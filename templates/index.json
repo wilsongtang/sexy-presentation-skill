@@ -1,0 +1,246 @@
+{
+  "$schema": "./schema.json",
+  "version": "0.1.0",
+  "templates": [
+    {
+      "id": "title-centered-hero-light",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "light",
+      "file": "title/centered-hero-light.html",
+      "description": "Centered title and subtitle on clean white background",
+      "tags": ["minimal", "clean", "hero"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-centered-hero-colored",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "colored",
+      "file": "title/centered-hero-colored.html",
+      "description": "Centered title on theme-colored background",
+      "tags": ["bold", "colored", "hero"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-centered-hero-reversed",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "reversed",
+      "file": "title/centered-hero-reversed.html",
+      "description": "Centered title with light text on dark background",
+      "tags": ["dark", "dramatic", "hero"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-split-image-light",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "light",
+      "file": "title/split-image-light.html",
+      "description": "Title text left, full-height image right, light background",
+      "tags": ["split", "image", "balanced"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-split-image-colored",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "colored",
+      "file": "title/split-image-colored.html",
+      "description": "Title on colored panel left, image right",
+      "tags": ["split", "image", "colored"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-split-image-reversed",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "reversed",
+      "file": "title/split-image-reversed.html",
+      "description": "Title with light text on dark panel left, image right",
+      "tags": ["split", "image", "dark"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-full-bleed-photo-light",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "light",
+      "file": "title/full-bleed-photo-light.html",
+      "description": "Full-screen photo with light overlay and title text",
+      "tags": ["photo", "immersive", "overlay"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-full-bleed-photo-colored",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "colored",
+      "file": "title/full-bleed-photo-colored.html",
+      "description": "Full-screen photo with colored gradient overlay",
+      "tags": ["photo", "gradient", "immersive"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-full-bleed-photo-reversed",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "reversed",
+      "file": "title/full-bleed-photo-reversed.html",
+      "description": "Full-screen photo with dark overlay and light title text",
+      "tags": ["photo", "dark", "cinematic"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-gradient-overlay-light",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "light",
+      "file": "title/gradient-overlay-light.html",
+      "description": "Subtle gradient background with centered title",
+      "tags": ["gradient", "subtle", "modern"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-gradient-overlay-colored",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "colored",
+      "file": "title/gradient-overlay-colored.html",
+      "description": "Bold gradient using theme colors with title",
+      "tags": ["gradient", "bold", "vibrant"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-gradient-overlay-reversed",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "reversed",
+      "file": "title/gradient-overlay-reversed.html",
+      "description": "Dark gradient with light title text",
+      "tags": ["gradient", "dark", "dramatic"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-logo-focused-light",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "light",
+      "file": "title/logo-focused-light.html",
+      "description": "Large centered logo with title below on white",
+      "tags": ["logo", "brand", "corporate"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-logo-focused-colored",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "colored",
+      "file": "title/logo-focused-colored.html",
+      "description": "Large centered logo on colored background",
+      "tags": ["logo", "brand", "colored"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-logo-focused-reversed",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "reversed",
+      "file": "title/logo-focused-reversed.html",
+      "description": "Large centered logo on dark background",
+      "tags": ["logo", "brand", "dark"],
+      "slots": { "title": true, "subtitle": true, "image": true }
+    },
+    {
+      "id": "title-minimal-text-light",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "light",
+      "file": "title/minimal-text-light.html",
+      "description": "Just the title, maximum whitespace, no subtitle",
+      "tags": ["minimal", "bold-text", "statement"],
+      "slots": { "title": true }
+    },
+    {
+      "id": "title-minimal-text-colored",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "colored",
+      "file": "title/minimal-text-colored.html",
+      "description": "Bold title on colored background, nothing else",
+      "tags": ["minimal", "bold-text", "colored"],
+      "slots": { "title": true }
+    },
+    {
+      "id": "title-minimal-text-reversed",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "reversed",
+      "file": "title/minimal-text-reversed.html",
+      "description": "Bold light title on dark background, maximum impact",
+      "tags": ["minimal", "bold-text", "dark"],
+      "slots": { "title": true }
+    },
+    {
+      "id": "title-asymmetric-light",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "light",
+      "file": "title/asymmetric-light.html",
+      "description": "Off-center title with decorative element, light background",
+      "tags": ["creative", "asymmetric", "dynamic"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-asymmetric-colored",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "colored",
+      "file": "title/asymmetric-colored.html",
+      "description": "Off-center title with geometric accent on colored bg",
+      "tags": ["creative", "asymmetric", "colored"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-asymmetric-reversed",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "reversed",
+      "file": "title/asymmetric-reversed.html",
+      "description": "Off-center title with accent shape on dark background",
+      "tags": ["creative", "asymmetric", "dark"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-editorial-spread-light",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "light",
+      "file": "title/editorial-spread-light.html",
+      "description": "Magazine-style title with large serif text and thin rule lines",
+      "tags": ["editorial", "magazine", "elegant"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-editorial-spread-colored",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "colored",
+      "file": "title/editorial-spread-colored.html",
+      "description": "Magazine-style title on warm tinted background",
+      "tags": ["editorial", "magazine", "tinted"],
+      "slots": { "title": true, "subtitle": true }
+    },
+    {
+      "id": "title-editorial-spread-reversed",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "reversed",
+      "file": "title/editorial-spread-reversed.html",
+      "description": "Magazine-style title with light text on dark background",
+      "tags": ["editorial", "magazine", "dark"],
+      "slots": { "title": true, "subtitle": true }
+    }
+  ]
+}
