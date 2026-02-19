@@ -1,0 +1,49 @@
+<!-- Template: timeline-steps-reversed -->
+<!-- Slots: title, step_1_number, step_1_title, step_1_description, step_2_number, step_2_title, step_2_description, step_3_number, step_3_title, step_3_description, step_4_number, step_4_title, step_4_description, step_5_number, step_5_title, step_5_description -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div class="flex flex-row" style="flex: 1; align-items: stretch; gap: 0;">
+
+    <!-- Step 1 -->
+    <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; background: var(--color-accent); padding: 32px 28px 32px 36px; clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%, 28px 50%); z-index: 5;">
+      <!-- First step has no left notch, override clip-path -->
+      <style>.step-first { clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%) !important; }</style>
+      <div class="step-first" style="position: absolute; inset: 0; background: var(--color-accent); clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%);"></div>
+      <div style="position: relative; z-index: 1;">
+        <div style="font-size: 40px; font-weight: 800; color: rgba(255,255,255,0.35); line-height: 1; margin-bottom: 8px;">{{step_1_number}}</div>
+        <h3 style="font-size: var(--size-body); font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.2;">{{step_1_title}}</h3>
+        <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.8); line-height: 1.5;">{{step_1_description}}</p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 32px 28px 32px 56px; background: var(--color-primary); clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%, 28px 50%); margin-left: -20px; z-index: 4;">
+      <div style="font-size: 40px; font-weight: 800; color: rgba(255,255,255,0.3); line-height: 1; margin-bottom: 8px;">{{step_2_number}}</div>
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.2;">{{step_2_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.8); line-height: 1.5;">{{step_2_description}}</p>
+    </div>
+
+    <!-- Step 3 -->
+    <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 32px 28px 32px 56px; background: var(--color-secondary); clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%, 28px 50%); margin-left: -20px; z-index: 3;">
+      <div style="font-size: 40px; font-weight: 800; color: rgba(255,255,255,0.3); line-height: 1; margin-bottom: 8px;">{{step_3_number}}</div>
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.2;">{{step_3_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.8); line-height: 1.5;">{{step_3_description}}</p>
+    </div>
+
+    <!-- Step 4 -->
+    <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 32px 28px 32px 56px; background: var(--color-border); clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%, 28px 50%); margin-left: -20px; z-index: 2;">
+      <div style="font-size: 40px; font-weight: 800; color: rgba(0,0,0,0.12); line-height: 1; margin-bottom: 8px;">{{step_4_number}}</div>
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 8px; line-height: 1.2;">{{step_4_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: 1.5; opacity: 0.8;">{{step_4_description}}</p>
+    </div>
+
+    <!-- Step 5 (last: no right arrow) -->
+    <div style="flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 32px 36px 32px 56px; background: var(--color-border); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 28px 50%); margin-left: -20px; z-index: 1; opacity: 0.7;">
+      <div style="font-size: 40px; font-weight: 800; color: rgba(0,0,0,0.12); line-height: 1; margin-bottom: 8px;">{{step_5_number}}</div>
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 8px; line-height: 1.2;">{{step_5_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: 1.5; opacity: 0.8;">{{step_5_description}}</p>
+    </div>
+
+  </div>
+</div>

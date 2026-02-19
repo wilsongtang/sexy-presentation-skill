@@ -1,0 +1,85 @@
+<!-- Template: timeline-roadmap-light -->
+<!-- Slots: title, lane_1_label, lane_2_label, lane_3_label, q1_label, q2_label, q3_label, q4_label, lane_1_q1_activity, lane_1_q2_activity, lane_1_q3_activity, lane_1_q4_activity, lane_2_q1_activity, lane_2_q2_activity, lane_2_q3_activity, lane_2_q4_activity, lane_3_q1_activity, lane_3_q2_activity, lane_3_q3_activity, lane_3_q4_activity -->
+<div class="slide">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div class="flex flex-col" style="flex: 1; gap: 0;">
+
+    <!-- Column headers row (quarter labels) -->
+    <div class="flex flex-row" style="margin-bottom: 8px;">
+      <!-- Lane label spacer -->
+      <div style="width: 200px; flex-shrink: 0;"></div>
+      <!-- Quarter headers -->
+      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px;">
+        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q1_label}}</div>
+        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q2_label}}</div>
+        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q3_label}}</div>
+        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q4_label}}</div>
+      </div>
+    </div>
+
+    <!-- Lane 1 row -->
+    <div class="flex flex-row" style="flex: 1; align-items: center; border-bottom: 1px solid var(--color-border);">
+      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
+        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_1_label}}</span>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
+        <div style="flex: 1; background: var(--color-accent); border-radius: 8px; padding: 10px 14px; opacity: 0.85;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_1_q1_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-accent); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_1_q2_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_1_q3_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_1_q4_activity}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lane 2 row -->
+    <div class="flex flex-row" style="flex: 1; align-items: center; border-bottom: 1px solid var(--color-border);">
+      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
+        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_2_label}}</span>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_2_q1_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-primary); border-radius: 8px; padding: 10px 14px; opacity: 0.8;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_2_q2_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-primary); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_2_q3_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_2_q4_activity}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lane 3 row -->
+    <div class="flex flex-row" style="flex: 1; align-items: center;">
+      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
+        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_3_label}}</span>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_3_q1_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_3_q2_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-secondary); border-radius: 8px; padding: 10px 14px; opacity: 0.8;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_3_q3_activity}}</span>
+        </div>
+        <div style="flex: 1; background: var(--color-secondary); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
+          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_3_q4_activity}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
