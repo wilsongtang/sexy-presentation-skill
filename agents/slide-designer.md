@@ -90,10 +90,13 @@ var(--color-border)      /* Borders and dividers */
 /* Typography */
 var(--font-header)       /* Heading font family */
 var(--font-body)         /* Body font family */
+var(--size-display)      /* 80-120px — hero slides only */
+var(--size-stat)         /* 64-96px — big numbers, hero/impact only */
 var(--size-title)        /* 44-60px depending on theme */
 var(--size-header)       /* 24-36px */
 var(--size-body)         /* 16-18px */
 var(--size-caption)      /* 12-14px */
+var(--size-overline)     /* 11-13px — uppercase category labels */
 
 /* Spacing */
 var(--margin)            /* Slide padding */
@@ -124,23 +127,71 @@ Before outputting, verify:
 - [ ] Consistent spacing using var(--gap) and var(--margin)
 - [ ] Template Handlebars slots ({{title}}, {{body}}, etc.) are replaced with actual content
 
-## Design Principles
+## Composition Rules
 
-1. **Less is more** — Maximum 3 levels of visual hierarchy per slide
-2. **Whitespace is intentional** — Don't fill every pixel, let elements breathe
-3. **Contrast creates hierarchy** — Size, weight, and color differences guide the eye
-4. **Consistency builds trust** — Same patterns across the deck
-5. **Content drives layout** — Choose template based on content, not the other way around
+These are non-negotiable. Every slide must satisfy all five.
 
-## Anti-Patterns (DO NOT)
+### 1. Rule of Thirds
+The primary content element anchors to a thirds intersection — not dead center. On a 1920×1080 slide, the four power points are at (640, 360), (1280, 360), (640, 720), (1280, 720). Place the dominant element at or near one of these points.
 
-- Don't use more than 2 fonts per slide
-- Don't center-align body paragraphs (use left-align)
-- Don't use decorative borders on data slides
-- Don't mix treatments within a visual group
-- Don't use gradients unless the template specifically calls for one
-- Don't add shadows to text
-- Don't use more than 3 colors per slide (excluding images)
+Exception: Full-bleed imagery with a centered overlay text block is acceptable if the image carries the visual weight to the edges.
+
+### 2. Scale Contrast
+At least a 3:1 size ratio between the largest and smallest text elements on any slide. If the title is 48px, nothing else on the slide should be larger than 16px body text. If you're using `--size-display` at 96px, the body text at 18px gives you a 5.3:1 ratio — that's the energy you want.
+
+A slide where everything is roughly the same size has no hierarchy. The eye doesn't know where to land.
+
+### 3. One Dominant Element
+Every slide has exactly one visual anchor — the thing the eye hits first. It could be a huge number, a hero photo, a display-sized word, or a bold color block. Everything else on the slide exists to support or contextualize that anchor.
+
+If you can't identify the dominant element, the slide doesn't have one. Fix it.
+
+### 4. Edge Tension
+At least one element should approach, touch, or break the slide edge. Full-bleed images, text flush against the margin, color blocks bleeding off-screen, motif elements extending past the boundary. Nothing should float timidly in the middle.
+
+Edge tension creates dynamism. It makes a slide feel like a crop of a larger composition rather than a card placed on a table.
+
+### 5. Layered Depth
+Create z-axis depth through overlapping elements: text over images (with appropriate treatment), cards casting shadows over backgrounds, motif elements behind content, color blocks partially obscured by other elements.
+
+Flat, side-by-side layouts where nothing overlaps are a last resort. Even a subtle shadow or a motif element peeking behind a content block creates depth.
+
+## Anti-Patterns
+
+These kill the visual energy. Never do them.
+
+- **Centered-everything** — Centering is a crutch. It's only appropriate for single hero statements and quotes. Multi-element slides should use asymmetric placement anchored to the rule of thirds.
+- **Equal-weight siblings** — If three cards are shown, one must be visually dominant (larger, different color, different z-level). Equal-weight items create visual monotony.
+- **Naked bullet lists** — Plain text bullets are a PowerPoint 2003 artifact. Every list item needs a visual anchor: a number, an icon, a colored marker, or a card container. If you're reaching for `<ul><li>`, stop and rethink the layout.
+- **Empty corners** — If three quadrants have content, the fourth needs a motif element, a decorative shape, or deliberate negative space with a clear compositional purpose. Dead corners make a slide look unfinished.
+- **Uniform backgrounds** — Don't use the same background treatment for every slide. Alternate between light, dark, image-backed, and color-blocked slides to create rhythm.
+- **Text-only slides** (except hero statements) — Even content-heavy slides should have at least one visual element: a motif, a color block, an icon, or an accent shape.
+- **Small, centered images** — Images are either full-bleed, half-bleed, or placed with edge tension. Never a small rectangle floating in the center with text underneath.
+
+## Intensity-Driven Design
+
+The `intensity` field from the slide plan tells you how dramatic to go.
+
+### hero intensity
+- Use `--size-display` (80-120px) for the primary text
+- Maximum 10 words visible on screen
+- Full-bleed imagery with `.img-darken`, `.img-duotone`, or `.img-gradient-fade` treatment
+- `motif-hero` class on the slide for maximum decorative intensity
+- The slide should be breathtaking. If it doesn't make someone pause, it's not hero enough.
+
+### impact intensity
+- Use `--size-stat` (64-96px) for numbers or key phrases
+- Maximum 2 content elements (e.g., a big number and a label)
+- Image treatments encouraged: `.img-desaturate`, `.img-color-wash`
+- `motif-bold` class on the slide
+- Overline text (`.overline` class) above headings for category context
+
+### workhorse intensity
+- Standard typography scale (`--size-title`, `--size-header`, `--size-body`)
+- All five composition rules still apply — workhorse doesn't mean boring
+- `motif-subtle` class on the slide
+- Overline text encouraged for section context
+- Edge tension and one-dominant-element rules are mandatory even here
 
 ## Memory Integration
 
