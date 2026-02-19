@@ -15,10 +15,13 @@
   "typography": {
     "header_font": "Inter, Helvetica Neue, Arial, sans-serif",
     "body_font": "Inter, Helvetica Neue, Arial, sans-serif",
+    "display_size": "112px",
+    "stat_size": "80px",
     "title_size": "56px",
     "header_size": "32px",
     "body_size": "18px",
     "caption_size": "14px",
+    "overline_size": "13px",
     "line_height": "1.6"
   },
   "spacing": {
@@ -27,5 +30,6 @@
     "density": "comfortable"
   },
   "motif": "bold-accent-blocks",
+  "motif_css_path": "themes/pitch-bold/motif.css",
   "background_modes": ["reversed", "colored"]
 }

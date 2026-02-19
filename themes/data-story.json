@@ -15,10 +15,13 @@
   "typography": {
     "header_font": "IBM Plex Sans, Roboto, sans-serif",
     "body_font": "IBM Plex Sans, Roboto, sans-serif",
+    "display_size": "88px",
+    "stat_size": "72px",
     "title_size": "44px",
     "header_size": "24px",
     "body_size": "16px",
     "caption_size": "12px",
+    "overline_size": "11px",
     "line_height": "1.5"
   },
   "spacing": {
@@ -27,5 +30,6 @@
     "density": "compact"
   },
   "motif": "data-grid-lines",
+  "motif_css_path": "themes/data-story/motif.css",
   "background_modes": ["light", "colored", "reversed"]
 }

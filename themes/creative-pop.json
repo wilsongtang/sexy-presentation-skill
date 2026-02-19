@@ -15,10 +15,13 @@
   "typography": {
     "header_font": "Poppins, Arial Black, sans-serif",
     "body_font": "Open Sans, Calibri, sans-serif",
+    "display_size": "120px",
+    "stat_size": "96px",
     "title_size": "60px",
     "header_size": "36px",
     "body_size": "18px",
     "caption_size": "14px",
+    "overline_size": "13px",
     "line_height": "1.6"
   },
   "spacing": {
@@ -27,5 +30,6 @@
     "density": "comfortable"
   },
   "motif": "geometric-shapes",
+  "motif_css_path": "themes/creative-pop/motif.css",
   "background_modes": ["light", "colored", "reversed"]
 }

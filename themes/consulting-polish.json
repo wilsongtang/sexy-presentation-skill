@@ -15,10 +15,13 @@
   "typography": {
     "header_font": "Georgia, Cambria, serif",
     "body_font": "Calibri, Arial, sans-serif",
+    "display_size": "88px",
+    "stat_size": "68px",
     "title_size": "44px",
     "header_size": "24px",
     "body_size": "16px",
     "caption_size": "12px",
+    "overline_size": "11px",
     "line_height": "1.5"
   },
   "spacing": {
@@ -27,5 +30,6 @@
     "density": "comfortable"
   },
   "motif": "subtle-border-left",
+  "motif_css_path": "themes/consulting-polish/motif.css",
   "background_modes": ["light", "colored", "reversed"]
 }

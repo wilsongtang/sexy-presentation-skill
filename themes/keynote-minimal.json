@@ -15,10 +15,13 @@
   "typography": {
     "header_font": "SF Pro Display, Helvetica Neue, Arial, sans-serif",
     "body_font": "SF Pro Text, Helvetica Neue, Arial, sans-serif",
+    "display_size": "96px",
+    "stat_size": "72px",
     "title_size": "48px",
     "header_size": "28px",
     "body_size": "18px",
     "caption_size": "14px",
+    "overline_size": "12px",
     "line_height": "1.5"
   },
   "spacing": {
@@ -27,5 +30,6 @@
     "density": "spacious"
   },
   "motif": "clean-whitespace",
+  "motif_css_path": "themes/keynote-minimal/motif.css",
   "background_modes": ["light", "reversed"]
 }
