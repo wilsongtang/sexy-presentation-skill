@@ -1,0 +1,48 @@
+<!-- Template: data-big-stat-triple-reversed -->
+<!-- Slots: title, stat_1_number, stat_1_label, stat_1_context, stat_2_number, stat_2_label, stat_2_context, stat_3_number, stat_3_label, stat_3_context -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+  <div class="flex flex-row" style="flex: 1; gap: var(--gap); align-items: center;">
+
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 1px solid var(--color-border); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: clamp(60pt, 5vw, 72pt); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_1_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">
+        {{stat_1_label}}
+      </div>
+      <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">
+        {{stat_1_context}}
+      </div>
+    </div>
+
+    <div style="width: 1px; align-self: stretch; background: var(--color-border); margin: 32px 0;"></div>
+
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 1px solid var(--color-border); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: clamp(60pt, 5vw, 72pt); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_2_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">
+        {{stat_2_label}}
+      </div>
+      <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">
+        {{stat_2_context}}
+      </div>
+    </div>
+
+    <div style="width: 1px; align-self: stretch; background: var(--color-border); margin: 32px 0;"></div>
+
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 1px solid var(--color-border); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: clamp(60pt, 5vw, 72pt); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_3_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">
+        {{stat_3_label}}
+      </div>
+      <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">
+        {{stat_3_context}}
+      </div>
+    </div>
+
+  </div>
+</div>

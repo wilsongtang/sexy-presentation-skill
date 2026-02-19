@@ -1,0 +1,78 @@
+<!-- Template: data-bar-comparison-reversed -->
+<!-- Slots: title, subtitle, bar_1_label, bar_1_value, bar_1_pct, bar_2_label, bar_2_value, bar_2_pct, bar_3_label, bar_3_value, bar_3_pct, bar_4_label, bar_4_value, bar_4_pct, bar_5_label, bar_5_value, bar_5_pct -->
+<!-- bar_*_pct is a number 0–100 controlling the CSS bar width percentage -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <div style="margin-bottom: var(--gap);">
+    <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600;">{{title}}</h2>
+    <p style="font-size: var(--size-body); color: rgba(255,255,255,0.6); margin-top: 8px;">{{subtitle}}</p>
+  </div>
+
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; max-width: 1400px;">
+
+    <!-- Bar 1 -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 280px; flex-shrink: 0; text-align: right; font-size: var(--size-body); color: var(--color-text-reversed); font-weight: 500; font-family: var(--font-body);">
+        {{bar_1_label}}
+      </div>
+      <div style="flex: 1; height: 48px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: {{bar_1_pct}}%; height: 100%; background: var(--color-accent); border-radius: 8px; transition: width 0.3s ease;"></div>
+      </div>
+      <div style="width: 100px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed);">
+        {{bar_1_value}}
+      </div>
+    </div>
+
+    <!-- Bar 2 -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 280px; flex-shrink: 0; text-align: right; font-size: var(--size-body); color: var(--color-text-reversed); font-weight: 500; font-family: var(--font-body);">
+        {{bar_2_label}}
+      </div>
+      <div style="flex: 1; height: 48px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: {{bar_2_pct}}%; height: 100%; background: var(--color-accent); border-radius: 8px; opacity: 0.85;"></div>
+      </div>
+      <div style="width: 100px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed);">
+        {{bar_2_value}}
+      </div>
+    </div>
+
+    <!-- Bar 3 -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 280px; flex-shrink: 0; text-align: right; font-size: var(--size-body); color: var(--color-text-reversed); font-weight: 500; font-family: var(--font-body);">
+        {{bar_3_label}}
+      </div>
+      <div style="flex: 1; height: 48px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: {{bar_3_pct}}%; height: 100%; background: var(--color-accent); border-radius: 8px; opacity: 0.70;"></div>
+      </div>
+      <div style="width: 100px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed);">
+        {{bar_3_value}}
+      </div>
+    </div>
+
+    <!-- Bar 4 -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 280px; flex-shrink: 0; text-align: right; font-size: var(--size-body); color: var(--color-text-reversed); font-weight: 500; font-family: var(--font-body);">
+        {{bar_4_label}}
+      </div>
+      <div style="flex: 1; height: 48px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: {{bar_4_pct}}%; height: 100%; background: var(--color-accent); border-radius: 8px; opacity: 0.55;"></div>
+      </div>
+      <div style="width: 100px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed);">
+        {{bar_4_value}}
+      </div>
+    </div>
+
+    <!-- Bar 5 -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 280px; flex-shrink: 0; text-align: right; font-size: var(--size-body); color: var(--color-text-reversed); font-weight: 500; font-family: var(--font-body);">
+        {{bar_5_label}}
+      </div>
+      <div style="flex: 1; height: 48px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: {{bar_5_pct}}%; height: 100%; background: var(--color-accent); border-radius: 8px; opacity: 0.40;"></div>
+      </div>
+      <div style="width: 100px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed);">
+        {{bar_5_value}}
+      </div>
+    </div>
+
+  </div>
+</div>
