@@ -1,0 +1,71 @@
+<!-- Template: closing-contact-reversed -->
+<!-- Slots: name, title, email, phone, website, social_1_platform, social_1_handle, social_2_platform, social_2_handle, social_3_platform, social_3_handle -->
+<div class="slide" style="background-color: var(--color-primary); position: relative;">
+  <!-- Logo placeholder top right -->
+  <div class="logo" style="width: 120px; height: 48px; border: 1px solid var(--color-border); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+    <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body);">LOGO</span>
+  </div>
+
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: var(--gap);">
+    <!-- Name & title -->
+    <div style="margin-bottom: calc(var(--gap) * 0.5);">
+      <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-text-reversed);">{{name}}</h2>
+      <p style="font-family: var(--font-body); font-size: var(--size-body); color: var(--color-accent); font-weight: 500; margin-top: 6px;">{{title}}</p>
+    </div>
+
+    <!-- Divider -->
+    <div style="width: 100%; height: 1px; background: var(--color-border);"></div>
+
+    <!-- Contact info grid (2-column) -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: calc(var(--gap) * 0.8) calc(var(--gap) * 2);">
+      <!-- Email -->
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 48px; height: 48px; border-radius: 10px; border: 1px solid var(--color-border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--color-secondary); opacity: 0.8;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22,6 12,13 2,6" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <p style="font-size: 18px; color: rgba(255,255,255,0.6); font-family: var(--font-body);">Email</p>
+          <p style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body); font-weight: 500;">{{email}}</p>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 48px; height: 48px; border-radius: 10px; border: 1px solid var(--color-border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--color-secondary); opacity: 0.8;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.76a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.06z" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <p style="font-size: 18px; color: rgba(255,255,255,0.6); font-family: var(--font-body);">Phone</p>
+          <p style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body); font-weight: 500;">{{phone}}</p>
+        </div>
+      </div>
+
+      <!-- Website -->
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="width: 48px; height: 48px; border-radius: 10px; border: 1px solid var(--color-border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--color-secondary); opacity: 0.8;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--color-accent)" stroke-width="2"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--color-accent)" stroke-width="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="var(--color-accent)" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <p style="font-size: 18px; color: rgba(255,255,255,0.6); font-family: var(--font-body);">Website</p>
+          <p style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body); font-weight: 500;">{{website}}</p>
+        </div>
+      </div>
+
+      <!-- Social links -->
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 600; min-width: 80px;">{{social_1_platform}}</span>
+          <span style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body);">{{social_1_handle}}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 600; min-width: 80px;">{{social_2_platform}}</span>
+          <span style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body);">{{social_2_handle}}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 600; min-width: 80px;">{{social_3_platform}}</span>
+          <span style="font-size: var(--size-caption); color: var(--color-text-reversed); font-family: var(--font-body);">{{social_3_handle}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1051,6 +1051,2551 @@
         "body": true,
         "image": true
       }
+    },
+    {
+      "id": "image-full-bleed-light",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "light",
+      "file": "image/full-bleed-light.html",
+      "description": "Full-screen image with small caption overlay at bottom on light gradient",
+      "tags": [
+        "image",
+        "full-bleed",
+        "immersive",
+        "caption"
+      ],
+      "slots": {
+        "image": true,
+        "caption": true
+      }
+    },
+    {
+      "id": "image-half-bleed-left-light",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "light",
+      "file": "image/half-bleed-left-light.html",
+      "description": "Image fills left 50%, title and body text on clean right panel",
+      "tags": [
+        "image",
+        "split",
+        "photo",
+        "clean"
+      ],
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "image-half-bleed-right-light",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "light",
+      "file": "image/half-bleed-right-light.html",
+      "description": "Title and body text on clean left panel, image fills right 50%",
+      "tags": [
+        "image",
+        "split",
+        "photo",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-gallery-2x2-light",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "light",
+      "file": "image/gallery-2x2-light.html",
+      "description": "Title above a 2x2 grid of equally-sized images on clean background",
+      "tags": [
+        "gallery",
+        "grid",
+        "photo",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true
+      }
+    },
+    {
+      "id": "image-gallery-strip-light",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "light",
+      "file": "image/gallery-strip-light.html",
+      "description": "Title above a horizontal strip of 4 equal-width images on clean background",
+      "tags": [
+        "gallery",
+        "strip",
+        "panorama",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true
+      }
+    },
+    {
+      "id": "image-captioned-center-light",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "light",
+      "file": "image/captioned-center-light.html",
+      "description": "Centered image at max 70% width with title above and caption below",
+      "tags": [
+        "image",
+        "centered",
+        "caption",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "caption": true
+      }
+    },
+    {
+      "id": "image-before-after-light",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "light",
+      "file": "image/before-after-light.html",
+      "description": "Split view comparing before image left and after image right with labels",
+      "tags": [
+        "before-after",
+        "comparison",
+        "split",
+        "photo"
+      ],
+      "slots": {
+        "image_before": true,
+        "image_after": true
+      }
+    },
+    {
+      "id": "image-overlapping-cards-light",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "light",
+      "file": "image/overlapping-cards-light.html",
+      "description": "3 images as tilted overlapping cards with title above on clean background",
+      "tags": [
+        "gallery",
+        "cards",
+        "creative",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true
+      }
+    },
+    {
+      "id": "data-big-stat-single-light",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "light",
+      "file": "data/big-stat-single-light.html",
+      "description": "One huge stat number centered with label",
+      "tags": [
+        "stat",
+        "big-number",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-big-stat-single-colored",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "colored",
+      "file": "data/big-stat-single-colored.html",
+      "description": "One huge stat number centered with label on colored background",
+      "tags": [
+        "stat",
+        "big-number",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-big-stat-single-reversed",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "reversed",
+      "file": "data/big-stat-single-reversed.html",
+      "description": "One huge stat number centered with label on dark background",
+      "tags": [
+        "stat",
+        "big-number",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-big-stat-triple-light",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "light",
+      "file": "data/big-stat-triple-light.html",
+      "description": "Three big stats in a row with labels",
+      "tags": [
+        "stat",
+        "big-number",
+        "trio",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-big-stat-triple-colored",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "colored",
+      "file": "data/big-stat-triple-colored.html",
+      "description": "Three big stats in a row with labels on colored background",
+      "tags": [
+        "stat",
+        "big-number",
+        "trio",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-big-stat-triple-reversed",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "reversed",
+      "file": "data/big-stat-triple-reversed.html",
+      "description": "Three big stats in a row with labels on dark background",
+      "tags": [
+        "stat",
+        "big-number",
+        "trio",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-metric-grid-light",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "light",
+      "file": "data/metric-grid-light.html",
+      "description": "2x2 grid of metric cards with trend indicators",
+      "tags": [
+        "metrics",
+        "grid",
+        "trends",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-metric-grid-colored",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "colored",
+      "file": "data/metric-grid-colored.html",
+      "description": "2x2 grid of metric cards with trend indicators on colored background",
+      "tags": [
+        "metrics",
+        "grid",
+        "trends",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-metric-grid-reversed",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "reversed",
+      "file": "data/metric-grid-reversed.html",
+      "description": "2x2 grid of metric cards with trend indicators on dark background",
+      "tags": [
+        "metrics",
+        "grid",
+        "trends",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-chart-placeholder-light",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "light",
+      "file": "data/chart-placeholder-light.html",
+      "description": "Chart placeholder area with axis labels",
+      "tags": [
+        "chart",
+        "placeholder",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "data-chart-placeholder-colored",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "colored",
+      "file": "data/chart-placeholder-colored.html",
+      "description": "Chart placeholder area with axis labels on colored background",
+      "tags": [
+        "chart",
+        "placeholder",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "data-chart-placeholder-reversed",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "reversed",
+      "file": "data/chart-placeholder-reversed.html",
+      "description": "Chart placeholder area with axis labels on dark background",
+      "tags": [
+        "chart",
+        "placeholder",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "data-bar-comparison-light",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "light",
+      "file": "data/bar-comparison-light.html",
+      "description": "Horizontal bar chart comparing values",
+      "tags": [
+        "bars",
+        "comparison",
+        "chart",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-bar-comparison-colored",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "colored",
+      "file": "data/bar-comparison-colored.html",
+      "description": "Horizontal bar chart comparing values on colored background",
+      "tags": [
+        "bars",
+        "comparison",
+        "chart",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-bar-comparison-reversed",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "reversed",
+      "file": "data/bar-comparison-reversed.html",
+      "description": "Horizontal bar chart comparing values on dark background",
+      "tags": [
+        "bars",
+        "comparison",
+        "chart",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-percentage-ring-light",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "light",
+      "file": "data/percentage-ring-light.html",
+      "description": "Three circular progress ring indicators",
+      "tags": [
+        "rings",
+        "percentage",
+        "progress",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-percentage-ring-colored",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "colored",
+      "file": "data/percentage-ring-colored.html",
+      "description": "Three circular progress ring indicators on colored background",
+      "tags": [
+        "rings",
+        "percentage",
+        "progress",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-percentage-ring-reversed",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "reversed",
+      "file": "data/percentage-ring-reversed.html",
+      "description": "Three circular progress ring indicators on dark background",
+      "tags": [
+        "rings",
+        "percentage",
+        "progress",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-data-table-light",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "light",
+      "file": "data/data-table-light.html",
+      "description": "Styled data table with header and rows",
+      "tags": [
+        "table",
+        "data",
+        "grid",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "data-data-table-colored",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "colored",
+      "file": "data/data-table-colored.html",
+      "description": "Styled data table with header and rows on colored background",
+      "tags": [
+        "table",
+        "data",
+        "grid",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "data-data-table-reversed",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "reversed",
+      "file": "data/data-table-reversed.html",
+      "description": "Styled data table with header and rows on dark background",
+      "tags": [
+        "table",
+        "data",
+        "grid",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "data-kpi-dashboard-light",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "light",
+      "file": "data/kpi-dashboard-light.html",
+      "description": "6 KPI cards in 3x2 grid with deltas",
+      "tags": [
+        "kpi",
+        "dashboard",
+        "metrics",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-kpi-dashboard-colored",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "colored",
+      "file": "data/kpi-dashboard-colored.html",
+      "description": "6 KPI cards in 3x2 grid with deltas on colored background",
+      "tags": [
+        "kpi",
+        "dashboard",
+        "metrics",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "data-kpi-dashboard-reversed",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "reversed",
+      "file": "data/kpi-dashboard-reversed.html",
+      "description": "6 KPI cards in 3x2 grid with deltas on dark background",
+      "tags": [
+        "kpi",
+        "dashboard",
+        "metrics",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "stats": true
+      }
+    },
+    {
+      "id": "image-full-bleed-colored",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "colored",
+      "file": "image/full-bleed-colored.html",
+      "description": "Full-screen image with caption overlay on colored background",
+      "tags": [
+        "photo",
+        "immersive",
+        "colored"
+      ],
+      "slots": {
+        "image": true
+      }
+    },
+    {
+      "id": "image-full-bleed-reversed",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "reversed",
+      "file": "image/full-bleed-reversed.html",
+      "description": "Full-screen image with caption overlay on dark background",
+      "tags": [
+        "photo",
+        "immersive",
+        "dark"
+      ],
+      "slots": {
+        "image": true
+      }
+    },
+    {
+      "id": "image-half-bleed-left-colored",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "colored",
+      "file": "image/half-bleed-left-colored.html",
+      "description": "Image fills left half, text on right on colored background",
+      "tags": [
+        "split",
+        "image",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-half-bleed-left-reversed",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "reversed",
+      "file": "image/half-bleed-left-reversed.html",
+      "description": "Image fills left half, text on right on dark background",
+      "tags": [
+        "split",
+        "image",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-half-bleed-right-colored",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "colored",
+      "file": "image/half-bleed-right-colored.html",
+      "description": "Text on left, image fills right half on colored background",
+      "tags": [
+        "split",
+        "image",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-half-bleed-right-reversed",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "reversed",
+      "file": "image/half-bleed-right-reversed.html",
+      "description": "Text on left, image fills right half on dark background",
+      "tags": [
+        "split",
+        "image",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-gallery-2x2-colored",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "colored",
+      "file": "image/gallery-2x2-colored.html",
+      "description": "Title with 2x2 image grid on colored background",
+      "tags": [
+        "gallery",
+        "grid",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-gallery-2x2-reversed",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "reversed",
+      "file": "image/gallery-2x2-reversed.html",
+      "description": "Title with 2x2 image grid on dark background",
+      "tags": [
+        "gallery",
+        "grid",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-gallery-strip-colored",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "colored",
+      "file": "image/gallery-strip-colored.html",
+      "description": "Title with horizontal strip of 4 images on colored background",
+      "tags": [
+        "gallery",
+        "strip",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-gallery-strip-reversed",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "reversed",
+      "file": "image/gallery-strip-reversed.html",
+      "description": "Title with horizontal strip of 4 images on dark background",
+      "tags": [
+        "gallery",
+        "strip",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-captioned-center-colored",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "colored",
+      "file": "image/captioned-center-colored.html",
+      "description": "Centered image with title and caption on colored background",
+      "tags": [
+        "centered",
+        "caption",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-captioned-center-reversed",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "reversed",
+      "file": "image/captioned-center-reversed.html",
+      "description": "Centered image with title and caption on dark background",
+      "tags": [
+        "centered",
+        "caption",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-before-after-colored",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "colored",
+      "file": "image/before-after-colored.html",
+      "description": "Split before/after image comparison on colored background",
+      "tags": [
+        "comparison",
+        "split",
+        "colored"
+      ],
+      "slots": {
+        "image": true
+      }
+    },
+    {
+      "id": "image-before-after-reversed",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "reversed",
+      "file": "image/before-after-reversed.html",
+      "description": "Split before/after image comparison on dark background",
+      "tags": [
+        "comparison",
+        "split",
+        "dark"
+      ],
+      "slots": {
+        "image": true
+      }
+    },
+    {
+      "id": "image-overlapping-cards-colored",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "colored",
+      "file": "image/overlapping-cards-colored.html",
+      "description": "Three images as overlapping tilted cards on colored background",
+      "tags": [
+        "creative",
+        "cards",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "image-overlapping-cards-reversed",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "reversed",
+      "file": "image/overlapping-cards-reversed.html",
+      "description": "Three images as overlapping tilted cards on dark background",
+      "tags": [
+        "creative",
+        "cards",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "comparison-side-by-side-light",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "light",
+      "file": "comparison/side-by-side-light.html",
+      "description": "Two equal panels with headings and bullets",
+      "tags": [
+        "versus",
+        "balanced",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-side-by-side-colored",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "colored",
+      "file": "comparison/side-by-side-colored.html",
+      "description": "Two equal panels with headings and bullets on colored background",
+      "tags": [
+        "versus",
+        "balanced",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-side-by-side-reversed",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "reversed",
+      "file": "comparison/side-by-side-reversed.html",
+      "description": "Two equal panels with headings and bullets on dark background",
+      "tags": [
+        "versus",
+        "balanced",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-pros-cons-light",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "light",
+      "file": "comparison/pros-cons-light.html",
+      "description": "Green pros and red cons panels",
+      "tags": [
+        "pros",
+        "cons",
+        "evaluation",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-pros-cons-colored",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "colored",
+      "file": "comparison/pros-cons-colored.html",
+      "description": "Green pros and red cons panels on colored background",
+      "tags": [
+        "pros",
+        "cons",
+        "evaluation",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-pros-cons-reversed",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "reversed",
+      "file": "comparison/pros-cons-reversed.html",
+      "description": "Green pros and red cons panels on dark background",
+      "tags": [
+        "pros",
+        "cons",
+        "evaluation",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-before-after-light",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "light",
+      "file": "comparison/before-after-light.html",
+      "description": "Before and after comparison panels",
+      "tags": [
+        "before",
+        "after",
+        "change",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-before-after-colored",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "colored",
+      "file": "comparison/before-after-colored.html",
+      "description": "Before and after comparison panels on colored background",
+      "tags": [
+        "before",
+        "after",
+        "change",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-before-after-reversed",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "reversed",
+      "file": "comparison/before-after-reversed.html",
+      "description": "Before and after comparison panels on dark background",
+      "tags": [
+        "before",
+        "after",
+        "change",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-feature-matrix-light",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "light",
+      "file": "comparison/feature-matrix-light.html",
+      "description": "Feature comparison table with checkmarks",
+      "tags": [
+        "matrix",
+        "features",
+        "table",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "comparison-feature-matrix-colored",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "colored",
+      "file": "comparison/feature-matrix-colored.html",
+      "description": "Feature comparison table with checkmarks on colored background",
+      "tags": [
+        "matrix",
+        "features",
+        "table",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "comparison-feature-matrix-reversed",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "reversed",
+      "file": "comparison/feature-matrix-reversed.html",
+      "description": "Feature comparison table with checkmarks on dark background",
+      "tags": [
+        "matrix",
+        "features",
+        "table",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "table": true
+      }
+    },
+    {
+      "id": "comparison-versus-light",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "light",
+      "file": "comparison/versus-light.html",
+      "description": "Two large options with VS badge",
+      "tags": [
+        "versus",
+        "dramatic",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-versus-colored",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "colored",
+      "file": "comparison/versus-colored.html",
+      "description": "Two large options with VS badge on colored background",
+      "tags": [
+        "versus",
+        "dramatic",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-versus-reversed",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "reversed",
+      "file": "comparison/versus-reversed.html",
+      "description": "Two large options with VS badge on dark background",
+      "tags": [
+        "versus",
+        "dramatic",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-stacked-compare-light",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "light",
+      "file": "comparison/stacked-compare-light.html",
+      "description": "Two stacked horizontal comparison panels",
+      "tags": [
+        "stacked",
+        "compare",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-stacked-compare-colored",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "colored",
+      "file": "comparison/stacked-compare-colored.html",
+      "description": "Two stacked horizontal comparison panels on colored background",
+      "tags": [
+        "stacked",
+        "compare",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "comparison-stacked-compare-reversed",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "reversed",
+      "file": "comparison/stacked-compare-reversed.html",
+      "description": "Two stacked horizontal comparison panels on dark background",
+      "tags": [
+        "stacked",
+        "compare",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "timeline-horizontal-light",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "light",
+      "file": "timeline/horizontal-light.html",
+      "description": "Horizontal timeline with connected points",
+      "tags": [
+        "horizontal",
+        "dates",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-horizontal-colored",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "colored",
+      "file": "timeline/horizontal-colored.html",
+      "description": "Horizontal timeline with connected points on colored background",
+      "tags": [
+        "horizontal",
+        "dates",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-horizontal-reversed",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "reversed",
+      "file": "timeline/horizontal-reversed.html",
+      "description": "Horizontal timeline with connected points on dark background",
+      "tags": [
+        "horizontal",
+        "dates",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-vertical-light",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "light",
+      "file": "timeline/vertical-light.html",
+      "description": "Vertical timeline with events",
+      "tags": [
+        "vertical",
+        "events",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-vertical-colored",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "colored",
+      "file": "timeline/vertical-colored.html",
+      "description": "Vertical timeline with events on colored background",
+      "tags": [
+        "vertical",
+        "events",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-vertical-reversed",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "reversed",
+      "file": "timeline/vertical-reversed.html",
+      "description": "Vertical timeline with events on dark background",
+      "tags": [
+        "vertical",
+        "events",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-milestone-light",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "light",
+      "file": "timeline/milestone-light.html",
+      "description": "Large milestone markers on horizontal path",
+      "tags": [
+        "milestones",
+        "achievements",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-milestone-colored",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "colored",
+      "file": "timeline/milestone-colored.html",
+      "description": "Large milestone markers on horizontal path on colored background",
+      "tags": [
+        "milestones",
+        "achievements",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-milestone-reversed",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "reversed",
+      "file": "timeline/milestone-reversed.html",
+      "description": "Large milestone markers on horizontal path on dark background",
+      "tags": [
+        "milestones",
+        "achievements",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-roadmap-light",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "light",
+      "file": "timeline/roadmap-light.html",
+      "description": "Phased roadmap with lanes and quarters",
+      "tags": [
+        "roadmap",
+        "phases",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-roadmap-colored",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "colored",
+      "file": "timeline/roadmap-colored.html",
+      "description": "Phased roadmap with lanes and quarters on colored background",
+      "tags": [
+        "roadmap",
+        "phases",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-roadmap-reversed",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "reversed",
+      "file": "timeline/roadmap-reversed.html",
+      "description": "Phased roadmap with lanes and quarters on dark background",
+      "tags": [
+        "roadmap",
+        "phases",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-steps-light",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "light",
+      "file": "timeline/steps-light.html",
+      "description": "Connected arrow-shaped step flow",
+      "tags": [
+        "steps",
+        "process",
+        "flow",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-steps-colored",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "colored",
+      "file": "timeline/steps-colored.html",
+      "description": "Connected arrow-shaped step flow on colored background",
+      "tags": [
+        "steps",
+        "process",
+        "flow",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-steps-reversed",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "reversed",
+      "file": "timeline/steps-reversed.html",
+      "description": "Connected arrow-shaped step flow on dark background",
+      "tags": [
+        "steps",
+        "process",
+        "flow",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-branching-light",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "light",
+      "file": "timeline/branching-light.html",
+      "description": "Decision point with branching paths",
+      "tags": [
+        "branching",
+        "decision",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-branching-colored",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "colored",
+      "file": "timeline/branching-colored.html",
+      "description": "Decision point with branching paths on colored background",
+      "tags": [
+        "branching",
+        "decision",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "timeline-branching-reversed",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "reversed",
+      "file": "timeline/branching-reversed.html",
+      "description": "Decision point with branching paths on dark background",
+      "tags": [
+        "branching",
+        "decision",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "timeline": true
+      }
+    },
+    {
+      "id": "quote-large-centered-light",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "light",
+      "file": "quote/large-centered-light.html",
+      "description": "Giant centered quote with decorative marks",
+      "tags": [
+        "quote",
+        "dramatic",
+        "clean"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-large-centered-colored",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "colored",
+      "file": "quote/large-centered-colored.html",
+      "description": "Giant centered quote with decorative marks on colored background",
+      "tags": [
+        "quote",
+        "dramatic",
+        "colored"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-large-centered-reversed",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "reversed",
+      "file": "quote/large-centered-reversed.html",
+      "description": "Giant centered quote with decorative marks on dark background",
+      "tags": [
+        "quote",
+        "dramatic",
+        "dark"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-sidebar-portrait-light",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "light",
+      "file": "quote/sidebar-portrait-light.html",
+      "description": "Speaker photo with quote text",
+      "tags": [
+        "quote",
+        "portrait",
+        "clean"
+      ],
+      "slots": {
+        "quote": true,
+        "image": true
+      }
+    },
+    {
+      "id": "quote-sidebar-portrait-colored",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "colored",
+      "file": "quote/sidebar-portrait-colored.html",
+      "description": "Speaker photo with quote text on colored background",
+      "tags": [
+        "quote",
+        "portrait",
+        "colored"
+      ],
+      "slots": {
+        "quote": true,
+        "image": true
+      }
+    },
+    {
+      "id": "quote-sidebar-portrait-reversed",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "reversed",
+      "file": "quote/sidebar-portrait-reversed.html",
+      "description": "Speaker photo with quote text on dark background",
+      "tags": [
+        "quote",
+        "portrait",
+        "dark"
+      ],
+      "slots": {
+        "quote": true,
+        "image": true
+      }
+    },
+    {
+      "id": "quote-minimal-light",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "light",
+      "file": "quote/minimal-light.html",
+      "description": "Clean quote with accent border",
+      "tags": [
+        "quote",
+        "minimal",
+        "clean"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-minimal-colored",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "colored",
+      "file": "quote/minimal-colored.html",
+      "description": "Clean quote with accent border on colored background",
+      "tags": [
+        "quote",
+        "minimal",
+        "colored"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-minimal-reversed",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "reversed",
+      "file": "quote/minimal-reversed.html",
+      "description": "Clean quote with accent border on dark background",
+      "tags": [
+        "quote",
+        "minimal",
+        "dark"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-stacked-light",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "light",
+      "file": "quote/stacked-light.html",
+      "description": "Two quotes stacked vertically",
+      "tags": [
+        "quote",
+        "dual",
+        "clean"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-stacked-colored",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "colored",
+      "file": "quote/stacked-colored.html",
+      "description": "Two quotes stacked vertically on colored background",
+      "tags": [
+        "quote",
+        "dual",
+        "colored"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-stacked-reversed",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "reversed",
+      "file": "quote/stacked-reversed.html",
+      "description": "Two quotes stacked vertically on dark background",
+      "tags": [
+        "quote",
+        "dual",
+        "dark"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-editorial-light",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "light",
+      "file": "quote/editorial-light.html",
+      "description": "Magazine-style quote with rule lines",
+      "tags": [
+        "quote",
+        "editorial",
+        "clean"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-editorial-colored",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "colored",
+      "file": "quote/editorial-colored.html",
+      "description": "Magazine-style quote with rule lines on colored background",
+      "tags": [
+        "quote",
+        "editorial",
+        "colored"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "quote-editorial-reversed",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "reversed",
+      "file": "quote/editorial-reversed.html",
+      "description": "Magazine-style quote with rule lines on dark background",
+      "tags": [
+        "quote",
+        "editorial",
+        "dark"
+      ],
+      "slots": {
+        "quote": true
+      }
+    },
+    {
+      "id": "team-grid-4-light",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "light",
+      "file": "team/grid-4-light.html",
+      "description": "4 team member cards in a row",
+      "tags": [
+        "team",
+        "grid",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-grid-4-colored",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "colored",
+      "file": "team/grid-4-colored.html",
+      "description": "4 team member cards in a row on colored background",
+      "tags": [
+        "team",
+        "grid",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-grid-4-reversed",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "reversed",
+      "file": "team/grid-4-reversed.html",
+      "description": "4 team member cards in a row on dark background",
+      "tags": [
+        "team",
+        "grid",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-grid-6-light",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "light",
+      "file": "team/grid-6-light.html",
+      "description": "6 team members in 3x2 grid",
+      "tags": [
+        "team",
+        "grid",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-grid-6-colored",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "colored",
+      "file": "team/grid-6-colored.html",
+      "description": "6 team members in 3x2 grid on colored background",
+      "tags": [
+        "team",
+        "grid",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-grid-6-reversed",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "reversed",
+      "file": "team/grid-6-reversed.html",
+      "description": "6 team members in 3x2 grid on dark background",
+      "tags": [
+        "team",
+        "grid",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-featured-light",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "light",
+      "file": "team/featured-light.html",
+      "description": "One featured member with smaller cards",
+      "tags": [
+        "team",
+        "featured",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-featured-colored",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "colored",
+      "file": "team/featured-colored.html",
+      "description": "One featured member with smaller cards on colored background",
+      "tags": [
+        "team",
+        "featured",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-featured-reversed",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "reversed",
+      "file": "team/featured-reversed.html",
+      "description": "One featured member with smaller cards on dark background",
+      "tags": [
+        "team",
+        "featured",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-org-chart-light",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "light",
+      "file": "team/org-chart-light.html",
+      "description": "3-level organizational chart",
+      "tags": [
+        "team",
+        "hierarchy",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-org-chart-colored",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "colored",
+      "file": "team/org-chart-colored.html",
+      "description": "3-level organizational chart on colored background",
+      "tags": [
+        "team",
+        "hierarchy",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-org-chart-reversed",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "reversed",
+      "file": "team/org-chart-reversed.html",
+      "description": "3-level organizational chart on dark background",
+      "tags": [
+        "team",
+        "hierarchy",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-profiles-light",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "light",
+      "file": "team/profiles-light.html",
+      "description": "Horizontal profile cards with bios",
+      "tags": [
+        "team",
+        "profiles",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-profiles-colored",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "colored",
+      "file": "team/profiles-colored.html",
+      "description": "Horizontal profile cards with bios on colored background",
+      "tags": [
+        "team",
+        "profiles",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "team-profiles-reversed",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "reversed",
+      "file": "team/profiles-reversed.html",
+      "description": "Horizontal profile cards with bios on dark background",
+      "tags": [
+        "team",
+        "profiles",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-section-divider-light",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "light",
+      "file": "structural/section-divider-light.html",
+      "description": "Section number and title centered",
+      "tags": [
+        "divider",
+        "section",
+        "clean"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-section-divider-colored",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "colored",
+      "file": "structural/section-divider-colored.html",
+      "description": "Section number and title centered on colored background",
+      "tags": [
+        "divider",
+        "section",
+        "colored"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-section-divider-reversed",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "reversed",
+      "file": "structural/section-divider-reversed.html",
+      "description": "Section number and title centered on dark background",
+      "tags": [
+        "divider",
+        "section",
+        "dark"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-agenda-light",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "light",
+      "file": "structural/agenda-light.html",
+      "description": "Numbered agenda items with timing",
+      "tags": [
+        "agenda",
+        "schedule",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-agenda-colored",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "colored",
+      "file": "structural/agenda-colored.html",
+      "description": "Numbered agenda items with timing on colored background",
+      "tags": [
+        "agenda",
+        "schedule",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-agenda-reversed",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "reversed",
+      "file": "structural/agenda-reversed.html",
+      "description": "Numbered agenda items with timing on dark background",
+      "tags": [
+        "agenda",
+        "schedule",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-toc-light",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "light",
+      "file": "structural/toc-light.html",
+      "description": "Two-column table of contents",
+      "tags": [
+        "toc",
+        "contents",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-toc-colored",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "colored",
+      "file": "structural/toc-colored.html",
+      "description": "Two-column table of contents on colored background",
+      "tags": [
+        "toc",
+        "contents",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-toc-reversed",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "reversed",
+      "file": "structural/toc-reversed.html",
+      "description": "Two-column table of contents on dark background",
+      "tags": [
+        "toc",
+        "contents",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-chapter-marker-light",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "light",
+      "file": "structural/chapter-marker-light.html",
+      "description": "Chapter number with title and accent",
+      "tags": [
+        "chapter",
+        "marker",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "structural-chapter-marker-colored",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "colored",
+      "file": "structural/chapter-marker-colored.html",
+      "description": "Chapter number with title and accent on colored background",
+      "tags": [
+        "chapter",
+        "marker",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "structural-chapter-marker-reversed",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "reversed",
+      "file": "structural/chapter-marker-reversed.html",
+      "description": "Chapter number with title and accent on dark background",
+      "tags": [
+        "chapter",
+        "marker",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "structural-transition-light",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "light",
+      "file": "structural/transition-light.html",
+      "description": "Brief transitional text with decoration",
+      "tags": [
+        "transition",
+        "bridge",
+        "clean"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-transition-colored",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "colored",
+      "file": "structural/transition-colored.html",
+      "description": "Brief transitional text with decoration on colored background",
+      "tags": [
+        "transition",
+        "bridge",
+        "colored"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-transition-reversed",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "reversed",
+      "file": "structural/transition-reversed.html",
+      "description": "Brief transitional text with decoration on dark background",
+      "tags": [
+        "transition",
+        "bridge",
+        "dark"
+      ],
+      "slots": {
+        "title": true
+      }
+    },
+    {
+      "id": "structural-recap-light",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "light",
+      "file": "structural/recap-light.html",
+      "description": "Key takeaways with checkmarks",
+      "tags": [
+        "recap",
+        "summary",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-recap-colored",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "colored",
+      "file": "structural/recap-colored.html",
+      "description": "Key takeaways with checkmarks on colored background",
+      "tags": [
+        "recap",
+        "summary",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "structural-recap-reversed",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "reversed",
+      "file": "structural/recap-reversed.html",
+      "description": "Key takeaways with checkmarks on dark background",
+      "tags": [
+        "recap",
+        "summary",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-thank-you-light",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "light",
+      "file": "closing/thank-you-light.html",
+      "description": "Large thank you text centered",
+      "tags": [
+        "thanks",
+        "end",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "closing-thank-you-colored",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "colored",
+      "file": "closing/thank-you-colored.html",
+      "description": "Large thank you text centered on colored background",
+      "tags": [
+        "thanks",
+        "end",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "closing-thank-you-reversed",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "reversed",
+      "file": "closing/thank-you-reversed.html",
+      "description": "Large thank you text centered on dark background",
+      "tags": [
+        "thanks",
+        "end",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "subtitle": true
+      }
+    },
+    {
+      "id": "closing-cta-light",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "light",
+      "file": "closing/cta-light.html",
+      "description": "Call-to-action with button",
+      "tags": [
+        "cta",
+        "action",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-cta-colored",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "colored",
+      "file": "closing/cta-colored.html",
+      "description": "Call-to-action with button on colored background",
+      "tags": [
+        "cta",
+        "action",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-cta-reversed",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "reversed",
+      "file": "closing/cta-reversed.html",
+      "description": "Call-to-action with button on dark background",
+      "tags": [
+        "cta",
+        "action",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-contact-light",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "light",
+      "file": "closing/contact-light.html",
+      "description": "Contact info grid with social links",
+      "tags": [
+        "contact",
+        "info",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-contact-colored",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "colored",
+      "file": "closing/contact-colored.html",
+      "description": "Contact info grid with social links on colored background",
+      "tags": [
+        "contact",
+        "info",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-contact-reversed",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "reversed",
+      "file": "closing/contact-reversed.html",
+      "description": "Contact info grid with social links on dark background",
+      "tags": [
+        "contact",
+        "info",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-qr-code-light",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "light",
+      "file": "closing/qr-code-light.html",
+      "description": "QR code with URL text",
+      "tags": [
+        "qr",
+        "link",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "closing-qr-code-colored",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "colored",
+      "file": "closing/qr-code-colored.html",
+      "description": "QR code with URL text on colored background",
+      "tags": [
+        "qr",
+        "link",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "closing-qr-code-reversed",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "reversed",
+      "file": "closing/qr-code-reversed.html",
+      "description": "QR code with URL text on dark background",
+      "tags": [
+        "qr",
+        "link",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "image": true
+      }
+    },
+    {
+      "id": "closing-social-light",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "light",
+      "file": "closing/social-light.html",
+      "description": "Social media handles grid",
+      "tags": [
+        "social",
+        "links",
+        "clean"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-social-colored",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "colored",
+      "file": "closing/social-colored.html",
+      "description": "Social media handles grid on colored background",
+      "tags": [
+        "social",
+        "links",
+        "colored"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
+    },
+    {
+      "id": "closing-social-reversed",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "reversed",
+      "file": "closing/social-reversed.html",
+      "description": "Social media handles grid on dark background",
+      "tags": [
+        "social",
+        "links",
+        "dark"
+      ],
+      "slots": {
+        "title": true,
+        "body": true
+      }
     }
   ]
 }

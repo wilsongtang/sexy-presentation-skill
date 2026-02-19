@@ -1,0 +1,82 @@
+<!-- Template: closing-social-colored -->
+<!-- Slots: title, twitter_handle, linkedin_handle, instagram_handle, youtube_handle, github_handle, tiktok_handle -->
+<div class="slide" style="background-color: var(--color-secondary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <!-- Social media handle grid (2x3) -->
+  <div style="flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: var(--gap);">
+
+    <!-- Twitter / X -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- X / Twitter icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="var(--color-text)"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">Twitter / X</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{twitter_handle}}</p>
+      </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- LinkedIn icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="4" r="2" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">LinkedIn</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{linkedin_handle}}</p>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- Instagram icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">Instagram</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{instagram_handle}}</p>
+      </div>
+    </div>
+
+    <!-- YouTube -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- YouTube icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20.06 12 20.06 12 20.06s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">YouTube</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{youtube_handle}}</p>
+      </div>
+    </div>
+
+    <!-- GitHub -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- GitHub icon -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">GitHub</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{github_handle}}</p>
+      </div>
+    </div>
+
+    <!-- TikTok -->
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 36px 40px; display: flex; flex-direction: row; align-items: center; gap: 28px;">
+      <div style="width: 72px; height: 72px; border-radius: 14px; background: var(--color-secondary); flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--color-border);">
+        <!-- TikTok icon (simplified music note shape) -->
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="var(--color-text)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-bottom: 4px;">TikTok</p>
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{tiktok_handle}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- Template: closing-thank-you-colored -->
+<!-- Slots: subtitle -->
+<div class="slide items-center justify-center text-center" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <!-- Subtle radial background accent -->
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%); opacity: 0.05; pointer-events: none;"></div>
+
+  <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.2);">
+    <!-- Thin decorative line above -->
+    <div style="width: 60px; height: 2px; background: var(--color-accent);"></div>
+
+    <h1 style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 700; color: var(--color-text); letter-spacing: -0.03em; line-height: 1;">
+      Thank You
+    </h1>
+
+    <p style="font-family: var(--font-body); font-size: var(--size-header); color: var(--color-muted); max-width: 900px; line-height: var(--line-height);">
+      {{subtitle}}
+    </p>
+
+    <!-- Thin decorative line below -->
+    <div style="width: 60px; height: 2px; background: var(--color-accent);"></div>
+  </div>
+</div>
