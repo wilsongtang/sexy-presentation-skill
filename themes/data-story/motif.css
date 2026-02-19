@@ -1,0 +1,59 @@
+/* Motif: data-story — grid-data-points
+   Grid lines, subtle graph paper, data-point dots.
+   Applied to real .motif-element DOM nodes inside .slide */
+
+/* Grid line — horizontal or vertical rule for graph-paper feel */
+.motif-gridline-h {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  opacity: 0.15;
+}
+
+.motif-gridline-v {
+  width: 1px;
+  height: 100%;
+  background: var(--color-border);
+  opacity: 0.15;
+}
+
+/* Data dot — small filled circle representing a data point */
+.motif-data-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.3;
+}
+
+/* Axis line — thicker line for chart axes */
+.motif-axis {
+  background: var(--color-muted);
+  opacity: 0.3;
+}
+.motif-axis-x {
+  width: 100%;
+  height: 2px;
+}
+.motif-axis-y {
+  width: 2px;
+  height: 100%;
+}
+
+/* Intensity: subtle */
+.motif-subtle .motif-gridline-h,
+.motif-subtle .motif-gridline-v { opacity: 0.08; }
+.motif-subtle .motif-data-dot { opacity: 0.15; width: 6px; height: 6px; }
+.motif-subtle .motif-axis { opacity: 0.15; }
+
+/* Intensity: bold */
+.motif-bold .motif-gridline-h,
+.motif-bold .motif-gridline-v { opacity: 0.2; }
+.motif-bold .motif-data-dot { opacity: 0.35; width: 10px; height: 10px; }
+.motif-bold .motif-axis { opacity: 0.35; }
+
+/* Intensity: hero */
+.motif-hero .motif-gridline-h,
+.motif-hero .motif-gridline-v { opacity: 0.25; }
+.motif-hero .motif-data-dot { opacity: 0.5; width: 12px; height: 12px; background: var(--color-accent); }
+.motif-hero .motif-axis { opacity: 0.5; background: var(--color-accent); }

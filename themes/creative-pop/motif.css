@@ -1,0 +1,56 @@
+/* Motif: creative-pop — geometric-shapes
+   Circles, triangles, overlapping geometric shapes.
+   Applied to real .motif-element DOM nodes inside .slide */
+
+/* Circle — decorative round shape */
+.motif-circle {
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.08;
+}
+
+/* Triangle — CSS triangle using borders */
+.motif-triangle {
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 140px solid var(--color-primary);
+  opacity: 0.06;
+}
+
+/* Square — rotated 45deg to appear as diamond */
+.motif-diamond {
+  width: 100px;
+  height: 100px;
+  background: var(--color-secondary);
+  transform: rotate(45deg);
+  opacity: 0.06;
+}
+
+/* Half circle — semicircle accent */
+.motif-halfcircle {
+  width: 200px;
+  height: 100px;
+  background: var(--color-accent);
+  border-radius: 200px 200px 0 0;
+  opacity: 0.08;
+}
+
+/* Intensity: subtle */
+.motif-subtle .motif-circle { opacity: 0.05; }
+.motif-subtle .motif-triangle { opacity: 0.04; }
+.motif-subtle .motif-diamond { opacity: 0.04; }
+.motif-subtle .motif-halfcircle { opacity: 0.05; }
+
+/* Intensity: bold */
+.motif-bold .motif-circle { opacity: 0.1; }
+.motif-bold .motif-triangle { opacity: 0.08; }
+.motif-bold .motif-diamond { opacity: 0.08; }
+.motif-bold .motif-halfcircle { opacity: 0.1; }
+
+/* Intensity: hero */
+.motif-hero .motif-circle { opacity: 0.15; }
+.motif-hero .motif-triangle { opacity: 0.12; border-bottom-color: var(--color-accent); }
+.motif-hero .motif-diamond { opacity: 0.12; background: var(--color-accent); }
+.motif-hero .motif-halfcircle { opacity: 0.15; }

@@ -1,0 +1,42 @@
+/* Motif: keynote-minimal — clean-whitespace
+   Thin horizontal rules and subtle dot accents.
+   Applied to real .motif-element DOM nodes inside .slide */
+
+/* Subtle horizontal rule — placed at bottom third of slide */
+.motif-rule {
+  width: 120px;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* Dot accent — small circle placed at grid intersections */
+.motif-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.25;
+}
+
+/* Thin vertical line — for editorial column effect */
+.motif-vline {
+  width: 1px;
+  height: 80px;
+  background: var(--color-border);
+  opacity: 0.4;
+}
+
+/* Intensity: subtle — default for workhorse slides */
+.motif-subtle .motif-rule { opacity: 0.3; width: 80px; }
+.motif-subtle .motif-dot { opacity: 0.15; }
+.motif-subtle .motif-vline { opacity: 0.2; }
+
+/* Intensity: bold — for impact slides */
+.motif-bold .motif-rule { opacity: 0.5; width: 160px; }
+.motif-bold .motif-dot { opacity: 0.35; width: 8px; height: 8px; }
+.motif-bold .motif-vline { opacity: 0.5; height: 120px; }
+
+/* Intensity: hero — for hero slides */
+.motif-hero .motif-rule { opacity: 0.6; width: 240px; height: 2px; background: var(--color-accent); }
+.motif-hero .motif-dot { opacity: 0.5; width: 10px; height: 10px; }
+.motif-hero .motif-vline { opacity: 0.6; height: 200px; background: var(--color-accent); }

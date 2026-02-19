@@ -1,0 +1,41 @@
+/* Motif: consulting-polish — pinstripe-borders
+   Pinstripe borders and muted geometric frames.
+   Applied to real .motif-element DOM nodes inside .slide */
+
+/* Pinstripe border — double thin line */
+.motif-pinstripe {
+  border: 1px solid var(--color-border);
+  outline: 1px solid var(--color-border);
+  outline-offset: 4px;
+  opacity: 0.4;
+}
+
+/* Geometric frame — thin rectangular border inset from slide edge */
+.motif-frame {
+  border: 1px solid var(--color-border);
+  opacity: 0.3;
+}
+
+/* Corner bracket — L-shaped accent in corners */
+.motif-bracket {
+  width: 40px;
+  height: 40px;
+  border-left: 2px solid var(--color-muted);
+  border-top: 2px solid var(--color-muted);
+  opacity: 0.3;
+}
+
+/* Intensity: subtle */
+.motif-subtle .motif-pinstripe { opacity: 0.2; }
+.motif-subtle .motif-frame { opacity: 0.15; }
+.motif-subtle .motif-bracket { opacity: 0.15; width: 30px; height: 30px; }
+
+/* Intensity: bold */
+.motif-bold .motif-pinstripe { opacity: 0.4; }
+.motif-bold .motif-frame { opacity: 0.3; }
+.motif-bold .motif-bracket { opacity: 0.35; width: 50px; height: 50px; }
+
+/* Intensity: hero */
+.motif-hero .motif-pinstripe { opacity: 0.5; border-color: var(--color-accent); outline-color: var(--color-accent); }
+.motif-hero .motif-frame { opacity: 0.4; border-color: var(--color-accent); }
+.motif-hero .motif-bracket { opacity: 0.5; width: 60px; height: 60px; border-color: var(--color-accent); }
