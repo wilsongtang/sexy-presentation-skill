@@ -1,0 +1,19 @@
+<!-- Template: image-gallery-2x2-reversed -->
+<!-- Slots: title, image_1, image_2, image_3, image_4 -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); flex-shrink: 0;">{{title}}</h2>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--gap); overflow: hidden;">
+    <div style="overflow: hidden; border-radius: 12px;">
+      <img src="{{image_1}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div style="overflow: hidden; border-radius: 12px;">
+      <img src="{{image_2}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div style="overflow: hidden; border-radius: 12px;">
+      <img src="{{image_3}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div style="overflow: hidden; border-radius: 12px;">
+      <img src="{{image_4}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </div>
+</div>
