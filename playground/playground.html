@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sexy Presentation — Playground</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-primary: #1D1D1F; --color-accent: #0071E3; --color-background: #FFFFFF;
+      --color-text: #1D1D1F; --color-muted: #86868B; --color-border: #D2D2D7;
+      --font-header: 'Helvetica Neue', Arial, sans-serif;
+      --font-body: 'Helvetica Neue', Arial, sans-serif;
+      --size-title: 48px; --size-header: 28px; --size-body: 18px;
+      --size-caption: 14px; --margin: 80px; --gap: 40px;
+    }
+    body { margin: 0; overflow: hidden; height: 100vh; font-family: system-ui, sans-serif; }
+    .thumb-item { cursor: pointer; border: 2px solid transparent; border-radius: 6px; transition: border-color 0.15s; }
+    .thumb-item:hover { border-color: #6366f1; }
+    .thumb-item.active { border-color: #818cf8; box-shadow: 0 0 0 2px rgba(99,102,241,0.3); }
+    .thumb-frame-wrapper { width: 180px; height: 101px; overflow: hidden; position: relative; background: #f8f8f8; border-radius: 4px; }
+    .thumb-frame { width: 1920px; height: 1080px; border: none; pointer-events: none; transform-origin: 0 0; }
+    .slide-iframe { width: 1920px; height: 1080px; border: none; transform-origin: 0 0; }
+    #notes-panel { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+    #notes-panel.open { max-height: 200px; }
+    #fullscreen-overlay { display: none; position: fixed; inset: 0; z-index: 100; background: #000; }
+    #fullscreen-overlay.open { display: flex; align-items: center; justify-content: center; }
+    .fs-frame { width: 1920px; height: 1080px; border: none; transform-origin: 0 0; }
+    .tpl-item { cursor: pointer; border-radius: 4px; overflow: hidden; border: 1px solid #374151; transition: border-color 0.15s; }
+    .tpl-item:hover { border-color: #6366f1; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-200">
+
+  <!-- Layout: sidebar (thumbs) | main (preview) | right panel (templates) -->
+  <div class="flex h-screen">
+
+    <!-- LEFT: Thumbnail strip -->
+    <div class="w-52 bg-gray-900 border-r border-gray-800 flex flex-col">
+      <div class="px-3 py-2 border-b border-gray-800">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Slides</p>
+      </div>
+      <div id="thumb-strip" class="flex-1 overflow-y-auto p-2 space-y-2"></div>
+    </div>
+
+    <!-- CENTER: Main preview -->
+    <div class="flex-1 flex flex-col min-w-0">
+      <!-- Top bar -->
+      <div class="h-12 bg-gray-900 border-b border-gray-800 flex items-center px-4 gap-3">
+        <button onclick="navigate(-1)" class="text-gray-400 hover:text-white px-2 py-1 rounded hover:bg-gray-800" title="Previous (Left arrow)">&#9664;</button>
+        <span id="slide-counter" class="text-sm text-gray-400 min-w-16 text-center">1 / 1</span>
+        <button onclick="navigate(1)" class="text-gray-400 hover:text-white px-2 py-1 rounded hover:bg-gray-800" title="Next (Right arrow)">&#9654;</button>
+        <div class="flex-1"></div>
+        <!-- Theme selector -->
+        <label class="text-xs text-gray-500 mr-1">Theme:</label>
+        <select id="theme-select" class="text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-2 py-1 focus:outline-none focus:border-indigo-500"></select>
+        <div class="w-px h-5 bg-gray-700 mx-2"></div>
+        <button id="notes-toggle-btn" onclick="toggleNotes()" class="text-xs text-gray-400 border border-gray-700 rounded px-2 py-1 hover:text-indigo-300 hover:border-indigo-500 transition-colors" title="Toggle notes (N)">Notes</button>
+        <button onclick="enterFullscreen()" class="text-xs text-gray-400 border border-gray-700 rounded px-2 py-1 hover:text-indigo-300 hover:border-indigo-500 transition-colors" title="Fullscreen (F)">Fullscreen</button>
+      </div>
+
+      <!-- Slide viewport -->
+      <div id="slide-viewport" class="flex-1 bg-gray-950 flex items-center justify-center overflow-hidden p-4">
+        <iframe id="slide-frame" class="slide-iframe" scrolling="no" sandbox="allow-same-origin allow-scripts"></iframe>
+      </div>
+
+      <!-- Notes panel -->
+      <div id="notes-panel" class="bg-gray-900 border-t border-gray-800 px-6 overflow-y-auto">
+        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider pt-3 pb-1">Speaker Notes</p>
+        <p id="notes-text" class="text-sm text-gray-300 pb-3 leading-relaxed"></p>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="h-1 bg-gray-800">
+        <div id="progress-bar" class="h-full bg-indigo-600 transition-all duration-200" style="width:0%"></div>
+      </div>
+
+      <!-- Export bar -->
+      <div class="h-10 bg-gray-900 border-t border-gray-800 flex items-center px-4 gap-2">
+        <span class="text-xs text-gray-500 mr-2">Export:</span>
+        <button onclick="exportAction('pdf')" class="export-btn text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-3 py-1 hover:border-indigo-500 hover:text-indigo-300 transition-colors">PDF</button>
+        <button onclick="exportAction('pptx')" class="export-btn text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-3 py-1 hover:border-indigo-500 hover:text-indigo-300 transition-colors">PPTX</button>
+        <button onclick="exportAction('html')" class="export-btn text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-3 py-1 hover:border-indigo-500 hover:text-indigo-300 transition-colors">HTML</button>
+        <button onclick="exportAction('figma')" class="export-btn text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-3 py-1 hover:border-indigo-500 hover:text-indigo-300 transition-colors">Figma</button>
+        <div class="flex-1"></div>
+        <span class="text-xs text-gray-600">Arrows: navigate | F: fullscreen | N: notes | Esc: exit</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Template gallery -->
+    <div class="w-56 bg-gray-900 border-l border-gray-800 flex flex-col">
+      <div class="px-3 py-2 border-b border-gray-800">
+        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Templates</p>
+        <input id="tpl-search" type="text" placeholder="Search..." class="w-full text-xs bg-gray-800 border border-gray-700 text-gray-300 rounded px-2 py-1 focus:outline-none focus:border-indigo-500">
+      </div>
+      <div id="category-tabs" class="px-3 py-2 flex flex-wrap gap-1 border-b border-gray-800"></div>
+      <div id="tpl-gallery" class="flex-1 overflow-y-auto p-2 space-y-1"></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen overlay -->
+  <div id="fullscreen-overlay" onclick="exitFullscreen()">
+    <iframe id="fullscreen-frame" class="fs-frame" scrolling="no" sandbox="allow-same-origin allow-scripts"></iframe>
+  </div>
+
+  <!-- DATA INJECTION POINTS -->
+  <script id="slides-data" type="application/json">
+  [
+    {
+      "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;width:1920px;height:1080px;padding:80px;\"><h1 style=\"font-family:var(--font-header);font-size:64px;font-weight:700;text-align:center;max-width:1200px;line-height:1.1;color:var(--color-text);\">Your Presentation Title</h1><p style=\"font-size:var(--size-header);color:var(--color-muted);margin-top:24px;\">Subtitle or tagline here</p><div style=\"width:80px;height:4px;background:var(--color-accent);margin-top:32px;border-radius:2px;\"></div></div>",
+      "notes": "Welcome the audience. Set the stage.",
+      "templateId": "title-centered-hero-light"
+    },
+    {
+      "html": "<div style=\"display:flex;flex-direction:column;width:1920px;height:1080px;padding:80px;\"><h1 style=\"font-family:var(--font-header);font-size:var(--size-title);font-weight:600;margin-bottom:48px;color:var(--color-text);\">Key Points</h1><div style=\"display:flex;flex-direction:column;gap:24px;\"><div style=\"display:flex;align-items:flex-start;gap:20px;\"><div style=\"width:32px;height:32px;border-radius:50%;background:var(--color-accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;\">1</div><p style=\"font-size:var(--size-body);color:var(--color-text);line-height:1.6;\">First important point with supporting details</p></div><div style=\"display:flex;align-items:flex-start;gap:20px;\"><div style=\"width:32px;height:32px;border-radius:50%;background:var(--color-accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;\">2</div><p style=\"font-size:var(--size-body);color:var(--color-text);line-height:1.6;\">Second point that builds on the first</p></div><div style=\"display:flex;align-items:flex-start;gap:20px;\"><div style=\"width:32px;height:32px;border-radius:50%;background:var(--color-accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:14px;\">3</div><p style=\"font-size:var(--size-body);color:var(--color-text);line-height:1.6;\">Third point that ties everything together</p></div></div></div>",
+      "notes": "Cover each point deliberately.",
+      "templateId": "content-bullets-light"
+    },
+    {
+      "html": "<div style=\"display:flex;flex-direction:column;align-items:center;justify-content:center;width:1920px;height:1080px;padding:80px;background:var(--color-primary);color:var(--color-background);\"><p style=\"font-size:var(--size-header);opacity:0.7;margin-bottom:32px;\">Thank you</p><h1 style=\"font-family:var(--font-header);font-size:56px;font-weight:700;text-align:center;max-width:1000px;line-height:1.1;\">Let's build something great together.</h1><div style=\"width:80px;height:4px;background:var(--color-accent);margin-top:48px;border-radius:2px;\"></div></div>",
+      "notes": "End with energy. Invite questions.",
+      "templateId": "closing-bold-statement"
+    }
+  ]
+  </script>
+
+  <script id="theme-data" type="application/json">
+  {
+    "keynote-minimal": {
+      "display_name": "Keynote Minimal",
+      "--color-primary": "#1D1D1F", "--color-accent": "#0071E3", "--color-background": "#FFFFFF",
+      "--color-text": "#1D1D1F", "--color-muted": "#86868B", "--color-border": "#D2D2D7",
+      "--font-header": "SF Pro Display, Helvetica Neue, Arial, sans-serif",
+      "--font-body": "SF Pro Text, Helvetica Neue, Arial, sans-serif",
+      "--size-title": "48px", "--size-header": "28px", "--size-body": "18px", "--size-caption": "14px",
+      "--margin": "80px", "--gap": "40px"
+    },
+    "pitch-bold": {
+      "display_name": "Pitch Bold",
+      "--color-primary": "#FFFFFF", "--color-accent": "#FF6B2B", "--color-background": "#0D0D0D",
+      "--color-text": "#FFFFFF", "--color-muted": "#666666", "--color-border": "#333333",
+      "--font-header": "Inter, Helvetica Neue, sans-serif", "--font-body": "Inter, Helvetica Neue, sans-serif",
+      "--size-title": "56px", "--size-header": "32px", "--size-body": "18px", "--size-caption": "14px",
+      "--margin": "64px", "--gap": "32px"
+    },
+    "editorial": {
+      "display_name": "Editorial",
+      "--color-primary": "#2C2C2C", "--color-accent": "#C1440E", "--color-background": "#FAF7F2",
+      "--color-text": "#2C2C2C", "--color-muted": "#9B9B9B", "--color-border": "#E0D5C5",
+      "--font-header": "Playfair Display, Georgia, serif", "--font-body": "Source Sans Pro, Calibri, sans-serif",
+      "--size-title": "52px", "--size-header": "28px", "--size-body": "17px", "--size-caption": "13px",
+      "--margin": "80px", "--gap": "40px"
+    },
+    "creative-pop": {
+      "display_name": "Creative Pop",
+      "--color-primary": "#E8175D", "--color-accent": "#F7B731", "--color-background": "#FFFFFF",
+      "--color-text": "#2C3A47", "--color-muted": "#778CA3", "--color-border": "#D1D8E0",
+      "--font-header": "Poppins, Arial Black, sans-serif", "--font-body": "Open Sans, Calibri, sans-serif",
+      "--size-title": "60px", "--size-header": "36px", "--size-body": "18px", "--size-caption": "14px",
+      "--margin": "60px", "--gap": "30px"
+    },
+    "data-story": {
+      "display_name": "Data Story",
+      "--color-primary": "#2D3748", "--color-accent": "#3182CE", "--color-background": "#F7FAFC",
+      "--color-text": "#1A202C", "--color-muted": "#A0AEC0", "--color-border": "#E2E8F0",
+      "--font-header": "IBM Plex Sans, Roboto, sans-serif", "--font-body": "IBM Plex Sans, Roboto, sans-serif",
+      "--size-title": "44px", "--size-header": "24px", "--size-body": "16px", "--size-caption": "12px",
+      "--margin": "64px", "--gap": "32px"
+    },
+    "consulting-polish": {
+      "display_name": "Consulting Polish",
+      "--color-primary": "#1E2761", "--color-accent": "#D4AF37", "--color-background": "#FFFFFF",
+      "--color-text": "#2D2D2D", "--color-muted": "#6B7280", "--color-border": "#E5E7EB",
+      "--font-header": "Georgia, Cambria, serif", "--font-body": "Calibri, Arial, sans-serif",
+      "--size-title": "44px", "--size-header": "24px", "--size-body": "16px", "--size-caption": "12px",
+      "--margin": "72px", "--gap": "36px"
+    }
+  }
+  </script>
+
+  <script id="templates-data" type="application/json">
+  [
+    {"id":"title-centered-hero-light","category":"title","layout":"centered-hero","treatment":"light","description":"Centered title on white"},
+    {"id":"title-split-image-light","category":"title","layout":"split-image","treatment":"light","description":"Title left, image right"},
+    {"id":"content-two-column-light","category":"content","layout":"two-column","treatment":"light","description":"Two balanced columns"},
+    {"id":"content-three-column-light","category":"content","layout":"three-column","treatment":"light","description":"Three equal columns"},
+    {"id":"content-bullets-light","category":"content","layout":"bullets","treatment":"light","description":"Bulleted content"},
+    {"id":"data-chart-light","category":"data","layout":"chart-focus","treatment":"light","description":"Chart with context header"},
+    {"id":"data-metrics-light","category":"data","layout":"metric-grid","treatment":"light","description":"Metric grid"},
+    {"id":"data-table-light","category":"data","layout":"table","treatment":"light","description":"Structured data table"},
+    {"id":"quote-centered-light","category":"quote","layout":"centered","treatment":"light","description":"Centered pull quote"},
+    {"id":"image-full-bleed-light","category":"image","layout":"full-bleed","treatment":"light","description":"Full-bleed image"},
+    {"id":"timeline-horizontal-light","category":"timeline","layout":"horizontal","treatment":"light","description":"Horizontal timeline"},
+    {"id":"comparison-table-light","category":"comparison","layout":"table","treatment":"light","description":"Feature comparison"},
+    {"id":"team-grid-light","category":"team","layout":"grid","treatment":"light","description":"Team member grid"},
+    {"id":"closing-bold-statement","category":"closing","layout":"bold-statement","treatment":"reversed","description":"Bold closing statement"},
+    {"id":"closing-cta-light","category":"closing","layout":"cta","treatment":"light","description":"Call to action"}
+  ]
+  </script>
+
+  <script>
+  (function () {
+    'use strict';
+
+    var slides = [], themes = {}, templates = [];
+    var currentIndex = 0, activeTheme = null, notesOpen = false, selectedCategory = 'all';
+
+    var slideFrame = document.getElementById('slide-frame');
+    var thumbStrip = document.getElementById('thumb-strip');
+    var progressBar = document.getElementById('progress-bar');
+    var slideCounter = document.getElementById('slide-counter');
+    var notesPanel = document.getElementById('notes-panel');
+    var notesText = document.getElementById('notes-text');
+    var noteToggleBtn = document.getElementById('notes-toggle-btn');
+    var themeSelect = document.getElementById('theme-select');
+    var tplGallery = document.getElementById('tpl-gallery');
+    var tplSearch = document.getElementById('tpl-search');
+    var categoryTabs = document.getElementById('category-tabs');
+    var fsOverlay = document.getElementById('fullscreen-overlay');
+    var fsFrame = document.getElementById('fullscreen-frame');
+    var slideViewport = document.getElementById('slide-viewport');
+
+    function scaleFrame(frame, wrapper, w, h) {
+      var sw = wrapper.clientWidth || wrapper.offsetWidth;
+      var sh = wrapper.clientHeight || wrapper.offsetHeight;
+      frame.style.transform = 'scale(' + Math.min(sw / w, sh / h) + ')';
+    }
+
+    function scaleMainFrame() { scaleFrame(slideFrame, slideViewport, 1920, 1080); }
+
+    function buildSlideDoc(html, vars) {
+      var cssVars = Object.keys(vars || {}).filter(function(k) { return k.indexOf('--') === 0; })
+        .map(function(k) { return '  ' + k + ': ' + vars[k] + ';'; }).join('\n');
+      return '<!DOCTYPE html><html><head><meta charset="UTF-8"><style>' +
+        '*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }\n' +
+        ':root {\n' + cssVars + '\n}\n' +
+        'body { width:1920px; height:1080px; overflow:hidden; ' +
+        'font-family: var(--font-body, Helvetica Neue, Arial, sans-serif); ' +
+        'font-size: var(--size-body, 18px); color: var(--color-text, #1D1D1F); ' +
+        'background-color: var(--color-background, #fff); }\n' +
+        'h1,h2,h3,h4,h5,h6 { font-family: var(--font-header, Helvetica Neue, Arial, sans-serif); }' +
+        '</style></head><body>' + html + '</body></html>';
+    }
+
+    function writeFrame(frame, doc) {
+      var d = frame.contentDocument || frame.contentWindow.document;
+      d.open(); d.write(doc); d.close();
+    }
+
+    function themeVars() {
+      if (!activeTheme || !themes[activeTheme]) return {};
+      var t = themes[activeTheme], out = {};
+      Object.keys(t).forEach(function(k) { if (k.indexOf('--') === 0) out[k] = t[k]; });
+      return out;
+    }
+
+    function renderMain() {
+      if (!slides.length) return;
+      var s = slides[currentIndex], vars = themeVars();
+      writeFrame(slideFrame, buildSlideDoc(s.html, vars));
+      requestAnimationFrame(scaleMainFrame);
+      slideCounter.textContent = (currentIndex + 1) + ' / ' + slides.length;
+      progressBar.style.width = ((currentIndex + 1) / slides.length * 100) + '%';
+      notesText.textContent = s.notes || '';
+      var items = document.querySelectorAll('.thumb-item');
+      items.forEach(function(el, i) { el.classList.toggle('active', i === currentIndex); });
+    }
+
+    function renderThumbs() {
+      thumbStrip.textContent = '';
+      var vars = themeVars();
+      slides.forEach(function(s, i) {
+        var wrap = document.createElement('div');
+        wrap.className = 'thumb-item' + (i === currentIndex ? ' active' : '');
+        wrap.title = 'Slide ' + (i + 1);
+        wrap.onclick = function() { currentIndex = i; renderMain(); };
+        var fw = document.createElement('div');
+        fw.className = 'thumb-frame-wrapper';
+        var fr = document.createElement('iframe');
+        fr.className = 'thumb-frame';
+        fr.setAttribute('scrolling', 'no');
+        fr.setAttribute('sandbox', 'allow-same-origin allow-scripts');
+        var num = document.createElement('div');
+        num.className = 'text-center text-xs text-gray-500 mt-1 pb-1';
+        num.textContent = i + 1;
+        fw.appendChild(fr); wrap.appendChild(fw); wrap.appendChild(num);
+        thumbStrip.appendChild(wrap);
+        requestAnimationFrame(function() {
+          writeFrame(fr, buildSlideDoc(s.html, vars));
+          scaleFrame(fr, fw, 1920, 1080);
+        });
+      });
+    }
+
+    function renderGallery() {
+      var q = tplSearch.value.toLowerCase();
+      var filtered = templates.filter(function(t) {
+        var matchCat = selectedCategory === 'all' || t.category === selectedCategory;
+        var matchQ = !q || t.id.indexOf(q) >= 0 || t.category.indexOf(q) >= 0 || t.layout.indexOf(q) >= 0;
+        return matchCat && matchQ;
+      });
+      var groups = {};
+      filtered.forEach(function(t) { if (!groups[t.category]) groups[t.category] = []; groups[t.category].push(t); });
+      tplGallery.textContent = '';
+      Object.keys(groups).forEach(function(cat) {
+        var h = document.createElement('p');
+        h.className = 'text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1 mt-2';
+        h.textContent = cat;
+        tplGallery.appendChild(h);
+        groups[cat].forEach(function(tpl) {
+          var item = document.createElement('div');
+          item.className = 'tpl-item mb-1';
+          item.title = tpl.description || tpl.id;
+          item.onclick = function() { insertTemplate(tpl); };
+          var lbl = document.createElement('div');
+          lbl.className = 'px-2 py-1.5 bg-gray-800 text-xs text-gray-300';
+          lbl.textContent = tpl.layout + ' (' + tpl.treatment + ')';
+          item.appendChild(lbl);
+          tplGallery.appendChild(item);
+        });
+      });
+    }
+
+    function renderCategoryTabs() {
+      var cats = ['all'];
+      templates.forEach(function(t) { if (cats.indexOf(t.category) < 0) cats.push(t.category); });
+      categoryTabs.textContent = '';
+      cats.forEach(function(cat) {
+        var btn = document.createElement('button');
+        btn.textContent = cat === 'all' ? 'All' : cat;
+        btn.className = 'text-xs px-2 py-0.5 rounded border transition-colors ' +
+          (cat === selectedCategory
+            ? 'bg-indigo-600 border-indigo-500 text-white'
+            : 'bg-gray-800 border-gray-700 text-gray-400 hover:border-indigo-500');
+        btn.onclick = function() { selectedCategory = cat; renderCategoryTabs(); renderGallery(); };
+        categoryTabs.appendChild(btn);
+      });
+    }
+
+    function insertTemplate(tpl) {
+      var v = themeVars(), bg = v['--color-background'] || '#fff', mt = v['--color-muted'] || '#86868B';
+      var html = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+        'width:1920px;height:1080px;background:' + bg + ';gap:24px;">' +
+        '<p style="font-size:48px;color:' + mt + ';">+</p>' +
+        '<p style="font-size:24px;color:' + mt + ';">' + tpl.layout + '</p>' +
+        '<p style="font-size:14px;color:' + mt + ';">' + tpl.id + '</p></div>';
+      slides.push({ html: html, notes: 'New ' + tpl.layout + ' slide.', templateId: tpl.id });
+      currentIndex = slides.length - 1;
+      renderThumbs(); renderMain();
+    }
+
+    window.navigate = function(d) {
+      currentIndex = Math.max(0, Math.min(slides.length - 1, currentIndex + d));
+      renderMain();
+      var thumbs = thumbStrip.querySelectorAll('.thumb-item');
+      if (thumbs[currentIndex]) thumbs[currentIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    };
+
+    window.toggleNotes = function() {
+      notesOpen = !notesOpen;
+      notesPanel.classList.toggle('open', notesOpen);
+    };
+
+    window.enterFullscreen = function() {
+      if (!slides.length) return;
+      fsOverlay.classList.add('open');
+      writeFrame(fsFrame, buildSlideDoc(slides[currentIndex].html, themeVars()));
+      var vw = window.innerWidth, vh = window.innerHeight;
+      var sc = Math.min(vw / 1920, vh / 1080);
+      fsFrame.style.transform = 'scale(' + sc + ')';
+      fsFrame.style.position = 'absolute';
+      fsFrame.style.left = ((vw - 1920 * sc) / 2) + 'px';
+      fsFrame.style.top = ((vh - 1080 * sc) / 2) + 'px';
+    };
+
+    window.exitFullscreen = function() { fsOverlay.classList.remove('open'); };
+
+    window.exportAction = function(fmt) {
+      document.dispatchEvent(new CustomEvent('playground:export', {
+        bubbles: true, detail: { format: fmt, currentIndex: currentIndex, themeId: activeTheme, slideCount: slides.length }
+      }));
+    };
+
+    themeSelect.addEventListener('change', function() {
+      activeTheme = this.value; renderThumbs(); renderMain(); renderGallery();
+    });
+    tplSearch.addEventListener('input', renderGallery);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); navigate(1); }
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); navigate(-1); }
+      else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); fsOverlay.classList.contains('open') ? exitFullscreen() : enterFullscreen(); }
+      else if (e.key === 'n' || e.key === 'N') { e.preventDefault(); toggleNotes(); }
+      else if (e.key === 'Escape') { if (fsOverlay.classList.contains('open')) exitFullscreen(); else if (notesOpen) toggleNotes(); }
+    });
+
+    new ResizeObserver(scaleMainFrame).observe(slideViewport);
+    window.addEventListener('resize', function() { if (fsOverlay.classList.contains('open')) enterFullscreen(); });
+
+    window.playgroundReload = function() {
+      try { slides = JSON.parse(document.getElementById('slides-data').textContent.trim()); } catch(e) { slides = []; }
+      try { themes = JSON.parse(document.getElementById('theme-data').textContent.trim()); } catch(e) { themes = {}; }
+      try { templates = JSON.parse(document.getElementById('templates-data').textContent.trim()); } catch(e) { templates = []; }
+      themeSelect.textContent = '';
+      Object.keys(themes).forEach(function(k) {
+        var opt = document.createElement('option');
+        opt.value = k; opt.textContent = themes[k].display_name || k;
+        themeSelect.appendChild(opt);
+      });
+      if (!activeTheme || !themes[activeTheme]) { activeTheme = Object.keys(themes)[0] || null; if (themeSelect.options.length) themeSelect.value = activeTheme; }
+      currentIndex = 0;
+      renderCategoryTabs(); renderGallery(); renderThumbs(); renderMain();
+    };
+
+    window.playgroundReload();
+  }());
+  </script>
+</body>
+</html>
