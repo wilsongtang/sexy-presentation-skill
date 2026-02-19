@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      /* Theme colors — injected by orchestrator */
+      --color-primary: {{colors.primary}};
+      --color-secondary: {{colors.secondary}};
+      --color-accent: {{colors.accent}};
+      --color-background: {{colors.background}};
+      --color-text: {{colors.text}};
+      --color-text-reversed: {{colors.text_reversed}};
+      --color-muted: {{colors.muted}};
+      --color-border: {{colors.border}};
+
+      /* Typography */
+      --font-header: {{typography.header_font}};
+      --font-body: {{typography.body_font}};
+      --size-title: {{typography.title_size}};
+      --size-header: {{typography.header_size}};
+      --size-body: {{typography.body_size}};
+      --size-caption: {{typography.caption_size}};
+      --line-height: {{typography.line_height}};
+
+      /* Spacing */
+      --margin: {{spacing.margin}};
+      --gap: {{spacing.gap}};
+    }
+
+    @page {
+      size: 1920px 1080px;
+      margin: 0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: var(--font-body);
+      font-size: var(--size-body);
+      line-height: var(--line-height);
+      color: var(--color-text);
+      background-color: var(--color-background);
+    }
+
+    .slide {
+      width: 1920px;
+      height: 1080px;
+      padding: var(--margin);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-header);
+    }
+
+    .page-number {
+      position: absolute;
+      bottom: 24px;
+      right: 40px;
+      font-size: var(--size-caption);
+      color: var(--color-muted);
+    }
+
+    .logo {
+      position: absolute;
+      top: 24px;
+      right: 40px;
+      max-height: 48px;
+      width: auto;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'theme-primary': 'var(--color-primary)',
+            'theme-secondary': 'var(--color-secondary)',
+            'theme-accent': 'var(--color-accent)',
+            'theme-bg': 'var(--color-background)',
+            'theme-text': 'var(--color-text)',
+            'theme-text-rev': 'var(--color-text-reversed)',
+            'theme-muted': 'var(--color-muted)',
+            'theme-border': 'var(--color-border)',
+          },
+          fontFamily: {
+            'header': 'var(--font-header)',
+            'body': 'var(--font-body)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- SLIDE CONTENT INJECTED HERE -->
+  {{slide_content}}
+</body>
+</html>
