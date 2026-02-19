@@ -1,0 +1,99 @@
+<!-- Template: team-org-chart-light -->
+<!-- Slots: title, ceo_name, ceo_role, dir_1_name, dir_1_role, dir_2_name, dir_2_role, dir_3_name, dir_3_role, lead_1_name, lead_1_role, lead_2_name, lead_2_role, lead_3_name, lead_3_role, lead_4_name, lead_4_role, lead_5_name, lead_5_role, lead_6_name, lead_6_role -->
+<div class="slide">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; position: relative;">
+
+    <!-- Level 1: CEO -->
+    <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 0;">
+      <div style="background: var(--color-primary); border-radius: 12px; padding: 16px 32px; text-align: center; min-width: 240px;">
+        <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text-reversed);">{{ceo_name}}</p>
+        <p style="font-size: var(--size-caption); color: var(--color-text-reversed); opacity: 0.75; font-family: var(--font-body); margin-top: 4px;">{{ceo_role}}</p>
+      </div>
+    </div>
+
+    <!-- Connector: CEO to Directors -->
+    <div style="width: 2px; height: 36px; background: var(--color-border); margin: 0 auto;"></div>
+    <div style="width: 66%; height: 2px; background: var(--color-border);"></div>
+
+    <!-- Level 2: Directors -->
+    <div style="display: flex; justify-content: space-between; width: 100%; position: relative;">
+      <!-- Top connector stubs -->
+      <div style="position: absolute; top: 0; left: 16.5%; width: 2px; height: 28px; background: var(--color-border);"></div>
+      <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 28px; background: var(--color-border);"></div>
+      <div style="position: absolute; top: 0; right: 16.5%; width: 2px; height: 28px; background: var(--color-border);"></div>
+
+      <div style="margin-top: 28px; flex: 1; display: flex; justify-content: space-around; gap: var(--gap);">
+        <!-- Director 1 -->
+        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
+          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_1_name}}</p>
+          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_1_role}}</p>
+        </div>
+        <!-- Director 2 -->
+        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
+          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_2_name}}</p>
+          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_2_role}}</p>
+        </div>
+        <!-- Director 3 -->
+        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
+          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_3_name}}</p>
+          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_3_role}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connectors: Directors to Team Leads -->
+    <div style="display: flex; justify-content: space-around; width: 100%; gap: var(--gap); padding-top: 0;">
+      <div style="flex: 1; display: flex; justify-content: space-around;">
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+      </div>
+      <div style="flex: 1; display: flex; justify-content: space-around;">
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+      </div>
+      <div style="flex: 1; display: flex; justify-content: space-around;">
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
+      </div>
+    </div>
+
+    <!-- Level 3: Team Leads (6, 2 under each director) -->
+    <div style="display: flex; justify-content: space-around; width: 100%; gap: var(--gap);">
+      <!-- Leads under Dir 1 -->
+      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_1_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_1_role}}</p>
+        </div>
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_2_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_2_role}}</p>
+        </div>
+      </div>
+      <!-- Leads under Dir 2 -->
+      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_3_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_3_role}}</p>
+        </div>
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_4_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_4_role}}</p>
+        </div>
+      </div>
+      <!-- Leads under Dir 3 -->
+      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_5_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_5_role}}</p>
+        </div>
+        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
+          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_6_name}}</p>
+          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_6_role}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

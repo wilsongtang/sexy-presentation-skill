@@ -1,0 +1,57 @@
+<!-- Template: team-featured-reversed -->
+<!-- Slots: title, featured_name, featured_role, featured_bio, member_1_name, member_1_role, member_2_name, member_2_role, member_3_name, member_3_role -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
+    <!-- Featured member (large, left) -->
+    <div style="flex: 2; border: 2px solid var(--color-accent); border-radius: 20px; padding: 48px; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; position: relative; overflow: hidden;">
+      <!-- Subtle accent background -->
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--color-accent);"></div>
+      <div style="width: 200px; height: 200px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 3px solid var(--color-accent); margin-top: 12px;">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
+      </div>
+      <div>
+        <p style="font-size: var(--size-header); font-weight: 700; font-family: var(--font-header); color: var(--color-text-reversed);">{{featured_name}}</p>
+        <p style="font-size: var(--size-body); color: var(--color-accent); font-family: var(--font-body); font-weight: 500; margin-top: 6px;">{{featured_role}}</p>
+      </div>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); line-height: var(--line-height); max-width: 500px;">{{featured_bio}}</p>
+    </div>
+
+    <!-- 3 smaller members (right column) -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: var(--gap);">
+      <!-- Member 1 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 14px; padding: 28px; display: flex; flex-direction: row; align-items: center; gap: 20px;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
+        </div>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_1_name}}</p>
+          <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 4px;">{{member_1_role}}</p>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 14px; padding: 28px; display: flex; flex-direction: row; align-items: center; gap: 20px;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
+        </div>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_2_name}}</p>
+          <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 4px;">{{member_2_role}}</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 14px; padding: 28px; display: flex; flex-direction: row; align-items: center; gap: 20px;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
+        </div>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_3_name}}</p>
+          <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 4px;">{{member_3_role}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
