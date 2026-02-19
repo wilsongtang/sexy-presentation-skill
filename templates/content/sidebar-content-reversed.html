@@ -1,0 +1,16 @@
+<!-- Template: content-sidebar-content-reversed -->
+<!-- Slots: sidebar_title, sidebar_items, title, body -->
+<div class="slide" style="background-color: var(--color-primary); !p-0 flex-row">
+  <div style="width: 30%; height: 100%; background: var(--color-secondary); padding: var(--margin); display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+    <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text-reversed); margin-bottom: 16px;">{{sidebar_title}}</h3>
+    <div style="font-size: var(--size-caption); color: var(--color-text-reversed); opacity: 0.85; line-height: 1.8;">
+      {{sidebar_items}}
+    </div>
+  </div>
+  <div style="width: 70%; padding: var(--margin); display: flex; flex-direction: column; justify-content: center;">
+    <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+    <div style="font-size: var(--size-body); line-height: var(--line-height); max-width: 900px;">
+      {{body}}
+    </div>
+  </div>
+</div>
