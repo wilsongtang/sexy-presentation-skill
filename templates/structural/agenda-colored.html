@@ -1,0 +1,44 @@
+<!-- Template: structural-agenda-colored -->
+<!-- Slots: title, item_1_label, item_1_time, item_2_label, item_2_time, item_3_label, item_3_time, item_4_label, item_4_time, item_5_label, item_5_time, item_6_label, item_6_time -->
+<div class="slide" style="background-color: var(--color-secondary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; max-width: 1200px;">
+    <!-- Item 1 -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0; border-bottom: 1px solid var(--color-border);">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">01</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_1_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_1_time}}</span>
+    </div>
+    <!-- Item 2 -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0; border-bottom: 1px solid var(--color-border);">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">02</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_2_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_2_time}}</span>
+    </div>
+    <!-- Item 3 -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0; border-bottom: 1px solid var(--color-border);">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">03</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_3_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_3_time}}</span>
+    </div>
+    <!-- Item 4 -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0; border-bottom: 1px solid var(--color-border);">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">04</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_4_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_4_time}}</span>
+    </div>
+    <!-- Item 5 -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0; border-bottom: 1px solid var(--color-border);">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">05</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_5_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_5_time}}</span>
+    </div>
+    <!-- Item 6 (optional) -->
+    <div style="display: flex; align-items: center; gap: 40px; padding: 20px 0;">
+      <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 700; color: var(--color-accent); min-width: 48px;">06</span>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); flex: 1;">{{item_6_label}}</p>
+      <span style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); white-space: nowrap;">{{item_6_time}}</span>
+    </div>
+  </div>
+</div>

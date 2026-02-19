@@ -1,0 +1,17 @@
+<!-- Template: structural-transition-reversed -->
+<!-- Slots: transition_text -->
+<div class="slide items-center justify-center text-center" style="background-color: var(--color-primary); position: relative; overflow: hidden;">
+  <!-- Subtle concentric ring decoration -->
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 700px; height: 700px; border-radius: 50%; border: 1px solid var(--color-border); opacity: 0.5; pointer-events: none;"></div>
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; border-radius: 50%; border: 1px solid var(--color-border); opacity: 0.5; pointer-events: none;"></div>
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; border-radius: 50%; border: 1px solid var(--color-accent); opacity: 0.2; pointer-events: none;"></div>
+
+  <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 0.8);">
+    <!-- Small decorative dot -->
+    <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent);"></div>
+    <!-- Transition text -->
+    <p style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 400; font-style: italic; color: var(--color-text-reversed); letter-spacing: 0.01em; max-width: 1000px; line-height: var(--line-height);">{{transition_text}}</p>
+    <!-- Small decorative dot -->
+    <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent);"></div>
+  </div>
+</div>

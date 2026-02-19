@@ -1,0 +1,40 @@
+<!-- Template: structural-recap-colored -->
+<!-- Slots: title, point_1, point_2, point_3, point_4 -->
+<div class="slide" style="background-color: var(--color-secondary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; max-width: 1300px; gap: calc(var(--gap) * 0.5);">
+    <!-- Point 1 -->
+    <div style="display: flex; align-items: flex-start; gap: 32px; padding: 28px 36px; border: 1px solid var(--color-border); border-radius: 14px; border-left: 4px solid var(--color-accent);">
+      <!-- Checkmark icon -->
+      <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); line-height: var(--line-height);">{{point_1}}</p>
+    </div>
+
+    <!-- Point 2 -->
+    <div style="display: flex; align-items: flex-start; gap: 32px; padding: 28px 36px; border: 1px solid var(--color-border); border-radius: 14px; border-left: 4px solid var(--color-accent);">
+      <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); line-height: var(--line-height);">{{point_2}}</p>
+    </div>
+
+    <!-- Point 3 -->
+    <div style="display: flex; align-items: flex-start; gap: 32px; padding: 28px 36px; border: 1px solid var(--color-border); border-radius: 14px; border-left: 4px solid var(--color-accent);">
+      <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); line-height: var(--line-height);">{{point_3}}</p>
+    </div>
+
+    <!-- Point 4 -->
+    <div style="display: flex; align-items: flex-start; gap: 32px; padding: 28px 36px; border: 1px solid var(--color-border); border-radius: 14px; border-left: 4px solid var(--color-accent);">
+      <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text); line-height: var(--line-height);">{{point_4}}</p>
+    </div>
+  </div>
+</div>

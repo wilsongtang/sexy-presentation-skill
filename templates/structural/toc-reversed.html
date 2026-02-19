@@ -1,0 +1,72 @@
+<!-- Template: structural-toc-reversed -->
+<!-- Slots: title, section_1_title, section_1_page, section_2_title, section_2_page, section_3_title, section_3_page, section_4_title, section_4_page, section_5_title, section_5_page, section_6_title, section_6_page, section_7_title, section_7_page, section_8_title, section_8_page -->
+<div class="slide" style="background-color: var(--color-primary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <!-- Two-column layout -->
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 calc(var(--gap) * 2); align-content: start;">
+    <!-- Left column: items 1-4 -->
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <!-- TOC Item 1 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">01</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_1_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_1_page}}</span>
+      </div>
+      <!-- TOC Item 2 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">02</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_2_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_2_page}}</span>
+      </div>
+      <!-- TOC Item 3 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">03</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_3_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_3_page}}</span>
+      </div>
+      <!-- TOC Item 4 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0;">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">04</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_4_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_4_page}}</span>
+      </div>
+    </div>
+
+    <!-- Right column: items 5-8 -->
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <!-- TOC Item 5 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">05</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_5_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_5_page}}</span>
+      </div>
+      <!-- TOC Item 6 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">06</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_6_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_6_page}}</span>
+      </div>
+      <!-- TOC Item 7 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0; border-bottom: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">07</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_7_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_7_page}}</span>
+      </div>
+      <!-- TOC Item 8 -->
+      <div style="display: flex; align-items: center; gap: 0; padding: 22px 0;">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-header); font-weight: 600; min-width: 40px;">08</span>
+        <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-text-reversed); flex: 1;">{{section_8_title}}</p>
+        <div style="flex: 1; border-bottom: 1px dotted var(--color-border); margin: 0 12px; position: relative; top: -2px;"></div>
+        <span style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); min-width: 32px; text-align: right;">{{section_8_page}}</span>
+      </div>
+    </div>
+  </div>
+</div>

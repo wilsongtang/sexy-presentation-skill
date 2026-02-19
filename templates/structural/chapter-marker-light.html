@@ -1,0 +1,20 @@
+<!-- Template: structural-chapter-marker-light -->
+<!-- Slots: chapter_number, chapter_title, chapter_subtitle -->
+<div class="slide justify-center" style="position: relative; overflow: hidden;">
+  <!-- Oversized background chapter number -->
+  <div style="position: absolute; right: calc(var(--margin) - 40px); top: 50%; transform: translateY(-50%); font-family: var(--font-header); font-size: 520px; font-weight: 900; color: var(--color-secondary); opacity: 0.08; line-height: 1; user-select: none; pointer-events: none; letter-spacing: -0.05em;">{{chapter_number}}</div>
+
+  <div style="position: relative; z-index: 10; max-width: 1100px; display: flex; flex-direction: column; gap: calc(var(--gap) * 0.7);">
+    <!-- Chapter label -->
+    <p style="font-family: var(--font-body); font-size: var(--size-caption); color: var(--color-accent); letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;">Chapter {{chapter_number}}</p>
+
+    <!-- Thin accent line -->
+    <div style="width: 64px; height: 3px; background: var(--color-accent); border-radius: 2px;"></div>
+
+    <!-- Chapter title -->
+    <h1 style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 700; color: var(--color-text); letter-spacing: -0.025em; line-height: 1.1; max-width: 900px;">{{chapter_title}}</h1>
+
+    <!-- Chapter subtitle -->
+    <p style="font-family: var(--font-body); font-size: var(--size-body); color: var(--color-muted); line-height: var(--line-height); max-width: 800px; margin-top: calc(var(--gap) * 0.3);">{{chapter_subtitle}}</p>
+  </div>
+</div>
