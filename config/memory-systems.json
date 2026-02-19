@@ -1,0 +1,156 @@
+{
+  "$schema": "./memory-systems-schema.json",
+  "description": "Three-memory-system architecture for sexy-presentation plugin. Each memory system serves a distinct purpose and persists across sessions.",
+  "systems": {
+    "brand": {
+      "id": "brand-memory",
+      "description": "Stores brand-specific design preferences, color palettes, typography rules, logo placement guidelines, image style preferences, and tone-of-voice for a particular organization or client.",
+      "persistence": "per-brand",
+      "storage_path": "memory/brand/",
+      "schema": {
+        "brand_name": "string",
+        "primary_colors": ["string"],
+        "secondary_colors": ["string"],
+        "typography": {
+          "heading_font": "string",
+          "body_font": "string",
+          "mono_font": "string"
+        },
+        "logo": {
+          "url": "string",
+          "placement": "string",
+          "min_clear_space": "string"
+        },
+        "image_style": {
+          "preferred_style": "string",
+          "prohibited_imagery": ["string"],
+          "photography_guidelines": "string"
+        },
+        "tone": "string",
+        "custom_rules": ["string"]
+      },
+      "read_by": ["orchestrator", "slide-designer", "art-director", "image-director", "copy-editor"],
+      "write_by": ["orchestrator", "brand-profile-skill"],
+      "example_queries": [
+        "What are Acme Corp's brand colors?",
+        "Does this brand prefer serif or sans-serif headings?",
+        "What imagery is prohibited for this client?"
+      ]
+    },
+    "project": {
+      "id": "project-memory",
+      "description": "Stores decisions and state for the current presentation project: chosen theme, slide plan, design decisions made, image assignments, template selections, and user feedback.",
+      "persistence": "per-project",
+      "storage_path": "memory/project/",
+      "schema": {
+        "project_name": "string",
+        "theme_id": "string",
+        "theme_customizations": "object",
+        "slide_count": "number",
+        "design_decisions": [
+          {
+            "slide_index": "number",
+            "decision": "string",
+            "rationale": "string"
+          }
+        ],
+        "template_assignments": [
+          {
+            "slide_index": "number",
+            "template_id": "string"
+          }
+        ],
+        "image_assignments": [
+          {
+            "slide_index": "number",
+            "image_src": "string",
+            "mode_used": "string"
+          }
+        ],
+        "user_feedback": [
+          {
+            "slide_index": "number",
+            "feedback": "string",
+            "applied": "boolean"
+          }
+        ],
+        "visual_direction": "string",
+        "export_history": ["object"]
+      },
+      "read_by": ["orchestrator", "slide-designer", "art-director", "image-director", "copy-editor", "table-designer", "timeline-agent"],
+      "write_by": ["orchestrator", "slide-designer", "art-director", "image-director"],
+      "example_queries": [
+        "What theme was selected for this project?",
+        "Which template was used for slide 3?",
+        "What visual direction has been established?"
+      ]
+    },
+    "design": {
+      "id": "design-memory",
+      "description": "A learning memory that accumulates design principles, successful patterns, user preferences, and anti-patterns across ALL projects. This memory grows over time and improves design quality with each presentation created.",
+      "persistence": "global",
+      "storage_path": "memory/design/",
+      "schema": {
+        "principles": [
+          {
+            "category": "string",
+            "principle": "string",
+            "source": "string",
+            "confidence": "number"
+          }
+        ],
+        "successful_patterns": [
+          {
+            "context": "string",
+            "pattern": "string",
+            "template_used": "string",
+            "user_rating": "number"
+          }
+        ],
+        "anti_patterns": [
+          {
+            "context": "string",
+            "mistake": "string",
+            "correction": "string"
+          }
+        ],
+        "user_preferences": [
+          {
+            "preference": "string",
+            "strength": "string",
+            "learned_from": "string"
+          }
+        ],
+        "typography_learnings": ["string"],
+        "color_learnings": ["string"],
+        "layout_learnings": ["string"]
+      },
+      "read_by": ["orchestrator", "slide-designer", "art-director", "image-director", "table-designer", "timeline-agent", "copy-editor"],
+      "write_by": ["orchestrator", "art-director", "slide-designer"],
+      "example_queries": [
+        "What typography pairing works best for data-heavy slides?",
+        "What design mistakes should I avoid for timeline slides?",
+        "What are the user's general layout preferences?"
+      ]
+    }
+  },
+  "integration": {
+    "agent_memory_protocol": {
+      "description": "How agents interact with memory systems",
+      "on_start": [
+        "Load brand memory for the active brand (if set)",
+        "Load project memory for the active project",
+        "Load design memory (global, always available)"
+      ],
+      "on_complete": [
+        "Write design decisions to project memory",
+        "If user gave positive feedback, record successful pattern in design memory",
+        "If user gave negative feedback, record anti-pattern in design memory"
+      ],
+      "on_feedback": [
+        "Record user feedback in project memory",
+        "Update design memory with learned preference"
+      ]
+    }
+  }
+}

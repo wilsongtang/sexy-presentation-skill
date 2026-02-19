@@ -1,0 +1,52 @@
+{
+  "$schema": "./model-routing-schema.json",
+  "description": "Model routing configuration for sexy-presentation agents. Controls cost vs quality trade-offs. Override any agent's model by changing its value here.",
+  "default_model": "sonnet",
+  "tiers": {
+    "creative": {
+      "description": "Design-critical agents that require highest visual and creative quality",
+      "model": "opus",
+      "agents": ["orchestrator", "slide-designer", "art-director"]
+    },
+    "support": {
+      "description": "Agents requiring good reasoning but not peak creative ability",
+      "model": "sonnet",
+      "agents": ["copy-editor", "image-director", "table-designer", "timeline-agent", "infographic-agent"]
+    },
+    "mechanical": {
+      "description": "Agents performing structured, rule-based tasks",
+      "model": "haiku",
+      "agents": ["playground-agent", "graphics-polisher"]
+    }
+  },
+  "overrides": {},
+  "presets": {
+    "quality-first": {
+      "description": "Maximum quality — all agents use opus",
+      "creative": "opus",
+      "support": "opus",
+      "mechanical": "sonnet"
+    },
+    "balanced": {
+      "description": "Default — creative=opus, support=sonnet, mechanical=haiku",
+      "creative": "opus",
+      "support": "sonnet",
+      "mechanical": "haiku"
+    },
+    "cost-saver": {
+      "description": "Minimize cost — only orchestrator uses opus",
+      "creative": "sonnet",
+      "support": "haiku",
+      "mechanical": "haiku",
+      "overrides": {
+        "orchestrator": "opus"
+      }
+    },
+    "speed": {
+      "description": "Fastest execution — haiku everywhere except orchestrator",
+      "creative": "sonnet",
+      "support": "haiku",
+      "mechanical": "haiku"
+    }
+  }
+}
