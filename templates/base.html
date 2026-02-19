@@ -19,10 +19,13 @@
       /* Typography */
       --font-header: {{typography.header_font}};
       --font-body: {{typography.body_font}};
+      --size-display: {{typography.display_size}};
+      --size-stat: {{typography.stat_size}};
       --size-title: {{typography.title_size}};
       --size-header: {{typography.header_size}};
       --size-body: {{typography.body_size}};
       --size-caption: {{typography.caption_size}};
+      --size-overline: {{typography.overline_size}};
       --line-height: {{typography.line_height}};
 
       /* Spacing */
@@ -76,7 +79,25 @@
       max-height: 48px;
       width: auto;
     }
+
+    .overline {
+      font-size: var(--size-overline);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      color: var(--color-muted);
+    }
+
+    .motif-element {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+    }
   </style>
+  <!-- Theme motif styles -->
+  <style>{{motif_css}}</style>
+  <!-- Image treatment utilities -->
+  <style>{{image_treatments_css}}</style>
   <script>
     tailwind.config = {
       theme: {
