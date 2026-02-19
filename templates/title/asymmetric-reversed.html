@@ -1,0 +1,13 @@
+<!-- Template: title-asymmetric-reversed -->
+<!-- Slots: title, subtitle -->
+<div class="slide !p-0 flex-row" style="background-color: var(--color-primary); position: relative;">
+  <div style="position: absolute; right: 0; top: 0; width: 40%; height: 100%; background: var(--color-secondary); opacity: 0.3;"></div>
+  <div class="flex flex-col justify-end" style="padding: var(--margin); padding-bottom: 120px; width: 65%; position: relative; z-index: 10;">
+    <h1 style="font-size: var(--size-title); font-weight: 700; letter-spacing: -0.02em;">
+      {{title}}
+    </h1>
+    <p style="font-size: var(--size-header); color: rgba(255,255,255,0.6); margin-top: calc(var(--gap) * 0.5);">
+      {{subtitle}}
+    </p>
+  </div>
+</div>
