@@ -1,0 +1,31 @@
+{
+  "name": "consulting-polish",
+  "display_name": "Consulting Polish",
+  "description": "McKinsey/BCG-style professional presentation with navy and gold accents",
+  "colors": {
+    "primary": "#1E2761",
+    "secondary": "#CADCFC",
+    "accent": "#D4AF37",
+    "background": "#FFFFFF",
+    "text": "#2D2D2D",
+    "text_reversed": "#FFFFFF",
+    "muted": "#6B7280",
+    "border": "#E5E7EB"
+  },
+  "typography": {
+    "header_font": "Georgia, Cambria, serif",
+    "body_font": "Calibri, Arial, sans-serif",
+    "title_size": "44px",
+    "header_size": "24px",
+    "body_size": "16px",
+    "caption_size": "12px",
+    "line_height": "1.5"
+  },
+  "spacing": {
+    "margin": "72px",
+    "gap": "36px",
+    "density": "comfortable"
+  },
+  "motif": "subtle-border-left",
+  "background_modes": ["light", "colored", "reversed"]
+}

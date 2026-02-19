@@ -1,0 +1,31 @@
+{
+  "name": "creative-pop",
+  "display_name": "Creative Pop",
+  "description": "TED talk energy with bold colors and oversized typography",
+  "colors": {
+    "primary": "#E8175D",
+    "secondary": "#474787",
+    "accent": "#F7B731",
+    "background": "#FFFFFF",
+    "text": "#2C3A47",
+    "text_reversed": "#FFFFFF",
+    "muted": "#778CA3",
+    "border": "#D1D8E0"
+  },
+  "typography": {
+    "header_font": "Poppins, Arial Black, sans-serif",
+    "body_font": "Open Sans, Calibri, sans-serif",
+    "title_size": "60px",
+    "header_size": "36px",
+    "body_size": "18px",
+    "caption_size": "14px",
+    "line_height": "1.6"
+  },
+  "spacing": {
+    "margin": "60px",
+    "gap": "30px",
+    "density": "comfortable"
+  },
+  "motif": "geometric-shapes",
+  "background_modes": ["light", "colored", "reversed"]
+}
