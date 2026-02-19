@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Presentation Theme",
+  "type": "object",
+  "required": ["name", "colors", "typography", "spacing", "motif", "background_modes"],
+  "properties": {
+    "name": { "type": "string" },
+    "display_name": { "type": "string" },
+    "description": { "type": "string" },
+    "colors": {
+      "type": "object",
+      "required": ["primary", "secondary", "accent", "background", "text", "text_reversed"],
+      "properties": {
+        "primary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "secondary": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "accent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "background": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "text": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "text_reversed": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "muted": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+        "border": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["header_font", "body_font", "title_size", "header_size", "body_size"],
+      "properties": {
+        "header_font": { "type": "string" },
+        "body_font": { "type": "string" },
+        "title_size": { "type": "string" },
+        "header_size": { "type": "string" },
+        "body_size": { "type": "string" },
+        "caption_size": { "type": "string" },
+        "line_height": { "type": "string" }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "required": ["margin", "gap", "density"],
+      "properties": {
+        "margin": { "type": "string" },
+        "gap": { "type": "string" },
+        "density": { "type": "string", "enum": ["compact", "comfortable", "spacious"] }
+      }
+    },
+    "motif": { "type": "string" },
+    "background_modes": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["light", "colored", "reversed"] }
+    }
+  }
+}
