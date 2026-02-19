@@ -1,0 +1,42 @@
+<!-- Template: comparison-stacked-compare-colored -->
+<!-- Slots: title, top_label, top_heading, top_body, top_tag, bottom_label, bottom_heading, bottom_body, bottom_tag -->
+<div class="slide" style="background-color: var(--color-secondary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header);">{{title}}</h2>
+  <div class="flex flex-col" style="gap: var(--gap); flex: 1;">
+
+    <!-- Top Panel -->
+    <div class="flex flex-row" style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; align-items: stretch;">
+      <!-- Accent sidebar -->
+      <div style="width: 8px; background: var(--color-accent); flex-shrink: 0;"></div>
+      <!-- Label column -->
+      <div style="width: 200px; background: #f9fafb; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border-right: 1px solid var(--color-border); flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-header);">{{top_label}}</span>
+        <div style="width: 24px; height: 2px; background: var(--color-accent); border-radius: 1px;"></div>
+        <span style="font-size: var(--size-caption); color: var(--color-muted); background: #e5e7eb; padding: 4px 10px; border-radius: 20px; font-weight: 500;">{{top_tag}}</span>
+      </div>
+      <!-- Content -->
+      <div style="flex: 1; padding: 32px 40px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{top_heading}}</h3>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6; max-width: 1200px;">{{top_body}}</p>
+      </div>
+    </div>
+
+    <!-- Bottom Panel -->
+    <div class="flex flex-row" style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; align-items: stretch;">
+      <!-- Accent sidebar -->
+      <div style="width: 8px; background: var(--color-secondary); flex-shrink: 0;"></div>
+      <!-- Label column -->
+      <div style="width: 200px; background: #f9fafb; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border-right: 1px solid var(--color-border); flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-header);">{{bottom_label}}</span>
+        <div style="width: 24px; height: 2px; background: var(--color-secondary); border-radius: 1px;"></div>
+        <span style="font-size: var(--size-caption); color: var(--color-muted); background: #e5e7eb; padding: 4px 10px; border-radius: 20px; font-weight: 500;">{{bottom_tag}}</span>
+      </div>
+      <!-- Content -->
+      <div style="flex: 1; padding: 32px 40px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
+        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{bottom_heading}}</h3>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6; max-width: 1200px;">{{bottom_body}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<!-- Template: comparison-pros-cons-light -->
+<!-- Slots: title, pro_1, pro_2, pro_3, pro_4, con_1, con_2, con_3, con_4 -->
+<div class="slide">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header);">{{title}}</h2>
+  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
+
+    <!-- Pros Panel -->
+    <div style="flex: 1; border: 2px solid #16a34a; border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 20px; background: #f0fdf4;">
+      <div class="flex flex-row items-center" style="gap: 12px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; background: #16a34a; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: #ffffff; font-size: 18px; font-weight: 700; line-height: 1;">+</span>
+        </div>
+        <h3 style="font-size: var(--size-body); font-weight: 700; color: #15803d; font-family: var(--font-header);">Pros</h3>
+      </div>
+      <div style="height: 1px; background: #86efac;"></div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
+          <span>{{pro_1}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
+          <span>{{pro_2}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
+          <span>{{pro_3}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
+          <span>{{pro_4}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cons Panel -->
+    <div style="flex: 1; border: 2px solid #dc2626; border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 20px; background: #fff1f2;">
+      <div class="flex flex-row items-center" style="gap: 12px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; background: #dc2626; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: #ffffff; font-size: 18px; font-weight: 700; line-height: 1;">&#8722;</span>
+        </div>
+        <h3 style="font-size: var(--size-body); font-weight: 700; color: #b91c1c; font-family: var(--font-header);">Cons</h3>
+      </div>
+      <div style="height: 1px; background: #fca5a5;"></div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
+          <span>{{con_1}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
+          <span>{{con_2}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
+          <span>{{con_3}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
+          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
+          <span>{{con_4}}</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

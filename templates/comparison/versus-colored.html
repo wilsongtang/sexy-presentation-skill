@@ -1,0 +1,65 @@
+<!-- Template: comparison-versus-colored -->
+<!-- Slots: title, left_name, left_image, left_detail_1, left_detail_2, left_detail_3, right_name, right_image, right_detail_1, right_detail_2, right_detail_3 -->
+<div class="slide" style="background-color: var(--color-secondary);">
+  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header); text-align: center;">{{title}}</h2>
+  <div class="flex flex-row" style="gap: 0; flex: 1; align-items: stretch; position: relative;">
+
+    <!-- Left Option -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 32px 56px; border: 1px solid var(--color-border); border-radius: 16px 0 0 16px; background: #ffffff;">
+      <!-- Image area -->
+      <div style="width: 100%; height: 280px; border-radius: 12px; background: #f3f4f6; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
+        {{left_image}}
+      </div>
+      <!-- Name -->
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text); font-family: var(--font-header); text-align: center;">{{left_name}}</h3>
+      <!-- Details -->
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; width: 100%;">
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-accent); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{left_detail_1}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-accent); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{left_detail_2}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-accent); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{left_detail_3}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- VS Badge (absolutely centered) -->
+    <div style="width: 0; display: flex; align-items: center; justify-content: center; z-index: 10; position: relative;">
+      <div style="width: 72px; height: 72px; border-radius: 50%; background: var(--color-accent); border: 4px solid #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; position: absolute; left: -36px; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 800; color: #ffffff; letter-spacing: 0.03em; font-family: var(--font-header);">VS</span>
+      </div>
+    </div>
+
+    <!-- Right Option -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 32px 56px; border: 1px solid var(--color-border); border-left: none; border-radius: 0 16px 16px 0; background: #ffffff;">
+      <!-- Image area -->
+      <div style="width: 100%; height: 280px; border-radius: 12px; background: #f3f4f6; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0;">
+        {{right_image}}
+      </div>
+      <!-- Name -->
+      <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text); font-family: var(--font-header); text-align: center;">{{right_name}}</h3>
+      <!-- Details -->
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; width: 100%;">
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-secondary); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{right_detail_1}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-secondary); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{right_detail_2}}</span>
+        </li>
+        <li class="flex flex-row items-start" style="gap: 10px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">
+          <span style="color: var(--color-secondary); font-weight: 600; flex-shrink: 0;">&#8226;</span>
+          <span>{{right_detail_3}}</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
