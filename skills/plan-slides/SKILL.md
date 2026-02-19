@@ -79,6 +79,30 @@ After the initial template assignment, review the sequence for pacing issues:
 
 Reorder or add slides as needed. Document any additions made (with reason) in the plan's `notes` field.
 
+### 5. Intensity Classification (Hero Moments)
+
+After template assignment and pacing review, make a second pass to tag each slide with an **intensity level**. This tag tells the slide-designer how dramatically to treat the slide.
+
+| Level | Meaning | Visual treatment |
+|---|---|---|
+| `hero` | The room goes quiet. Big reveal, emotional peak, key insight. | `--size-display` typography, full-bleed imagery with treatment, `motif-hero` class, maximum whitespace, max 10 words on screen |
+| `impact` | Important supporting beat. Carries weight but not the climax. | `--size-stat` for numbers or enlarged title, image treatments, `motif-bold` class, 2 content elements maximum |
+| `workhorse` | Carries the argument. Content-dense but still polished. | Standard typography scale, clean layout, `motif-subtle` class, edge tension and one-dominant-element rules apply |
+
+**Classification signals:**
+
+- Title slide (first slide) → `hero`
+- Closing / CTA slide (last slide) → `hero`
+- Single stat or number as primary content → `impact` (or `hero` if it's THE key number)
+- Single sentence or short phrase as only content → `hero`
+- Strong pull quote or testimonial → `impact`
+- Section break / chapter divider → `impact`
+- All other content slides → `workhorse`
+
+**Every slide gets elevated treatment.** The difference between `hero` and `workhorse` is dramatic vs. controlled — not good vs. filler. There are no throwaway slides.
+
+Add the `intensity` field to each slide in the output array.
+
 ## Output Format: Slide Plan Array
 
 ```json
@@ -102,6 +126,7 @@ Reorder or add slides as needed. Document any additions made (with reason) in th
       "chart": null,
       "specialized": null,
       "needs_imagery": false,
+      "intensity": "hero",
       "speaker_notes": "",
       "design_notes": "Use the hero variant with large title treatment"
     },
@@ -117,6 +142,7 @@ Reorder or add slides as needed. Document any additions made (with reason) in th
       "chart": null,
       "specialized": null,
       "needs_imagery": false,
+      "intensity": "impact",
       "speaker_notes": "Explain each metric briefly",
       "design_notes": "Three equal-width stat cards with large numerals"
     }
