@@ -1,0 +1,17 @@
+<!-- Template: quote-large-centered-light -->
+<!-- Slots: quote_text, attribution -->
+<div class="slide items-center justify-center text-center" style="position: relative;">
+  <!-- Decorative open quotation mark -->
+  <div style="position: absolute; top: calc(var(--margin) + 20px); left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&ldquo;</div>
+  <!-- Decorative close quotation mark -->
+  <div style="position: absolute; bottom: calc(var(--margin) + 20px); left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&rdquo;</div>
+
+  <div style="position: relative; z-index: 10; max-width: 1400px; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.5);">
+    <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 400; font-style: italic; line-height: 1.25; color: var(--color-text); letter-spacing: -0.02em;">
+      {{quote_text}}
+    </blockquote>
+    <p style="font-size: var(--size-body); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase;">
+      &mdash; {{attribution}}
+    </p>
+  </div>
+</div>

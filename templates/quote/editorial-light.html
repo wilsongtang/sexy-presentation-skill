@@ -1,0 +1,25 @@
+<!-- Template: quote-editorial-light -->
+<!-- Slots: quote_text, attribution -->
+<div class="slide justify-center" style="position: relative;">
+  <div style="max-width: 1300px; width: 100%; display: flex; flex-direction: column; gap: calc(var(--gap) * 0.8);">
+    <!-- Top thin rule line -->
+    <div style="height: 1px; width: 100%; background: var(--color-text);"></div>
+    <!-- Thin spacer line below rule -->
+    <div style="height: 3px; width: 100%; background: var(--color-accent);"></div>
+
+    <div style="padding: calc(var(--gap) * 1.2) 0;">
+      <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 300; font-style: italic; line-height: 1.2; color: var(--color-text); letter-spacing: -0.02em;">
+        {{quote_text}}
+      </blockquote>
+    </div>
+
+    <!-- Bottom thin rule lines -->
+    <div style="height: 3px; width: 100%; background: var(--color-accent);"></div>
+    <div style="height: 1px; width: 100%; background: var(--color-text);"></div>
+
+    <!-- Attribution right-aligned -->
+    <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; text-align: right; padding-top: calc(var(--gap) * 0.4);">
+      {{attribution}}
+    </p>
+  </div>
+</div>
