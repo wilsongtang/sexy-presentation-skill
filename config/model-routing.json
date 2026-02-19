@@ -6,12 +6,12 @@
     "creative": {
       "description": "Design-critical agents that require highest visual and creative quality",
       "model": "opus",
-      "agents": ["orchestrator", "slide-designer", "art-director"]
+      "agents": ["slide-designer", "art-director"]
     },
     "support": {
       "description": "Agents requiring good reasoning but not peak creative ability",
       "model": "sonnet",
-      "agents": ["copy-editor", "image-director", "table-designer", "timeline-agent", "infographic-agent"]
+      "agents": ["orchestrator", "copy-editor", "image-director", "table-designer", "timeline-agent", "infographic-agent"]
     },
     "mechanical": {
       "description": "Agents performing structured, rule-based tasks",
