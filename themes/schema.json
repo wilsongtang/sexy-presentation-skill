@@ -27,10 +27,13 @@
       "properties": {
         "header_font": { "type": "string" },
         "body_font": { "type": "string" },
+        "display_size": { "type": "string", "description": "80-120px. Hero slides, single powerful words." },
+        "stat_size": { "type": "string", "description": "64-96px. Big numbers, KPIs." },
         "title_size": { "type": "string" },
         "header_size": { "type": "string" },
         "body_size": { "type": "string" },
         "caption_size": { "type": "string" },
+        "overline_size": { "type": "string", "description": "11-13px. Uppercase category labels." },
         "line_height": { "type": "string" }
       }
     },
@@ -44,6 +47,7 @@
       }
     },
     "motif": { "type": "string" },
+    "motif_css_path": { "type": "string", "description": "Path to theme motif CSS file relative to plugin root" },
     "background_modes": {
       "type": "array",
       "items": { "type": "string", "enum": ["light", "colored", "reversed"] }
