@@ -18,6 +18,7 @@ Take the assembled, QA-approved presentation HTML and convert it to the user's r
 | PPTX | `CLAUDE_PLUGIN_ROOT/scripts/export-pptx.js` | Editable decks, corporate use |
 | Figma | Figma MCP integration | Design handoff, further editing |
 | HTML | Direct file save | Web embedding, interactive decks |
+| Per-slide HTML | Auto-generated alongside any export | Figma import, individual editing |
 
 ## Format 1: PDF Export
 
@@ -179,6 +180,70 @@ Direct file save — the simplest export format.
 - `--autoplay [seconds]` — auto-advance slides after N seconds
 - `--no-controls` — hide the navigation UI (for embedding in iframes)
 - `--embed-fonts` — download and base64-encode all Google Fonts for full offline use
+
+## Format 5: Per-Slide HTML Export (Figma-Ready)
+
+Export each slide as a standalone, self-contained HTML page for Figma import and individual editing.
+
+### Output Structure
+
+```
+output/
+  deck.html              # Full assembled deck (playground, PDF export)
+  slides/
+    slide-01.html         # Standalone page — own <html>, theme vars, fonts
+    slide-02.html
+    ...
+    slide-N.html
+  assets/                 # Shared images referenced by slides
+```
+
+### Per-Slide HTML Structure
+
+Each standalone slide file is a complete HTML document:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Google Fonts links for theme fonts -->
+  <style>
+    :root { /* Full theme CSS variables inlined */ }
+    /* Base slide styles inlined from base.html */
+    /* Motif CSS inlined from theme motif file */
+    /* Image treatment CSS inlined */
+  </style>
+</head>
+<body>
+  <div class="slide" data-index="N" data-intensity="hero|impact|workhorse">
+    <!-- Motif DOM elements -->
+    <!-- Slide content -->
+  </div>
+</body>
+</html>
+```
+
+### Key Requirements
+
+- **Self-contained**: No external CSS or JS dependencies (except Google Fonts CDN)
+- **One slide per file**: Each file renders exactly one 1920×1080 slide
+- **Motif elements included**: Real DOM elements, not pseudo-elements
+- **Image treatments included**: CSS utility classes inlined in the `<style>` block
+- **Editable**: A designer can open any file in a browser, edit in DevTools, or import into Figma
+
+### Usage
+
+This format is always generated alongside the primary export format. When the user requests any export, also generate the `slides/` directory. The user can opt out with `--no-slide-html`.
+
+### Figma Import Workflow
+
+1. Generate per-slide HTML files
+2. Open each in a browser at 1920×1080 viewport
+3. Use Figma's "Import from URL" or screenshot-to-frame workflow
+4. Motif elements, image treatments, and text are all real DOM — selectable and editable after import
 
 ## Post-Export Actions
 
