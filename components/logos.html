@@ -1,0 +1,123 @@
+<!--
+  logos.html
+  Reusable logo placement patterns for presentation slides.
+  All sizing, opacity, and spacing values use CSS custom properties for theme compatibility.
+  Designed for absolute positioning within a slide container that has position: relative set.
+  Replace the placeholder <img> src with the actual logo path or inline SVG.
+-->
+
+<!-- ============================================================ -->
+<!-- Component: logo-top-right                                     -->
+<!-- Logo anchored to the top-right corner of the slide           -->
+<!-- ============================================================ -->
+<!-- Component: logo-top-right -->
+<div style="
+  position: absolute;
+  top: var(--padding, 24px);
+  right: var(--padding, 24px);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+">
+  <img
+    src="logo.svg"
+    alt="Logo"
+    style="
+      max-height: var(--logo-height, 36px);
+      max-width: var(--logo-width, 160px);
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    "
+  />
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: logo-top-left                                      -->
+<!-- Logo anchored to the top-left corner of the slide            -->
+<!-- ============================================================ -->
+<!-- Component: logo-top-left -->
+<div style="
+  position: absolute;
+  top: var(--padding, 24px);
+  left: var(--padding, 24px);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+">
+  <img
+    src="logo.svg"
+    alt="Logo"
+    style="
+      max-height: var(--logo-height, 36px);
+      max-width: var(--logo-width, 160px);
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    "
+  />
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: logo-bottom-center                                 -->
+<!-- Logo centered horizontally at the bottom of the slide        -->
+<!-- ============================================================ -->
+<!-- Component: logo-bottom-center -->
+<div style="
+  position: absolute;
+  bottom: var(--padding, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+">
+  <img
+    src="logo.svg"
+    alt="Logo"
+    style="
+      max-height: var(--logo-height-sm, 28px);
+      max-width: var(--logo-width, 160px);
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    "
+  />
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: logo-watermark                                     -->
+<!-- Large, low-opacity logo centered on the slide as a watermark -->
+<!-- Sits behind content via z-index; adjust opacity as needed    -->
+<!-- ============================================================ -->
+<!-- Component: logo-watermark -->
+<div style="
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  opacity: var(--watermark-opacity, 0.06);
+">
+  <img
+    src="logo.svg"
+    alt=""
+    aria-hidden="true"
+    style="
+      max-height: var(--watermark-height, 240px);
+      max-width: var(--watermark-width, 480px);
+      width: auto;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    "
+  />
+</div>
