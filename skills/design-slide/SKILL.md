@@ -21,6 +21,8 @@ Each invocation receives:
 | Template HTML | File at `slide.template_path` from the Slide Plan |
 | Brand profile (optional) | `brand-profile.json` from `brand-profile` skill |
 | Resolved images (optional) | Image URLs/base64 from `source-imagery` skill |
+| Slide intensity level | `intensity` field from plan-slides classifier (`hero`, `impact`, `workhorse`) |
+| Image treatments CSS | `components/image-treatments.css` utility classes |
 
 ## Process
 
@@ -65,6 +67,39 @@ Replace each `data-slot` placeholder with the corresponding content from the sli
 - `data-slot="speaker-notes"` → hidden `<aside>` with speaker notes text
 
 For bullet lists, render each body item as an `<li>` with appropriate nesting level class (`level-0`, `level-1`, `level-2`).
+
+### Step 3.5: Inject Motif Elements
+
+Based on the slide's `intensity` level, inject appropriate motif DOM elements from the active theme's motif CSS classes. Add the intensity class to the `.slide` root:
+
+- `hero` → add `motif-hero` class to `.slide`, inject 2-3 motif elements at compositionally significant positions (corners, edges, behind content)
+- `impact` → add `motif-bold` class to `.slide`, inject 1-2 motif elements
+- `workhorse` → add `motif-subtle` class to `.slide`, inject 0-1 motif elements
+
+All motif elements must be real `<div>` nodes with class `motif-element` plus the theme-specific motif class (e.g., `motif-circle`, `motif-rule`). Use `position: absolute` with specific `top`/`left`/`right`/`bottom` values. Never use CSS pseudo-elements.
+
+Example:
+```html
+<div class="motif-element motif-circle" style="position: absolute; top: -60px; right: -40px; width: 300px; height: 300px;"></div>
+```
+
+### Step 3.6: Apply Image Treatments
+
+When a slide contains imagery, wrap the `<img>` element in an image treatment container:
+
+```html
+<div class="img-treatment img-darken">
+  <img src="..." alt="...">
+  <div class="img-treatment-overlay"></div>
+</div>
+```
+
+Treatment selection by intensity:
+- `hero`: `.img-darken`, `.img-duotone`, or `.img-gradient-fade` (choose based on whether text overlays the image)
+- `impact`: `.img-desaturate` or `.img-color-wash`
+- `workhorse`: `.img-desaturate` for backgrounds, no treatment for content images
+
+Never use an image without `object-fit: cover` and a meaningful `alt` attribute.
 
 ### Step 4: Handle Dynamic Resizing
 
@@ -134,6 +169,11 @@ Before returning the HTML fragment, verify all of the following:
 - [ ] Contrast ratio between text and background meets WCAG AA (4.5:1 for body text)
 - [ ] Speaker notes are present in a hidden `<aside>` (even if empty)
 - [ ] No inline `style` attributes that could conflict with theme tokens
+- [ ] Slide has the correct `motif-hero|motif-bold|motif-subtle` class matching its intensity
+- [ ] All motif decorations are real DOM elements with class `motif-element` (no pseudo-elements)
+- [ ] Image treatments use the `.img-treatment` wrapper pattern with `.img-treatment-overlay` div
+- [ ] `--size-display` is only used on `hero` intensity slides
+- [ ] `--size-stat` is only used on `hero` or `impact` intensity slides
 
 If any checklist item fails, fix it before returning. Document any items that could not be resolved in an `<!-- QA: ... -->` HTML comment at the end of the fragment.
 
