@@ -1,16 +1,22 @@
 <!-- Template: quote-large-centered-light -->
 <!-- Slots: quote_text, attribution -->
-<div class="slide items-center justify-center text-center" style="position: relative;">
-  <!-- Decorative open quotation mark -->
-  <div style="position: absolute; top: calc(var(--margin) + 20px); left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&ldquo;</div>
-  <!-- Decorative close quotation mark -->
-  <div style="position: absolute; bottom: calc(var(--margin) + 20px); left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&rdquo;</div>
+<!-- Composition: Minimal Statement | Intensity: impact -->
+<div class="slide items-center justify-center text-center" style="position: relative; overflow: hidden;">
+  <!-- Motif: vertical rule at left edge -->
+  <div class="motif-element motif-rule" style="position: absolute; top: 50%; left: var(--margin); transform: translateY(-50%);"></div>
 
-  <div style="position: relative; z-index: 10; max-width: 1400px; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.5);">
-    <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 400; font-style: italic; line-height: 1.25; color: var(--color-text); letter-spacing: -0.02em;">
+  <!-- Decorative opening quotation mark (real div, not pseudo-element) -->
+  <div aria-hidden="true" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&ldquo;</div>
+
+  <!-- Decorative closing quotation mark (real div, not pseudo-element) -->
+  <div aria-hidden="true" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&rdquo;</div>
+
+  <!-- Content: centered, generous whitespace, z-index above decorative marks -->
+  <div style="position: relative; z-index: 1; max-width: 1400px; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 2);">
+    <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 400; font-style: italic; line-height: 1.25; color: var(--color-text); letter-spacing: -0.02em; margin: 0;">
       {{quote_text}}
     </blockquote>
-    <p style="font-size: var(--size-body); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase;">
+    <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; margin: 0;">
       &mdash; {{attribution}}
     </p>
   </div>
