@@ -1,0 +1,68 @@
+<!-- Template: content-numbered-list-light -->
+<!-- Slots: title, item_1, item_2, item_3, item_4, item_5, item_6 -->
+<!-- Composition: Magazine Flow | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden; display: flex; flex-direction: column; padding: var(--margin);">
+  <!-- Motif: rule bottom-left -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: var(--margin); left: var(--margin);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: column; gap: calc(var(--gap) * 0.6); flex: 1; justify-content: center;">
+    <!-- Item 1 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">1</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_1}}
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">2</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_2}}
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">3</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_3}}
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">4</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_4}}
+      </div>
+    </div>
+    <!-- Item 5 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">5</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_5}}
+      </div>
+    </div>
+    <!-- Item 6 -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 20px;">
+      <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; line-height: 1;">6</span>
+      </div>
+      <div style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-top: 8px;">
+        {{item_6}}
+      </div>
+    </div>
+  </div>
+</div>

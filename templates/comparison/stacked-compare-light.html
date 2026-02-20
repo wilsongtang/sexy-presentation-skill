@@ -1,0 +1,45 @@
+<!-- Template: comparison-stacked-compare-light -->
+<!-- Slots: title, item_1_label, item_1_value, item_2_label, item_2_value, item_3_label, item_3_value -->
+<!-- Composition: Comparison Matrix | Intensity: workhorse -->
+<div class="slide light" style="position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: column; gap: var(--gap); flex: 1; justify-content: center;">
+
+    <!-- Item 1 (dominant — accent color bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{item_1_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 700; color: var(--color-accent);">{{item_1_value}}</span>
+      </div>
+      <div style="height: 16px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 80%; background: var(--color-accent); border-radius: 8px;"></div>
+      </div>
+    </div>
+
+    <!-- Item 2 (supporting — muted bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 500; color: var(--color-text); font-family: var(--font-header);">{{item_2_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-muted);">{{item_2_value}}</span>
+      </div>
+      <div style="height: 12px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 55%; background: var(--color-muted); border-radius: 8px; opacity: 0.4;"></div>
+      </div>
+    </div>
+
+    <!-- Item 3 (supporting — muted bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 500; color: var(--color-text); font-family: var(--font-header);">{{item_3_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-muted);">{{item_3_value}}</span>
+      </div>
+      <div style="height: 12px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 35%; background: var(--color-muted); border-radius: 8px; opacity: 0.4;"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

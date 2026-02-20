@@ -1,0 +1,77 @@
+<!-- Template: comparison-feature-matrix-colored -->
+<!-- Slots: title, feature_1, feature_2, feature_3, feature_4, col_1_name, col_2_name -->
+<!-- Composition: Card Grid | Intensity: workhorse -->
+<div class="slide light" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden;">
+
+    <!-- Header row (accent background) -->
+    <div style="display: flex; flex-direction: row; background: var(--color-accent);">
+      <div style="flex: 2; padding: 24px 32px;">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-header);">Feature</span>
+      </div>
+      <div style="flex: 1; padding: 24px 32px; text-align: center; border-left: 1px solid rgba(255,255,255,0.2);">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; font-family: var(--font-header);">{{col_1_name}}</span>
+      </div>
+      <div style="flex: 1; padding: 24px 32px; text-align: center; border-left: 1px solid rgba(255,255,255,0.2);">
+        <span style="font-size: var(--size-caption); font-weight: 700; color: #fff; font-family: var(--font-header);">{{col_2_name}}</span>
+      </div>
+    </div>
+
+    <!-- Row 1 -->
+    <div style="display: flex; flex-direction: row; flex: 1; border-top: 1px solid var(--color-border);">
+      <div style="flex: 2; padding: 22px 32px; display: flex; align-items: center;">
+        <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-text);">{{feature_1}}</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-muted);">✕</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 700;">✓</span>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div style="display: flex; flex-direction: row; flex: 1; border-top: 1px solid var(--color-border); background: rgba(0,0,0,0.02);">
+      <div style="flex: 2; padding: 22px 32px; display: flex; align-items: center;">
+        <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-text);">{{feature_2}}</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-muted);">✕</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 700;">✓</span>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div style="display: flex; flex-direction: row; flex: 1; border-top: 1px solid var(--color-border);">
+      <div style="flex: 2; padding: 22px 32px; display: flex; align-items: center;">
+        <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-text);">{{feature_3}}</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-muted);">✕</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 700;">✓</span>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div style="display: flex; flex-direction: row; flex: 1; border-top: 1px solid var(--color-border); background: rgba(0,0,0,0.02);">
+      <div style="flex: 2; padding: 22px 32px; display: flex; align-items: center;">
+        <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-text);">{{feature_4}}</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-muted);">✕</span>
+      </div>
+      <div style="flex: 1; padding: 22px 32px; display: flex; align-items: center; justify-content: center; border-left: 1px solid var(--color-border);">
+        <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 700;">✓</span>
+      </div>
+    </div>
+
+  </div>
+</div>

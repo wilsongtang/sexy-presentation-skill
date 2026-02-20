@@ -1,0 +1,9 @@
+{
+  "name": "sexy-presentation",
+  "version": "0.1.0",
+  "description": "Magazine-quality presentation design with 200+ templates, parallel subagents, and interactive playground",
+  "author": {
+    "name": "Wilson Tang"
+  },
+  "keywords": ["presentation", "slides", "design", "tailwind", "pptx", "pdf", "figma"]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "editorial",
+  "display_name": "Editorial",
+  "description": "Magazine-spread aesthetic with serif headers and muted earth tones",
+  "colors": {
+    "primary": "#2C2C2C",
+    "secondary": "#8B7355",
+    "accent": "#C1440E",
+    "background": "#FAF7F2",
+    "text": "#2C2C2C",
+    "text_reversed": "#FAF7F2",
+    "muted": "#9B9B9B",
+    "border": "#E0D5C5"
+  },
+  "typography": {
+    "header_font": "Playfair Display, Georgia, serif",
+    "body_font": "Source Sans Pro, Calibri, sans-serif",
+    "display_size": "96px",
+    "stat_size": "72px",
+    "title_size": "52px",
+    "header_size": "28px",
+    "body_size": "17px",
+    "caption_size": "13px",
+    "overline_size": "12px",
+    "line_height": "1.7"
+  },
+  "spacing": {
+    "margin": "80px",
+    "gap": "40px",
+    "density": "spacious"
+  },
+  "motif": "editorial-columns",
+  "motif_css_path": "themes/editorial/motif.css",
+  "background_modes": ["light", "colored", "reversed"]
+}

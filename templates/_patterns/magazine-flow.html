@@ -1,0 +1,36 @@
+<!-- PATTERN: Magazine Flow
+     PURPOSE: Long-form content, editorial layouts, text-heavy slides that need visual interest
+     COMPOSITION RULES: Rule of thirds (asymmetric columns), one dominant element (pull quote or hero paragraph)
+     TYPICAL CATEGORIES: content, quote
+
+     KEY FEATURES:
+     - Asymmetric multi-column layout (not equal widths)
+     - Pull quote or highlighted paragraph acts as dominant element
+     - Generous line-height (1.7+) for readability
+     - Decorative divider between columns
+     - Overline for section context
+-->
+<div class="slide" style="position: relative; overflow: hidden;">
+  <!-- Motif: vertical line accent -->
+  <div class="motif-element motif-vline" style="position: absolute; bottom: var(--margin); right: calc(var(--margin) + 20px);"></div>
+
+  <span class="overline" style="color: var(--color-accent); margin-bottom: calc(var(--gap) * 0.5);">{{overline}}</span>
+  <h2 style="font-size: var(--size-title); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; color: var(--color-text); margin-bottom: var(--gap);">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: row; gap: calc(var(--gap) * 1.5); flex: 1;">
+    <!-- Main column (dominant, wider) -->
+    <div style="flex: 3; font-size: var(--size-body); line-height: 1.7; color: var(--color-text);">
+      {{body}}
+    </div>
+    <!-- Divider -->
+    <div style="width: 1px; background: var(--color-border); flex-shrink: 0;"></div>
+    <!-- Side column (supporting) -->
+    <div style="flex: 2;">
+      <blockquote style="font-family: var(--font-header); font-size: var(--size-header); font-style: italic; color: var(--color-accent); line-height: 1.4; border-left: 3px solid var(--color-accent); padding-left: 24px;">
+        {{pull_quote}}
+      </blockquote>
+    </div>
+  </div>
+</div>

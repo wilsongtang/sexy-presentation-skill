@@ -1,0 +1,30 @@
+<!-- Template: title-split-image-colored -->
+<!-- Slots: title, subtitle, image -->
+<!-- Composition: Asymmetric Split | Intensity: hero -->
+<div class="slide !p-0" style="background-color: var(--color-secondary); display: flex; flex-direction: row; position: relative; overflow: hidden;">
+  <!-- Image panel: 45% width, bleeds to left edge (edge tension) -->
+  <div style="width: 45%; height: 100%; flex-shrink: 0;">
+    <div class="img-treatment img-desaturate" style="width: 100%; height: 100%;">
+      <img src="{{image}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="img-treatment-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Accent divider: 3px accent line between panels -->
+  <div style="width: 3px; background: var(--color-accent); opacity: 0.3; flex-shrink: 0;"></div>
+
+  <!-- Text panel: 55% width, generous padding, content centered -->
+  <div style="flex: 1; padding: calc(var(--margin) * 1.5); display: flex; flex-direction: column; justify-content: center; position: relative;">
+    <!-- Motif: dot at top-right of text panel -->
+    <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
+    <!-- Motif: subtle rule at bottom-right of text panel -->
+    <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 1.5); right: var(--margin);"></div>
+
+    <h1 style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text); margin-bottom: var(--gap);">
+      {{title}}
+    </h1>
+    <p style="font-size: var(--size-header); color: var(--color-muted); line-height: 1.4; max-width: 700px;">
+      {{subtitle}}
+    </p>
+  </div>
+</div>

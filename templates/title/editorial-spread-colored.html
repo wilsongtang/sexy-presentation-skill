@@ -1,0 +1,27 @@
+<!-- Template: title-editorial-spread-colored -->
+<!-- Slots: title, subtitle, image -->
+<!-- Composition: Editorial Spread | Intensity: hero -->
+<div class="slide !p-0" style="background-color: var(--color-secondary); display: flex; flex-direction: row; position: relative; overflow: hidden;">
+  <!-- Left panel: 60% image, bleeds to left edge -->
+  <div style="width: 60%; height: 100%; flex-shrink: 0;">
+    <div class="img-treatment img-desaturate" style="width: 100%; height: 100%;">
+      <img src="{{image}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="img-treatment-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Right panel: 40% text, dramatic typography -->
+  <div style="width: 40%; padding: calc(var(--margin) * 2) var(--margin); display: flex; flex-direction: column; justify-content: center; position: relative;">
+    <!-- Motif: vertical line at the split point -->
+    <div class="motif-element motif-vline" style="position: absolute; top: var(--margin); left: 0; bottom: var(--margin);"></div>
+    <!-- Motif: dot at top-right for balance -->
+    <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
+
+    <!-- Overline for category context -->
+    <span class="overline" style="color: var(--color-accent); margin-bottom: 20px; display: block; letter-spacing: 0.1em; text-transform: uppercase; font-size: var(--size-caption);">{{subtitle}}</span>
+
+    <h1 style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text);">
+      {{title}}
+    </h1>
+  </div>
+</div>

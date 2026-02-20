@@ -1,0 +1,163 @@
+<!--
+  grids.html
+  Reusable CSS grid layout helpers for presentation slides.
+  All gap and sizing values use CSS custom properties for theme compatibility.
+  Each grid wrapper uses display:grid and is ready for any child elements.
+-->
+
+<!-- ============================================================ -->
+<!-- Component: grid-2col                                          -->
+<!-- Two equal columns, gap from theme variable                   -->
+<!-- ============================================================ -->
+<!-- Component: grid-2col -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Column 1 -->
+  <div>Content A</div>
+  <!-- Column 2 -->
+  <div>Content B</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-3col                                          -->
+<!-- Three equal columns, gap from theme variable                 -->
+<!-- ============================================================ -->
+<!-- Component: grid-3col -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Column 1 -->
+  <div>Content A</div>
+  <!-- Column 2 -->
+  <div>Content B</div>
+  <!-- Column 3 -->
+  <div>Content C</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-4col                                          -->
+<!-- Four equal columns, gap from theme variable                  -->
+<!-- ============================================================ -->
+<!-- Component: grid-4col -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Column 1 -->
+  <div>Content A</div>
+  <!-- Column 2 -->
+  <div>Content B</div>
+  <!-- Column 3 -->
+  <div>Content C</div>
+  <!-- Column 4 -->
+  <div>Content D</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-2x2                                           -->
+<!-- 2-column by 2-row grid, equal cells, gap from theme variable -->
+<!-- ============================================================ -->
+<!-- Component: grid-2x2 -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Row 1 -->
+  <div>Cell 1</div>
+  <div>Cell 2</div>
+  <!-- Row 2 -->
+  <div>Cell 3</div>
+  <div>Cell 4</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-2x3                                           -->
+<!-- 2-column by 3-row grid, equal cells, gap from theme variable -->
+<!-- ============================================================ -->
+<!-- Component: grid-2x3 -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Row 1 -->
+  <div>Cell 1</div>
+  <div>Cell 2</div>
+  <!-- Row 2 -->
+  <div>Cell 3</div>
+  <div>Cell 4</div>
+  <!-- Row 3 -->
+  <div>Cell 5</div>
+  <div>Cell 6</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-3x3                                           -->
+<!-- 3-column by 3-row grid, equal cells, gap from theme variable -->
+<!-- ============================================================ -->
+<!-- Component: grid-3x3 -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--gap, 24px);
+  width: 100%;
+">
+  <!-- Row 1 -->
+  <div>Cell 1</div>
+  <div>Cell 2</div>
+  <div>Cell 3</div>
+  <!-- Row 2 -->
+  <div>Cell 4</div>
+  <div>Cell 5</div>
+  <div>Cell 6</div>
+  <!-- Row 3 -->
+  <div>Cell 7</div>
+  <div>Cell 8</div>
+  <div>Cell 9</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: grid-sidebar-content                               -->
+<!-- 30/70 split: narrow sidebar on left, wide content on right   -->
+<!-- Gap from theme variable                                       -->
+<!-- ============================================================ -->
+<!-- Component: grid-sidebar-content -->
+<div style="
+  display: grid;
+  grid-template-columns: 30fr 70fr;
+  gap: var(--gap, 24px);
+  width: 100%;
+  align-items: start;
+">
+  <!-- Sidebar (30%) -->
+  <aside style="
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm, 12px);
+  ">
+    Sidebar content
+  </aside>
+  <!-- Main content area (70%) -->
+  <main style="
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm, 12px);
+  ">
+    Main content
+  </main>
+</div>

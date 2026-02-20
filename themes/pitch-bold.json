@@ -1,0 +1,35 @@
+{
+  "name": "pitch-bold",
+  "display_name": "Pitch Bold",
+  "description": "Startup energy with dark backgrounds and vibrant accent colors",
+  "colors": {
+    "primary": "#FFFFFF",
+    "secondary": "#A0A0A0",
+    "accent": "#FF6B2B",
+    "background": "#0D0D0D",
+    "text": "#FFFFFF",
+    "text_reversed": "#0D0D0D",
+    "muted": "#666666",
+    "border": "#333333"
+  },
+  "typography": {
+    "header_font": "Inter, Helvetica Neue, Arial, sans-serif",
+    "body_font": "Inter, Helvetica Neue, Arial, sans-serif",
+    "display_size": "112px",
+    "stat_size": "80px",
+    "title_size": "56px",
+    "header_size": "32px",
+    "body_size": "18px",
+    "caption_size": "14px",
+    "overline_size": "13px",
+    "line_height": "1.6"
+  },
+  "spacing": {
+    "margin": "64px",
+    "gap": "32px",
+    "density": "comfortable"
+  },
+  "motif": "bold-accent-blocks",
+  "motif_css_path": "themes/pitch-bold/motif.css",
+  "background_modes": ["reversed", "colored"]
+}

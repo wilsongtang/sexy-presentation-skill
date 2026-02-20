@@ -1,0 +1,122 @@
+<!--
+  dividers.html
+  Reusable visual divider and rule patterns for presentation slides.
+  All color, size, and spacing values use CSS custom properties for theme compatibility.
+  Each divider is a self-contained block; drop it between sections to create separation.
+-->
+
+<!-- ============================================================ -->
+<!-- Component: divider-thin-rule                                  -->
+<!-- 1px solid horizontal rule using the theme border color       -->
+<!-- ============================================================ -->
+<!-- Component: divider-thin-rule -->
+<div style="
+  width: 100%;
+  height: 1px;
+  background: var(--color-border, rgba(0,0,0,0.15));
+  border: none;
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+"></div>
+
+<!-- ============================================================ -->
+<!-- Component: divider-thick-accent                               -->
+<!-- 4px solid horizontal bar using the theme accent color        -->
+<!-- ============================================================ -->
+<!-- Component: divider-thick-accent -->
+<div style="
+  width: 100%;
+  height: 4px;
+  background: var(--color-accent);
+  border: none;
+  border-radius: 2px;
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+"></div>
+
+<!-- ============================================================ -->
+<!-- Component: divider-gradient-fade                              -->
+<!-- Horizontal rule that fades from accent on the left to        -->
+<!-- transparent on the right                                     -->
+<!-- ============================================================ -->
+<!-- Component: divider-gradient-fade -->
+<div style="
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-accent),
+    transparent
+  );
+  border: none;
+  border-radius: 1px;
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+"></div>
+
+<!-- ============================================================ -->
+<!-- Component: divider-dotted                                     -->
+<!-- Dotted line using the theme border color                     -->
+<!-- ============================================================ -->
+<!-- Component: divider-dotted -->
+<div style="
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 2px dotted var(--color-border, rgba(0,0,0,0.2));
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+"></div>
+
+<!-- ============================================================ -->
+<!-- Component: divider-double-line                                -->
+<!-- Two parallel thin rules with a gap between them              -->
+<!-- ============================================================ -->
+<!-- Component: divider-double-line -->
+<div style="
+  width: 100%;
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+">
+  <div style="width: 100%; height: 1px; background: var(--color-border, rgba(0,0,0,0.15));"></div>
+  <div style="width: 100%; height: 1px; background: var(--color-border, rgba(0,0,0,0.15));"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: divider-diamond                                    -->
+<!-- Decorative rule: thin lines on either side of a center       -->
+<!-- diamond glyph rendered in the accent color                   -->
+<!-- ============================================================ -->
+<!-- Component: divider-diamond -->
+<div style="
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm, 12px);
+  margin: var(--gap, 24px) 0;
+  flex-shrink: 0;
+">
+  <!-- Left line -->
+  <div style="
+    flex: 1;
+    height: 1px;
+    background: var(--color-border, rgba(0,0,0,0.2));
+  "></div>
+  <!-- Center diamond -->
+  <span style="
+    color: var(--color-accent);
+    font-size: 12px;
+    line-height: 1;
+    user-select: none;
+    flex-shrink: 0;
+  ">&#9670;</span>
+  <!-- Right line -->
+  <div style="
+    flex: 1;
+    height: 1px;
+    background: var(--color-border, rgba(0,0,0,0.2));
+  "></div>
+</div>

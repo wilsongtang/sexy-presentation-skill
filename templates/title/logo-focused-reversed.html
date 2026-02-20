@@ -1,0 +1,21 @@
+<!-- Template: title-logo-focused-reversed -->
+<!-- Slots: title, subtitle, logo -->
+<!-- Composition: Centered Hero | Intensity: hero -->
+<div class="slide items-center justify-center text-center" style="background-color: var(--color-primary); position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom-center for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+  <!-- Motif: dot at top-right for balance -->
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: calc(var(--margin) + 40px);"></div>
+
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.5); max-width: 1400px; padding-bottom: calc(var(--margin) * 0.5);">
+    <!-- Logo: NOT in .img-treatment — it's a brand asset -->
+    <img src="{{logo}}" alt="Logo" style="max-height: 80px; max-width: 240px; object-fit: contain; margin-bottom: calc(var(--gap) * 0.5);">
+
+    <h1 style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text-reversed);">
+      {{title}}
+    </h1>
+    <p style="font-size: var(--size-header); color: rgba(255,255,255,0.6); line-height: 1.4; max-width: 900px;">
+      {{subtitle}}
+    </p>
+  </div>
+</div>

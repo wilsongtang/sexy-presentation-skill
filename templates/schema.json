@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Template Registry Entry",
+  "type": "object",
+  "required": ["id", "category", "layout", "treatment", "file", "description"],
+  "properties": {
+    "id": { "type": "string", "description": "Unique template ID: category-layout-treatment" },
+    "category": {
+      "type": "string",
+      "enum": ["title", "content", "data", "image", "comparison", "timeline", "quote", "team", "structural", "closing"]
+    },
+    "layout": { "type": "string", "description": "Layout variant name" },
+    "treatment": {
+      "type": "string",
+      "enum": ["light", "colored", "reversed"]
+    },
+    "file": { "type": "string", "description": "Relative path to HTML template file" },
+    "description": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "slots": {
+      "type": "object",
+      "description": "Content slots this template accepts",
+      "properties": {
+        "title": { "type": "boolean" },
+        "subtitle": { "type": "boolean" },
+        "body": { "type": "boolean" },
+        "image": { "type": "boolean" },
+        "icon_grid": { "type": "boolean" },
+        "stats": { "type": "boolean" },
+        "table": { "type": "boolean" },
+        "timeline": { "type": "boolean" },
+        "quote": { "type": "boolean" },
+        "speaker_notes": { "type": "boolean" }
+      }
+    }
+  }
+}

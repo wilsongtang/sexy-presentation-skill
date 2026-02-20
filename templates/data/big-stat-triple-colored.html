@@ -1,0 +1,41 @@
+<!-- Template: data-big-stat-triple-colored -->
+<!-- Slots: stat_1_number, stat_1_label, stat_2_number, stat_2_label, stat_3_number, stat_3_label -->
+<!-- Composition: Data Spotlight | Intensity: impact -->
+<div class="slide items-center justify-center" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: row; gap: var(--gap); align-items: stretch; width: 100%;">
+
+    <!-- Stat 1: flanking -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 1px solid var(--color-border); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_1_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text);">
+        {{stat_1_label}}
+      </div>
+    </div>
+
+    <!-- Stat 2: dominant (middle) — flex:1.15 + accent border -->
+    <div style="flex: 1.15; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 2px solid var(--color-accent); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_2_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text);">
+        {{stat_2_label}}
+      </div>
+    </div>
+
+    <!-- Stat 3: flanking -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 48px 32px; border: 1px solid var(--color-border); border-radius: 20px;">
+      <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+        {{stat_3_number}}
+      </div>
+      <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text);">
+        {{stat_3_label}}
+      </div>
+    </div>
+
+  </div>
+</div>

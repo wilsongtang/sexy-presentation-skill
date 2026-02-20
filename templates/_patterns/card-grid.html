@@ -1,0 +1,40 @@
+<!-- PATTERN: Card Grid
+     PURPOSE: Multiple items of same type — features, services, benefits, team members
+     COMPOSITION RULES: One dominant element (first card larger), scale contrast (dominant vs supporting)
+     TYPICAL CATEGORIES: content, team, comparison
+
+     KEY FEATURES:
+     - First card is visually dominant: 1.15x scale + accent border or accent shadow
+     - Equal cards use flex:1 with consistent gaps
+     - Cards have rounded corners (16px) and subtle borders
+     - Decorative accent square inside each card as brand touch
+     - For 4+ columns: heading drops to --size-body, descriptions to --size-caption
+     - For 5+ columns: heading drops to --size-caption
+     - Supports 2, 3, 4, and 5 column layouts
+-->
+<div class="slide" style="position: relative; overflow: hidden;">
+  <!-- Motif: bottom-right corner -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+    <!-- Dominant card: accent border + slight scale emphasis -->
+    <div style="flex: 1.15; border: 2px solid var(--color-accent); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.15;"></div>
+      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_1_title}}</h3>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6;">{{card_1_body}}</p>
+    </div>
+    <!-- Supporting cards -->
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.08;"></div>
+      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_2_title}}</h3>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6;">{{card_2_body}}</p>
+    </div>
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.08;"></div>
+      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_3_title}}</h3>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6;">{{card_3_body}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- Template: comparison-versus-colored -->
+<!-- Slots: title, left_label, left_content, right_label, right_content, center_vs -->
+<!-- Composition: Comparison Matrix | Intensity: impact -->
+<div class="slide light" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap); text-align: center;">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: row; flex: 1; align-items: stretch; gap: 0;">
+
+    <!-- Left panel (supporting) -->
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px; margin-right: 32px;">
+      <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header); text-align: center;">{{left_label}}</h3>
+      <div style="width: 40px; height: 2px; background: var(--color-border); border-radius: 2px; align-self: center;"></div>
+      <div style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7; text-align: center;">{{left_content}}</div>
+    </div>
+
+    <!-- VS center element (dominant) -->
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; width: 80px; z-index: 1;">
+      <div style="width: 1px; flex: 1; background: var(--color-border);"></div>
+      <div style="padding: 16px 0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <span style="font-size: var(--size-stat); font-weight: 800; color: var(--color-accent); line-height: 1; font-family: var(--font-header);">{{center_vs}}</span>
+      </div>
+      <div style="width: 1px; flex: 1; background: var(--color-border);"></div>
+    </div>
+
+    <!-- Right panel (dominant: accent border) -->
+    <div style="flex: 1; border: 2px solid var(--color-accent); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px; margin-left: 32px;">
+      <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-accent); font-family: var(--font-header); text-align: center;">{{right_label}}</h3>
+      <div style="width: 40px; height: 3px; background: var(--color-accent); border-radius: 2px; align-self: center;"></div>
+      <div style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7; text-align: center;">{{right_content}}</div>
+    </div>
+
+  </div>
+</div>

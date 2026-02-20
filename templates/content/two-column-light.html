@@ -1,0 +1,24 @@
+<!-- Template: content-two-column-light -->
+<!-- Slots: title, col_1, col_2 -->
+<!-- Composition: Magazine Flow | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden; display: flex; flex-direction: column; padding: var(--margin);">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: row; gap: 0; flex: 1; align-items: stretch;">
+    <!-- Primary column (55%) -->
+    <div style="flex: 55; font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-right: calc(var(--gap) * 1.5);">
+      {{col_1}}
+    </div>
+    <!-- Divider -->
+    <div style="width: 1px; background: var(--color-border); flex-shrink: 0; align-self: stretch;"></div>
+    <!-- Secondary column (45%) -->
+    <div style="flex: 45; font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text); padding-left: calc(var(--gap) * 1.5);">
+      {{col_2}}
+    </div>
+  </div>
+</div>

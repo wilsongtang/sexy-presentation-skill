@@ -1,0 +1,9 @@
+{
+  "name": "sexy-presentation-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^23.0.0",
+    "pptxgenjs": "^3.12.0"
+  }
+}

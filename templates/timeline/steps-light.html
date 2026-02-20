@@ -1,0 +1,72 @@
+<!-- Template: timeline-steps-light -->
+<!-- Slots: title, step_1_number, step_1_title, step_1_body, step_2_number, step_2_title, step_2_body, step_3_number, step_3_title, step_3_body, step_4_number, step_4_title, step_4_body -->
+<!-- Composition: Timeline Flow | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden;">
+
+  <!-- Motif: dot at bottom-right -->
+  <div class="motif-element" style="position: absolute; bottom: -32px; right: -32px; width: 112px; height: 112px; border-radius: 50%; background: var(--color-accent); opacity: 0.08; pointer-events: none;"></div>
+
+  <h2 style="font-size: var(--size-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div class="flex flex-col" style="flex: 1; justify-content: center;">
+
+    <!-- Steps row: circles + content + connectors -->
+    <div class="flex flex-row" style="align-items: flex-start; gap: 0;">
+
+      <!-- Step 1 — active/dominant: accent fill circle -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <!-- Numbered circle: 56px, accent fill -->
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1;">
+          <span style="font-size: var(--size-header); font-weight: 700; color: #fff; line-height: 1;">{{step_1_number}}</span>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text); margin-bottom: 6px; line-height: 1.3;">{{step_1_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{step_1_body}}</p>
+        </div>
+      </div>
+
+      <!-- Connecting line 1→2 -->
+      <div style="flex-shrink: 0; width: 32px; height: 3px; background: var(--color-border); margin-top: 26px; align-self: flex-start;"></div>
+
+      <!-- Step 2 — future: border-only circle -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1;">
+          <span style="font-size: var(--size-header); font-weight: 700; color: var(--color-muted); line-height: 1;">{{step_2_number}}</span>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 6px; line-height: 1.3;">{{step_2_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{step_2_body}}</p>
+        </div>
+      </div>
+
+      <!-- Connecting line 2→3 -->
+      <div style="flex-shrink: 0; width: 32px; height: 3px; background: var(--color-border); margin-top: 26px; align-self: flex-start;"></div>
+
+      <!-- Step 3 — future: border-only circle -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1;">
+          <span style="font-size: var(--size-header); font-weight: 700; color: var(--color-muted); line-height: 1;">{{step_3_number}}</span>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 6px; line-height: 1.3;">{{step_3_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{step_3_body}}</p>
+        </div>
+      </div>
+
+      <!-- Connecting line 3→4 -->
+      <div style="flex-shrink: 0; width: 32px; height: 3px; background: var(--color-border); margin-top: 26px; align-self: flex-start;"></div>
+
+      <!-- Step 4 — future: border-only circle -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1;">
+          <span style="font-size: var(--size-header); font-weight: 700; color: var(--color-muted); line-height: 1;">{{step_4_number}}</span>
+        </div>
+        <div style="text-align: center;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 6px; line-height: 1.3;">{{step_4_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{step_4_body}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

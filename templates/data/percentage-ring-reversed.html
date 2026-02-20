@@ -1,0 +1,51 @@
+<!-- Template: data-percentage-ring-reversed -->
+<!-- Slots: title, percentage, label, context -->
+<!-- Composition: Data Spotlight | Intensity: impact -->
+<div class="slide items-center justify-center text-center" style="background-color: var(--color-primary); position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+
+  <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text-reversed); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+
+    <!-- CSS conic-gradient ring: 300px, NOT SVG -->
+    <div style="
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: conic-gradient(var(--color-accent) calc({{percentage}} * 1%), var(--color-border) 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      <!-- Inner circle to create donut effect -->
+      <div style="
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: var(--color-background, #fff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <!-- Percentage number centered inside at --size-stat -->
+        <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+          {{percentage}}%
+        </div>
+      </div>
+    </div>
+
+    <!-- Label -->
+    <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text-reversed);">
+      {{label}}
+    </div>
+
+    <!-- Context at --size-body, muted -->
+    <div style="font-size: var(--size-body); color: rgba(255,255,255,0.6); max-width: 700px; line-height: var(--line-height);">
+      {{context}}
+    </div>
+
+  </div>
+</div>

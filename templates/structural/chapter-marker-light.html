@@ -1,0 +1,28 @@
+<!-- Template: structural-chapter-marker-light -->
+<!-- Slots: chapter_number, chapter_title, chapter_subtitle -->
+<!-- Composition: Centered Hero | Intensity: impact -->
+<div class="slide items-center justify-center text-center" style="position: relative; overflow: hidden;">
+
+  <!-- Motif: bottom-left rule for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: var(--margin);"></div>
+  <!-- Motif: top-right dot for balance -->
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: calc(var(--margin) + 40px);"></div>
+
+  <!-- Background number: real div, 600px, 0.06 opacity, centered behind content -->
+  <div style="position: absolute; z-index: 0; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-header); font-size: 600px; font-weight: 800; color: var(--color-text); opacity: 0.06; line-height: 1; user-select: none; pointer-events: none; letter-spacing: -0.05em;">{{chapter_number}}</div>
+
+  <!-- Content layer above background number -->
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.5); max-width: 1400px; padding-bottom: calc(var(--margin) * 0.5);">
+    <!-- Overline: Chapter N context label -->
+    <span class="overline" style="color: var(--color-accent);">Chapter {{chapter_number}}</span>
+    <!-- Dominant element: title-size heading -->
+    <h1 style="font-size: var(--size-title); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--color-text); max-width: 1200px;">
+      {{chapter_title}}
+    </h1>
+    <!-- Supporting subtitle at body size -->
+    <p style="font-size: var(--size-body); font-family: var(--font-body); color: var(--color-muted); line-height: 1.6; max-width: 900px;">
+      {{chapter_subtitle}}
+    </p>
+  </div>
+
+</div>

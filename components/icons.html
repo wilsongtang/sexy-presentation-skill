@@ -1,0 +1,271 @@
+<!--
+  icons.html
+  Reusable icon patterns for presentation slides.
+  All sizing and color values use CSS custom properties for theme compatibility.
+-->
+
+<!-- ============================================================ -->
+<!-- Component: icon-circle-48                                     -->
+<!-- Icon centered inside a 48px circle with accent background    -->
+<!-- ============================================================ -->
+<!-- Component: icon-circle-48 -->
+<div style="
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+">
+  <!-- Replace with <img>, <svg>, or emoji -->
+  <span style="
+    color: var(--color-on-accent, #ffffff);
+    font-size: 22px;
+    line-height: 1;
+  ">★</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-circle-64                                     -->
+<!-- Icon centered inside a 64px circle with accent background    -->
+<!-- ============================================================ -->
+<!-- Component: icon-circle-64 -->
+<div style="
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+">
+  <span style="
+    color: var(--color-on-accent, #ffffff);
+    font-size: 30px;
+    line-height: 1;
+  ">★</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-circle-80                                     -->
+<!-- Icon centered inside an 80px circle with accent background   -->
+<!-- ============================================================ -->
+<!-- Component: icon-circle-80 -->
+<div style="
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+">
+  <span style="
+    color: var(--color-on-accent, #ffffff);
+    font-size: 38px;
+    line-height: 1;
+  ">★</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-label-horizontal                              -->
+<!-- Icon circle (48px) paired with a label, arranged in a row    -->
+<!-- ============================================================ -->
+<!-- Component: icon-label-horizontal -->
+<div style="
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm, 12px);
+">
+  <div style="
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  ">
+    <span style="
+      color: var(--color-on-accent, #ffffff);
+      font-size: 22px;
+      line-height: 1;
+    ">★</span>
+  </div>
+  <span style="
+    color: var(--color-text);
+    font-size: var(--size-body, 1rem);
+    font-weight: 600;
+    line-height: 1.3;
+  ">Icon Label</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-label-vertical                                -->
+<!-- Icon circle (64px) stacked above a label, centered           -->
+<!-- ============================================================ -->
+<!-- Component: icon-label-vertical -->
+<div style="
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-sm, 12px);
+  text-align: center;
+">
+  <div style="
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <span style="
+      color: var(--color-on-accent, #ffffff);
+      font-size: 30px;
+      line-height: 1;
+    ">★</span>
+  </div>
+  <span style="
+    color: var(--color-text);
+    font-size: var(--size-body, 1rem);
+    font-weight: 600;
+    line-height: 1.3;
+  ">Icon Label</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-grid-2x2                                      -->
+<!-- 2-column, 2-row grid of icon+label vertical combos           -->
+<!-- ============================================================ -->
+<!-- Component: icon-grid-2x2 -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap, 24px);
+">
+  <!-- Cell 1 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 30px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label One</span>
+  </div>
+  <!-- Cell 2 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 30px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label Two</span>
+  </div>
+  <!-- Cell 3 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 30px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label Three</span>
+  </div>
+  <!-- Cell 4 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 64px; height: 64px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 30px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label Four</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: icon-grid-3x3                                      -->
+<!-- 3-column, 3-row grid of icon+label vertical combos           -->
+<!-- ============================================================ -->
+<!-- Component: icon-grid-3x3 -->
+<div style="
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap, 24px);
+">
+  <!-- Row 1 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 1</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 2</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 3</span>
+  </div>
+  <!-- Row 2 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 4</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 5</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 6</span>
+  </div>
+  <!-- Row 3 -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 7</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 8</span>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: var(--gap-sm, 12px); text-align: center;">
+    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center;">
+      <span style="color: var(--color-on-accent, #ffffff); font-size: 22px; line-height: 1;">★</span>
+    </div>
+    <span style="color: var(--color-text); font-size: var(--size-body, 1rem); font-weight: 600;">Label 9</span>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: emoji-icon-wrapper                                 -->
+<!-- Wraps an emoji in a consistently sized, vertically centered  -->
+<!-- container so emoji icons behave like other icon types        -->
+<!-- ============================================================ -->
+<!-- Component: emoji-icon-wrapper -->
+<div style="
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-icon, 48px);
+  height: var(--size-icon, 48px);
+  font-size: calc(var(--size-icon, 48px) * 0.55);
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+">
+  <!-- Replace with any emoji -->
+  🚀
+</div>

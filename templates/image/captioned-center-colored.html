@@ -1,0 +1,25 @@
+<!-- Template: image-captioned-center-colored -->
+<!-- Slots: image, title, caption -->
+<!-- Composition: Centered Hero | Intensity: impact -->
+<div class="slide" style="background-color: var(--color-secondary); position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: var(--margin); left: 50%; transform: translateX(-50%);"></div>
+
+  <!-- Centered image at 60% width -->
+  <div class="img-treatment img-desaturate" style="width: 60%; flex: 1; max-height: 65%; border-radius: 12px; overflow: hidden; margin-bottom: var(--gap);">
+    <img src="{{image}}" alt="{{title}}" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="img-treatment-overlay"></div>
+  </div>
+
+  <!-- Title below image -->
+  <h1 style="font-size: var(--size-title); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--color-text); text-align: center; max-width: 800px; margin-bottom: 12px; flex-shrink: 0;">
+    {{title}}
+  </h1>
+
+  <!-- Caption below title -->
+  <p style="font-size: var(--size-caption); color: var(--color-muted); text-align: center; max-width: 700px; flex-shrink: 0;">
+    {{caption}}
+  </p>
+
+</div>

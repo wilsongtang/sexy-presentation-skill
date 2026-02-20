@@ -1,0 +1,4641 @@
+{
+  "$schema": "./schema.json",
+  "version": "0.2.0",
+  "templates": [
+    {
+      "id": "title-asymmetric-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "colored",
+      "file": "title/asymmetric-colored.html",
+      "description": "Asymmetric (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-asymmetric-light",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "light",
+      "file": "title/asymmetric-light.html",
+      "description": "Asymmetric (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "title-asymmetric-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "asymmetric",
+      "treatment": "reversed",
+      "file": "title/asymmetric-reversed.html",
+      "description": "Asymmetric (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-centered-hero-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "colored",
+      "file": "title/centered-hero-colored.html",
+      "description": "Centered Hero (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-centered-hero-light",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "light",
+      "file": "title/centered-hero-light.html",
+      "description": "Centered Hero (light) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "title-centered-hero-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "centered-hero",
+      "treatment": "reversed",
+      "file": "title/centered-hero-reversed.html",
+      "description": "Centered Hero (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-editorial-spread-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "colored",
+      "file": "title/editorial-spread-colored.html",
+      "description": "Editorial Spread (colored) \u2014 Editorial Spread composition",
+      "tags": [
+        "hero",
+        "editorial-spread",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-editorial-spread-light",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "light",
+      "file": "title/editorial-spread-light.html",
+      "description": "Editorial Spread (light) \u2014 Editorial Spread composition",
+      "tags": [
+        "hero",
+        "editorial-spread",
+        "light"
+      ]
+    },
+    {
+      "id": "title-editorial-spread-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "editorial-spread",
+      "treatment": "reversed",
+      "file": "title/editorial-spread-reversed.html",
+      "description": "Editorial Spread (reversed) \u2014 Editorial Spread composition",
+      "tags": [
+        "hero",
+        "editorial-spread",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-full-bleed-photo-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "colored",
+      "file": "title/full-bleed-photo-colored.html",
+      "description": "Full Bleed Photo (colored) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-full-bleed-photo-light",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "light",
+      "file": "title/full-bleed-photo-light.html",
+      "description": "Full Bleed Photo (light) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "light"
+      ]
+    },
+    {
+      "id": "title-full-bleed-photo-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "full-bleed-photo",
+      "treatment": "reversed",
+      "file": "title/full-bleed-photo-reversed.html",
+      "description": "Full Bleed Photo (reversed) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-gradient-overlay-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "colored",
+      "file": "title/gradient-overlay-colored.html",
+      "description": "Gradient Overlay (colored) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-gradient-overlay-light",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "light",
+      "file": "title/gradient-overlay-light.html",
+      "description": "Gradient Overlay (light) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "light"
+      ]
+    },
+    {
+      "id": "title-gradient-overlay-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "gradient-overlay",
+      "treatment": "reversed",
+      "file": "title/gradient-overlay-reversed.html",
+      "description": "Gradient Overlay (reversed) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-logo-focused-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "logo": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "colored",
+      "file": "title/logo-focused-colored.html",
+      "description": "Logo Focused (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-logo-focused-light",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "logo": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "light",
+      "file": "title/logo-focused-light.html",
+      "description": "Logo Focused (light) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "title-logo-focused-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "logo": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "logo-focused",
+      "treatment": "reversed",
+      "file": "title/logo-focused-reversed.html",
+      "description": "Logo Focused (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-minimal-text-colored",
+      "slots": {
+        "title": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "colored",
+      "file": "title/minimal-text-colored.html",
+      "description": "Minimal Text (colored) \u2014 Minimal Statement composition",
+      "tags": [
+        "hero",
+        "minimal-statement",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-minimal-text-light",
+      "slots": {
+        "title": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "light",
+      "file": "title/minimal-text-light.html",
+      "description": "Minimal Text (light) \u2014 Minimal Statement composition",
+      "tags": [
+        "hero",
+        "minimal-statement",
+        "light"
+      ]
+    },
+    {
+      "id": "title-minimal-text-reversed",
+      "slots": {
+        "title": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "minimal-text",
+      "treatment": "reversed",
+      "file": "title/minimal-text-reversed.html",
+      "description": "Minimal Text (reversed) \u2014 Minimal Statement composition",
+      "tags": [
+        "hero",
+        "minimal-statement",
+        "reversed"
+      ]
+    },
+    {
+      "id": "title-split-image-colored",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "colored",
+      "file": "title/split-image-colored.html",
+      "description": "Split Image (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "title-split-image-light",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "light",
+      "file": "title/split-image-light.html",
+      "description": "Split Image (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "title-split-image-reversed",
+      "slots": {
+        "title": true,
+        "subtitle": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "hero",
+      "category": "title",
+      "layout": "split-image",
+      "treatment": "reversed",
+      "file": "title/split-image-reversed.html",
+      "description": "Split Image (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "hero",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-card-layout-colored",
+      "slots": {
+        "title": true,
+        "card_1_title": true,
+        "card_1_body": true,
+        "card_2_title": true,
+        "card_2_body": true,
+        "card_3_title": true,
+        "card_3_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "card-layout",
+      "treatment": "colored",
+      "file": "content/card-layout-colored.html",
+      "description": "Card Layout (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-card-layout-light",
+      "slots": {
+        "title": true,
+        "card_1_title": true,
+        "card_1_body": true,
+        "card_2_title": true,
+        "card_2_body": true,
+        "card_3_title": true,
+        "card_3_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "card-layout",
+      "treatment": "light",
+      "file": "content/card-layout-light.html",
+      "description": "Card Layout (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "content-card-layout-reversed",
+      "slots": {
+        "title": true,
+        "card_1_title": true,
+        "card_1_body": true,
+        "card_2_title": true,
+        "card_2_body": true,
+        "card_3_title": true,
+        "card_3_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "card-layout",
+      "treatment": "reversed",
+      "file": "content/card-layout-reversed.html",
+      "description": "Card Layout (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x2-colored",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x2",
+      "treatment": "colored",
+      "file": "content/icon-grid-2x2-colored.html",
+      "description": "Icon Grid 2X2 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x2-light",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x2",
+      "treatment": "light",
+      "file": "content/icon-grid-2x2-light.html",
+      "description": "Icon Grid 2X2 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x2-reversed",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x2",
+      "treatment": "reversed",
+      "file": "content/icon-grid-2x2-reversed.html",
+      "description": "Icon Grid 2X2 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x3-colored",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x3",
+      "treatment": "colored",
+      "file": "content/icon-grid-2x3-colored.html",
+      "description": "Icon Grid 2X3 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x3-light",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x3",
+      "treatment": "light",
+      "file": "content/icon-grid-2x3-light.html",
+      "description": "Icon Grid 2X3 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "content-icon-grid-2x3-reversed",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-2x3",
+      "treatment": "reversed",
+      "file": "content/icon-grid-2x3-reversed.html",
+      "description": "Icon Grid 2X3 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-icon-grid-3x3-colored",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true,
+        "icon_7_title": true,
+        "icon_7_body": true,
+        "icon_8_title": true,
+        "icon_8_body": true,
+        "icon_9_title": true,
+        "icon_9_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-3x3",
+      "treatment": "colored",
+      "file": "content/icon-grid-3x3-colored.html",
+      "description": "Icon Grid 3X3 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-icon-grid-3x3-light",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true,
+        "icon_7_title": true,
+        "icon_7_body": true,
+        "icon_8_title": true,
+        "icon_8_body": true,
+        "icon_9_title": true,
+        "icon_9_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-3x3",
+      "treatment": "light",
+      "file": "content/icon-grid-3x3-light.html",
+      "description": "Icon Grid 3X3 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "content-icon-grid-3x3-reversed",
+      "slots": {
+        "title": true,
+        "icon_1_title": true,
+        "icon_1_body": true,
+        "icon_2_title": true,
+        "icon_2_body": true,
+        "icon_3_title": true,
+        "icon_3_body": true,
+        "icon_4_title": true,
+        "icon_4_body": true,
+        "icon_5_title": true,
+        "icon_5_body": true,
+        "icon_6_title": true,
+        "icon_6_body": true,
+        "icon_7_title": true,
+        "icon_7_body": true,
+        "icon_8_title": true,
+        "icon_8_body": true,
+        "icon_9_title": true,
+        "icon_9_body": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "icon-grid-3x3",
+      "treatment": "reversed",
+      "file": "content/icon-grid-3x3-reversed.html",
+      "description": "Icon Grid 3X3 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-magazine-flow-colored",
+      "slots": {
+        "title": true,
+        "body": true,
+        "pull_quote": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "impact",
+      "category": "content",
+      "layout": "magazine-flow",
+      "treatment": "colored",
+      "file": "content/magazine-flow-colored.html",
+      "description": "Magazine Flow (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "impact",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-magazine-flow-light",
+      "slots": {
+        "title": true,
+        "body": true,
+        "pull_quote": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "impact",
+      "category": "content",
+      "layout": "magazine-flow",
+      "treatment": "light",
+      "file": "content/magazine-flow-light.html",
+      "description": "Magazine Flow (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "impact",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "content-magazine-flow-reversed",
+      "slots": {
+        "title": true,
+        "body": true,
+        "pull_quote": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "impact",
+      "category": "content",
+      "layout": "magazine-flow",
+      "treatment": "reversed",
+      "file": "content/magazine-flow-reversed.html",
+      "description": "Magazine Flow (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "impact",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-numbered-list-colored",
+      "slots": {
+        "title": true,
+        "item_1": true,
+        "item_2": true,
+        "item_3": true,
+        "item_4": true,
+        "item_5": true,
+        "item_6": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "numbered-list",
+      "treatment": "colored",
+      "file": "content/numbered-list-colored.html",
+      "description": "Numbered List (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-numbered-list-light",
+      "slots": {
+        "title": true,
+        "item_1": true,
+        "item_2": true,
+        "item_3": true,
+        "item_4": true,
+        "item_5": true,
+        "item_6": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "numbered-list",
+      "treatment": "light",
+      "file": "content/numbered-list-light.html",
+      "description": "Numbered List (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "content-numbered-list-reversed",
+      "slots": {
+        "title": true,
+        "item_1": true,
+        "item_2": true,
+        "item_3": true,
+        "item_4": true,
+        "item_5": true,
+        "item_6": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "numbered-list",
+      "treatment": "reversed",
+      "file": "content/numbered-list-reversed.html",
+      "description": "Numbered List (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-sidebar-content-colored",
+      "slots": {
+        "title": true,
+        "body": true,
+        "sidebar": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "sidebar-content",
+      "treatment": "colored",
+      "file": "content/sidebar-content-colored.html",
+      "description": "Sidebar Content (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-sidebar-content-light",
+      "slots": {
+        "title": true,
+        "body": true,
+        "sidebar": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "sidebar-content",
+      "treatment": "light",
+      "file": "content/sidebar-content-light.html",
+      "description": "Sidebar Content (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "content-sidebar-content-reversed",
+      "slots": {
+        "title": true,
+        "body": true,
+        "sidebar": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "sidebar-content",
+      "treatment": "reversed",
+      "file": "content/sidebar-content-reversed.html",
+      "description": "Sidebar Content (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-single-column-colored",
+      "slots": {
+        "title": true,
+        "body": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "single-column",
+      "treatment": "colored",
+      "file": "content/single-column-colored.html",
+      "description": "Single Column (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-single-column-light",
+      "slots": {
+        "title": true,
+        "body": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "single-column",
+      "treatment": "light",
+      "file": "content/single-column-light.html",
+      "description": "Single Column (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "content-single-column-reversed",
+      "slots": {
+        "title": true,
+        "body": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "single-column",
+      "treatment": "reversed",
+      "file": "content/single-column-reversed.html",
+      "description": "Single Column (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-text-image-left-colored",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-left",
+      "treatment": "colored",
+      "file": "content/text-image-left-colored.html",
+      "description": "Text Image Left (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-text-image-left-light",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-left",
+      "treatment": "light",
+      "file": "content/text-image-left-light.html",
+      "description": "Text Image Left (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "content-text-image-left-reversed",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-left",
+      "treatment": "reversed",
+      "file": "content/text-image-left-reversed.html",
+      "description": "Text Image Left (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-text-image-right-colored",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-right",
+      "treatment": "colored",
+      "file": "content/text-image-right-colored.html",
+      "description": "Text Image Right (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-text-image-right-light",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-right",
+      "treatment": "light",
+      "file": "content/text-image-right-light.html",
+      "description": "Text Image Right (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "content-text-image-right-reversed",
+      "slots": {
+        "title": true,
+        "body": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "text-image-right",
+      "treatment": "reversed",
+      "file": "content/text-image-right-reversed.html",
+      "description": "Text Image Right (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "workhorse",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-three-column-colored",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true,
+        "col_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "three-column",
+      "treatment": "colored",
+      "file": "content/three-column-colored.html",
+      "description": "Three Column (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-three-column-light",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true,
+        "col_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "three-column",
+      "treatment": "light",
+      "file": "content/three-column-light.html",
+      "description": "Three Column (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "content-three-column-reversed",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true,
+        "col_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "three-column",
+      "treatment": "reversed",
+      "file": "content/three-column-reversed.html",
+      "description": "Three Column (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "content-two-column-colored",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "two-column",
+      "treatment": "colored",
+      "file": "content/two-column-colored.html",
+      "description": "Two Column (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "content-two-column-light",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "two-column",
+      "treatment": "light",
+      "file": "content/two-column-light.html",
+      "description": "Two Column (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "content-two-column-reversed",
+      "slots": {
+        "title": true,
+        "col_1": true,
+        "col_2": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "content",
+      "layout": "two-column",
+      "treatment": "reversed",
+      "file": "content/two-column-reversed.html",
+      "description": "Two Column (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-bar-comparison-colored",
+      "slots": {
+        "title": true,
+        "bar_1_label": true,
+        "bar_1_value": true,
+        "bar_2_label": true,
+        "bar_2_value": true,
+        "bar_3_label": true,
+        "bar_3_value": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "colored",
+      "file": "data/bar-comparison-colored.html",
+      "description": "Bar Comparison (colored) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-bar-comparison-light",
+      "slots": {
+        "title": true,
+        "bar_1_label": true,
+        "bar_1_value": true,
+        "bar_2_label": true,
+        "bar_2_value": true,
+        "bar_3_label": true,
+        "bar_3_value": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "light",
+      "file": "data/bar-comparison-light.html",
+      "description": "Bar Comparison (light) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "light"
+      ]
+    },
+    {
+      "id": "data-bar-comparison-reversed",
+      "slots": {
+        "title": true,
+        "bar_1_label": true,
+        "bar_1_value": true,
+        "bar_2_label": true,
+        "bar_2_value": true,
+        "bar_3_label": true,
+        "bar_3_value": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "bar-comparison",
+      "treatment": "reversed",
+      "file": "data/bar-comparison-reversed.html",
+      "description": "Bar Comparison (reversed) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-big-stat-single-colored",
+      "slots": {
+        "stat_number": true,
+        "stat_label": true,
+        "stat_context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "colored",
+      "file": "data/big-stat-single-colored.html",
+      "description": "Big Stat Single (colored) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-big-stat-single-light",
+      "slots": {
+        "stat_number": true,
+        "stat_label": true,
+        "stat_context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "light",
+      "file": "data/big-stat-single-light.html",
+      "description": "Big Stat Single (light) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "light"
+      ]
+    },
+    {
+      "id": "data-big-stat-single-reversed",
+      "slots": {
+        "stat_number": true,
+        "stat_label": true,
+        "stat_context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-single",
+      "treatment": "reversed",
+      "file": "data/big-stat-single-reversed.html",
+      "description": "Big Stat Single (reversed) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-big-stat-triple-colored",
+      "slots": {
+        "stat_1_number": true,
+        "stat_1_label": true,
+        "stat_2_number": true,
+        "stat_2_label": true,
+        "stat_3_number": true,
+        "stat_3_label": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "colored",
+      "file": "data/big-stat-triple-colored.html",
+      "description": "Big Stat Triple (colored) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-big-stat-triple-light",
+      "slots": {
+        "stat_1_number": true,
+        "stat_1_label": true,
+        "stat_2_number": true,
+        "stat_2_label": true,
+        "stat_3_number": true,
+        "stat_3_label": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "light",
+      "file": "data/big-stat-triple-light.html",
+      "description": "Big Stat Triple (light) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "light"
+      ]
+    },
+    {
+      "id": "data-big-stat-triple-reversed",
+      "slots": {
+        "stat_1_number": true,
+        "stat_1_label": true,
+        "stat_2_number": true,
+        "stat_2_label": true,
+        "stat_3_number": true,
+        "stat_3_label": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "big-stat-triple",
+      "treatment": "reversed",
+      "file": "data/big-stat-triple-reversed.html",
+      "description": "Big Stat Triple (reversed) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-chart-placeholder-colored",
+      "slots": {
+        "title": true,
+        "chart_description": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "colored",
+      "file": "data/chart-placeholder-colored.html",
+      "description": "Chart Placeholder (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-chart-placeholder-light",
+      "slots": {
+        "title": true,
+        "chart_description": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "light",
+      "file": "data/chart-placeholder-light.html",
+      "description": "Chart Placeholder (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "data-chart-placeholder-reversed",
+      "slots": {
+        "title": true,
+        "chart_description": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "chart-placeholder",
+      "treatment": "reversed",
+      "file": "data/chart-placeholder-reversed.html",
+      "description": "Chart Placeholder (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-data-table-colored",
+      "slots": {
+        "title": true,
+        "table_content": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "colored",
+      "file": "data/data-table-colored.html",
+      "description": "Data Table (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-data-table-light",
+      "slots": {
+        "title": true,
+        "table_content": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "light",
+      "file": "data/data-table-light.html",
+      "description": "Data Table (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "data-data-table-reversed",
+      "slots": {
+        "title": true,
+        "table_content": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "data-table",
+      "treatment": "reversed",
+      "file": "data/data-table-reversed.html",
+      "description": "Data Table (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-kpi-dashboard-colored",
+      "slots": {
+        "title": true,
+        "kpi_1_value": true,
+        "kpi_1_label": true,
+        "kpi_2_value": true,
+        "kpi_2_label": true,
+        "kpi_3_value": true,
+        "kpi_3_label": true,
+        "kpi_4_value": true,
+        "kpi_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "colored",
+      "file": "data/kpi-dashboard-colored.html",
+      "description": "Kpi Dashboard (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-kpi-dashboard-light",
+      "slots": {
+        "title": true,
+        "kpi_1_value": true,
+        "kpi_1_label": true,
+        "kpi_2_value": true,
+        "kpi_2_label": true,
+        "kpi_3_value": true,
+        "kpi_3_label": true,
+        "kpi_4_value": true,
+        "kpi_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "light",
+      "file": "data/kpi-dashboard-light.html",
+      "description": "Kpi Dashboard (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "data-kpi-dashboard-reversed",
+      "slots": {
+        "title": true,
+        "kpi_1_value": true,
+        "kpi_1_label": true,
+        "kpi_2_value": true,
+        "kpi_2_label": true,
+        "kpi_3_value": true,
+        "kpi_3_label": true,
+        "kpi_4_value": true,
+        "kpi_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "kpi-dashboard",
+      "treatment": "reversed",
+      "file": "data/kpi-dashboard-reversed.html",
+      "description": "Kpi Dashboard (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-metric-grid-colored",
+      "slots": {
+        "title": true,
+        "metric_1_value": true,
+        "metric_1_label": true,
+        "metric_2_value": true,
+        "metric_2_label": true,
+        "metric_3_value": true,
+        "metric_3_label": true,
+        "metric_4_value": true,
+        "metric_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "colored",
+      "file": "data/metric-grid-colored.html",
+      "description": "Metric Grid (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-metric-grid-light",
+      "slots": {
+        "title": true,
+        "metric_1_value": true,
+        "metric_1_label": true,
+        "metric_2_value": true,
+        "metric_2_label": true,
+        "metric_3_value": true,
+        "metric_3_label": true,
+        "metric_4_value": true,
+        "metric_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "light",
+      "file": "data/metric-grid-light.html",
+      "description": "Metric Grid (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "data-metric-grid-reversed",
+      "slots": {
+        "title": true,
+        "metric_1_value": true,
+        "metric_1_label": true,
+        "metric_2_value": true,
+        "metric_2_label": true,
+        "metric_3_value": true,
+        "metric_3_label": true,
+        "metric_4_value": true,
+        "metric_4_label": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "data",
+      "layout": "metric-grid",
+      "treatment": "reversed",
+      "file": "data/metric-grid-reversed.html",
+      "description": "Metric Grid (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "data-percentage-ring-colored",
+      "slots": {
+        "title": true,
+        "percentage": true,
+        "label": true,
+        "context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "colored",
+      "file": "data/percentage-ring-colored.html",
+      "description": "Percentage Ring (colored) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "colored"
+      ]
+    },
+    {
+      "id": "data-percentage-ring-light",
+      "slots": {
+        "title": true,
+        "percentage": true,
+        "label": true,
+        "context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "light",
+      "file": "data/percentage-ring-light.html",
+      "description": "Percentage Ring (light) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "light"
+      ]
+    },
+    {
+      "id": "data-percentage-ring-reversed",
+      "slots": {
+        "title": true,
+        "percentage": true,
+        "label": true,
+        "context": true
+      },
+      "composition": "Data Spotlight",
+      "intensity": "impact",
+      "category": "data",
+      "layout": "percentage-ring",
+      "treatment": "reversed",
+      "file": "data/percentage-ring-reversed.html",
+      "description": "Percentage Ring (reversed) \u2014 Data Spotlight composition",
+      "tags": [
+        "impact",
+        "data-spotlight",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-before-after-colored",
+      "slots": {
+        "title": true,
+        "before_image": true,
+        "after_image": true,
+        "before_label": true,
+        "after_label": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "colored",
+      "file": "image/before-after-colored.html",
+      "description": "Before After (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-before-after-light",
+      "slots": {
+        "title": true,
+        "before_image": true,
+        "after_image": true,
+        "before_label": true,
+        "after_label": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "light",
+      "file": "image/before-after-light.html",
+      "description": "Before After (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "image-before-after-reversed",
+      "slots": {
+        "title": true,
+        "before_image": true,
+        "after_image": true,
+        "before_label": true,
+        "after_label": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "before-after",
+      "treatment": "reversed",
+      "file": "image/before-after-reversed.html",
+      "description": "Before After (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-captioned-center-colored",
+      "slots": {
+        "image": true,
+        "title": true,
+        "caption": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "colored",
+      "file": "image/captioned-center-colored.html",
+      "description": "Captioned Center (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-captioned-center-light",
+      "slots": {
+        "image": true,
+        "title": true,
+        "caption": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "light",
+      "file": "image/captioned-center-light.html",
+      "description": "Captioned Center (light) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "image-captioned-center-reversed",
+      "slots": {
+        "image": true,
+        "title": true,
+        "caption": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "captioned-center",
+      "treatment": "reversed",
+      "file": "image/captioned-center-reversed.html",
+      "description": "Captioned Center (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-full-bleed-colored",
+      "slots": {
+        "image": true,
+        "caption": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "colored",
+      "file": "image/full-bleed-colored.html",
+      "description": "Full Bleed (colored) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-full-bleed-light",
+      "slots": {
+        "image": true,
+        "caption": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "light",
+      "file": "image/full-bleed-light.html",
+      "description": "Full Bleed (light) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "light"
+      ]
+    },
+    {
+      "id": "image-full-bleed-reversed",
+      "slots": {
+        "image": true,
+        "caption": true
+      },
+      "composition": "Full Bleed",
+      "intensity": "hero",
+      "category": "image",
+      "layout": "full-bleed",
+      "treatment": "reversed",
+      "file": "image/full-bleed-reversed.html",
+      "description": "Full Bleed (reversed) \u2014 Full Bleed composition",
+      "tags": [
+        "hero",
+        "full-bleed",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-gallery-2x2-colored",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true,
+        "caption": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "colored",
+      "file": "image/gallery-2x2-colored.html",
+      "description": "Gallery 2X2 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-gallery-2x2-light",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true,
+        "caption": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "light",
+      "file": "image/gallery-2x2-light.html",
+      "description": "Gallery 2X2 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "image-gallery-2x2-reversed",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true,
+        "caption": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-2x2",
+      "treatment": "reversed",
+      "file": "image/gallery-2x2-reversed.html",
+      "description": "Gallery 2X2 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-gallery-strip-colored",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true
+      },
+      "composition": "Edge Tension",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "colored",
+      "file": "image/gallery-strip-colored.html",
+      "description": "Gallery Strip (colored) \u2014 Edge Tension composition",
+      "tags": [
+        "workhorse",
+        "edge-tension",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-gallery-strip-light",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true
+      },
+      "composition": "Edge Tension",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "light",
+      "file": "image/gallery-strip-light.html",
+      "description": "Gallery Strip (light) \u2014 Edge Tension composition",
+      "tags": [
+        "workhorse",
+        "edge-tension",
+        "light"
+      ]
+    },
+    {
+      "id": "image-gallery-strip-reversed",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true,
+        "image_4": true
+      },
+      "composition": "Edge Tension",
+      "intensity": "workhorse",
+      "category": "image",
+      "layout": "gallery-strip",
+      "treatment": "reversed",
+      "file": "image/gallery-strip-reversed.html",
+      "description": "Gallery Strip (reversed) \u2014 Edge Tension composition",
+      "tags": [
+        "workhorse",
+        "edge-tension",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-half-bleed-left-colored",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "colored",
+      "file": "image/half-bleed-left-colored.html",
+      "description": "Half Bleed Left (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-half-bleed-left-light",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "light",
+      "file": "image/half-bleed-left-light.html",
+      "description": "Half Bleed Left (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "image-half-bleed-left-reversed",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-left",
+      "treatment": "reversed",
+      "file": "image/half-bleed-left-reversed.html",
+      "description": "Half Bleed Left (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-half-bleed-right-colored",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "colored",
+      "file": "image/half-bleed-right-colored.html",
+      "description": "Half Bleed Right (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-half-bleed-right-light",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "light",
+      "file": "image/half-bleed-right-light.html",
+      "description": "Half Bleed Right (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "image-half-bleed-right-reversed",
+      "slots": {
+        "image": true,
+        "title": true,
+        "body": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "half-bleed-right",
+      "treatment": "reversed",
+      "file": "image/half-bleed-right-reversed.html",
+      "description": "Half Bleed Right (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "image-overlapping-cards-colored",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true
+      },
+      "composition": "Layered Stack",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "colored",
+      "file": "image/overlapping-cards-colored.html",
+      "description": "Overlapping Cards (colored) \u2014 Layered Stack composition",
+      "tags": [
+        "impact",
+        "layered-stack",
+        "colored"
+      ]
+    },
+    {
+      "id": "image-overlapping-cards-light",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true
+      },
+      "composition": "Layered Stack",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "light",
+      "file": "image/overlapping-cards-light.html",
+      "description": "Overlapping Cards (light) \u2014 Layered Stack composition",
+      "tags": [
+        "impact",
+        "layered-stack",
+        "light"
+      ]
+    },
+    {
+      "id": "image-overlapping-cards-reversed",
+      "slots": {
+        "title": true,
+        "image_1": true,
+        "image_2": true,
+        "image_3": true
+      },
+      "composition": "Layered Stack",
+      "intensity": "impact",
+      "category": "image",
+      "layout": "overlapping-cards",
+      "treatment": "reversed",
+      "file": "image/overlapping-cards-reversed.html",
+      "description": "Overlapping Cards (reversed) \u2014 Layered Stack composition",
+      "tags": [
+        "impact",
+        "layered-stack",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-before-after-colored",
+      "slots": {
+        "title": true,
+        "before_heading": true,
+        "before_body": true,
+        "after_heading": true,
+        "after_body": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "colored",
+      "file": "comparison/before-after-colored.html",
+      "description": "Before After (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-before-after-light",
+      "slots": {
+        "title": true,
+        "before_heading": true,
+        "before_body": true,
+        "after_heading": true,
+        "after_body": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "light",
+      "file": "comparison/before-after-light.html",
+      "description": "Before After (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-before-after-reversed",
+      "slots": {
+        "title": true,
+        "before_heading": true,
+        "before_body": true,
+        "after_heading": true,
+        "after_body": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "before-after",
+      "treatment": "reversed",
+      "file": "comparison/before-after-reversed.html",
+      "description": "Before After (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-feature-matrix-colored",
+      "slots": {
+        "title": true,
+        "feature_1": true,
+        "feature_2": true,
+        "feature_3": true,
+        "feature_4": true,
+        "col_1_name": true,
+        "col_2_name": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "colored",
+      "file": "comparison/feature-matrix-colored.html",
+      "description": "Feature Matrix (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-feature-matrix-light",
+      "slots": {
+        "title": true,
+        "feature_1": true,
+        "feature_2": true,
+        "feature_3": true,
+        "feature_4": true,
+        "col_1_name": true,
+        "col_2_name": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "light",
+      "file": "comparison/feature-matrix-light.html",
+      "description": "Feature Matrix (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-feature-matrix-reversed",
+      "slots": {
+        "title": true,
+        "feature_1": true,
+        "feature_2": true,
+        "feature_3": true,
+        "feature_4": true,
+        "col_1_name": true,
+        "col_2_name": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "feature-matrix",
+      "treatment": "reversed",
+      "file": "comparison/feature-matrix-reversed.html",
+      "description": "Feature Matrix (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-pros-cons-colored",
+      "slots": {
+        "title": true,
+        "pros_heading": true,
+        "pros_items": true,
+        "cons_heading": true,
+        "cons_items": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "colored",
+      "file": "comparison/pros-cons-colored.html",
+      "description": "Pros Cons (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-pros-cons-light",
+      "slots": {
+        "title": true,
+        "pros_heading": true,
+        "pros_items": true,
+        "cons_heading": true,
+        "cons_items": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "light",
+      "file": "comparison/pros-cons-light.html",
+      "description": "Pros Cons (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-pros-cons-reversed",
+      "slots": {
+        "title": true,
+        "pros_heading": true,
+        "pros_items": true,
+        "cons_heading": true,
+        "cons_items": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "pros-cons",
+      "treatment": "reversed",
+      "file": "comparison/pros-cons-reversed.html",
+      "description": "Pros Cons (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-side-by-side-colored",
+      "slots": {
+        "title": true,
+        "left_heading": true,
+        "left_bullets": true,
+        "right_heading": true,
+        "right_bullets": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "colored",
+      "file": "comparison/side-by-side-colored.html",
+      "description": "Side By Side (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-side-by-side-light",
+      "slots": {
+        "title": true,
+        "left_heading": true,
+        "left_bullets": true,
+        "right_heading": true,
+        "right_bullets": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "light",
+      "file": "comparison/side-by-side-light.html",
+      "description": "Side By Side (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-side-by-side-reversed",
+      "slots": {
+        "title": true,
+        "left_heading": true,
+        "left_bullets": true,
+        "right_heading": true,
+        "right_bullets": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "side-by-side",
+      "treatment": "reversed",
+      "file": "comparison/side-by-side-reversed.html",
+      "description": "Side By Side (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-stacked-compare-colored",
+      "slots": {
+        "title": true,
+        "item_1_label": true,
+        "item_1_value": true,
+        "item_2_label": true,
+        "item_2_value": true,
+        "item_3_label": true,
+        "item_3_value": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "colored",
+      "file": "comparison/stacked-compare-colored.html",
+      "description": "Stacked Compare (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "workhorse",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-stacked-compare-light",
+      "slots": {
+        "title": true,
+        "item_1_label": true,
+        "item_1_value": true,
+        "item_2_label": true,
+        "item_2_value": true,
+        "item_3_label": true,
+        "item_3_value": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "light",
+      "file": "comparison/stacked-compare-light.html",
+      "description": "Stacked Compare (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "workhorse",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-stacked-compare-reversed",
+      "slots": {
+        "title": true,
+        "item_1_label": true,
+        "item_1_value": true,
+        "item_2_label": true,
+        "item_2_value": true,
+        "item_3_label": true,
+        "item_3_value": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "workhorse",
+      "category": "comparison",
+      "layout": "stacked-compare",
+      "treatment": "reversed",
+      "file": "comparison/stacked-compare-reversed.html",
+      "description": "Stacked Compare (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "workhorse",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "comparison-versus-colored",
+      "slots": {
+        "title": true,
+        "left_label": true,
+        "left_content": true,
+        "right_label": true,
+        "right_content": true,
+        "center_vs": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "colored",
+      "file": "comparison/versus-colored.html",
+      "description": "Versus (colored) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "colored"
+      ]
+    },
+    {
+      "id": "comparison-versus-light",
+      "slots": {
+        "title": true,
+        "left_label": true,
+        "left_content": true,
+        "right_label": true,
+        "right_content": true,
+        "center_vs": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "light",
+      "file": "comparison/versus-light.html",
+      "description": "Versus (light) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "light"
+      ]
+    },
+    {
+      "id": "comparison-versus-reversed",
+      "slots": {
+        "title": true,
+        "left_label": true,
+        "left_content": true,
+        "right_label": true,
+        "right_content": true,
+        "center_vs": true
+      },
+      "composition": "Comparison Matrix",
+      "intensity": "impact",
+      "category": "comparison",
+      "layout": "versus",
+      "treatment": "reversed",
+      "file": "comparison/versus-reversed.html",
+      "description": "Versus (reversed) \u2014 Comparison Matrix composition",
+      "tags": [
+        "impact",
+        "comparison-matrix",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-branching-colored",
+      "slots": {
+        "title": true,
+        "trunk": true,
+        "branch_1_label": true,
+        "branch_1_items": true,
+        "branch_2_label": true,
+        "branch_2_items": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "colored",
+      "file": "timeline/branching-colored.html",
+      "description": "Branching (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-branching-light",
+      "slots": {
+        "title": true,
+        "trunk": true,
+        "branch_1_label": true,
+        "branch_1_items": true,
+        "branch_2_label": true,
+        "branch_2_items": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "light",
+      "file": "timeline/branching-light.html",
+      "description": "Branching (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-branching-reversed",
+      "slots": {
+        "title": true,
+        "trunk": true,
+        "branch_1_label": true,
+        "branch_1_items": true,
+        "branch_2_label": true,
+        "branch_2_items": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "branching",
+      "treatment": "reversed",
+      "file": "timeline/branching-reversed.html",
+      "description": "Branching (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-horizontal-colored",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_label": true,
+        "point_2_date": true,
+        "point_2_label": true,
+        "point_3_date": true,
+        "point_3_label": true,
+        "point_4_date": true,
+        "point_4_label": true,
+        "point_5_date": true,
+        "point_5_label": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "colored",
+      "file": "timeline/horizontal-colored.html",
+      "description": "Horizontal (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-horizontal-light",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_label": true,
+        "point_2_date": true,
+        "point_2_label": true,
+        "point_3_date": true,
+        "point_3_label": true,
+        "point_4_date": true,
+        "point_4_label": true,
+        "point_5_date": true,
+        "point_5_label": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "light",
+      "file": "timeline/horizontal-light.html",
+      "description": "Horizontal (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-horizontal-reversed",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_label": true,
+        "point_2_date": true,
+        "point_2_label": true,
+        "point_3_date": true,
+        "point_3_label": true,
+        "point_4_date": true,
+        "point_4_label": true,
+        "point_5_date": true,
+        "point_5_label": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "horizontal",
+      "treatment": "reversed",
+      "file": "timeline/horizontal-reversed.html",
+      "description": "Horizontal (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-milestone-colored",
+      "slots": {
+        "title": true,
+        "milestone_1_date": true,
+        "milestone_1_title": true,
+        "milestone_1_body": true,
+        "milestone_2_date": true,
+        "milestone_2_title": true,
+        "milestone_2_body": true,
+        "milestone_3_date": true,
+        "milestone_3_title": true,
+        "milestone_3_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "impact",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "colored",
+      "file": "timeline/milestone-colored.html",
+      "description": "Milestone (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "impact",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-milestone-light",
+      "slots": {
+        "title": true,
+        "milestone_1_date": true,
+        "milestone_1_title": true,
+        "milestone_1_body": true,
+        "milestone_2_date": true,
+        "milestone_2_title": true,
+        "milestone_2_body": true,
+        "milestone_3_date": true,
+        "milestone_3_title": true,
+        "milestone_3_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "impact",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "light",
+      "file": "timeline/milestone-light.html",
+      "description": "Milestone (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "impact",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-milestone-reversed",
+      "slots": {
+        "title": true,
+        "milestone_1_date": true,
+        "milestone_1_title": true,
+        "milestone_1_body": true,
+        "milestone_2_date": true,
+        "milestone_2_title": true,
+        "milestone_2_body": true,
+        "milestone_3_date": true,
+        "milestone_3_title": true,
+        "milestone_3_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "impact",
+      "category": "timeline",
+      "layout": "milestone",
+      "treatment": "reversed",
+      "file": "timeline/milestone-reversed.html",
+      "description": "Milestone (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "impact",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-roadmap-colored",
+      "slots": {
+        "title": true,
+        "phase_1_title": true,
+        "phase_1_body": true,
+        "phase_2_title": true,
+        "phase_2_body": true,
+        "phase_3_title": true,
+        "phase_3_body": true,
+        "phase_4_title": true,
+        "phase_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "colored",
+      "file": "timeline/roadmap-colored.html",
+      "description": "Roadmap (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-roadmap-light",
+      "slots": {
+        "title": true,
+        "phase_1_title": true,
+        "phase_1_body": true,
+        "phase_2_title": true,
+        "phase_2_body": true,
+        "phase_3_title": true,
+        "phase_3_body": true,
+        "phase_4_title": true,
+        "phase_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "light",
+      "file": "timeline/roadmap-light.html",
+      "description": "Roadmap (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-roadmap-reversed",
+      "slots": {
+        "title": true,
+        "phase_1_title": true,
+        "phase_1_body": true,
+        "phase_2_title": true,
+        "phase_2_body": true,
+        "phase_3_title": true,
+        "phase_3_body": true,
+        "phase_4_title": true,
+        "phase_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "roadmap",
+      "treatment": "reversed",
+      "file": "timeline/roadmap-reversed.html",
+      "description": "Roadmap (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-steps-colored",
+      "slots": {
+        "title": true,
+        "step_1_number": true,
+        "step_1_title": true,
+        "step_1_body": true,
+        "step_2_number": true,
+        "step_2_title": true,
+        "step_2_body": true,
+        "step_3_number": true,
+        "step_3_title": true,
+        "step_3_body": true,
+        "step_4_number": true,
+        "step_4_title": true,
+        "step_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "colored",
+      "file": "timeline/steps-colored.html",
+      "description": "Steps (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-steps-light",
+      "slots": {
+        "title": true,
+        "step_1_number": true,
+        "step_1_title": true,
+        "step_1_body": true,
+        "step_2_number": true,
+        "step_2_title": true,
+        "step_2_body": true,
+        "step_3_number": true,
+        "step_3_title": true,
+        "step_3_body": true,
+        "step_4_number": true,
+        "step_4_title": true,
+        "step_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "light",
+      "file": "timeline/steps-light.html",
+      "description": "Steps (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-steps-reversed",
+      "slots": {
+        "title": true,
+        "step_1_number": true,
+        "step_1_title": true,
+        "step_1_body": true,
+        "step_2_number": true,
+        "step_2_title": true,
+        "step_2_body": true,
+        "step_3_number": true,
+        "step_3_title": true,
+        "step_3_body": true,
+        "step_4_number": true,
+        "step_4_title": true,
+        "step_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "steps",
+      "treatment": "reversed",
+      "file": "timeline/steps-reversed.html",
+      "description": "Steps (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "timeline-vertical-colored",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_title": true,
+        "point_1_body": true,
+        "point_2_date": true,
+        "point_2_title": true,
+        "point_2_body": true,
+        "point_3_date": true,
+        "point_3_title": true,
+        "point_3_body": true,
+        "point_4_date": true,
+        "point_4_title": true,
+        "point_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "colored",
+      "file": "timeline/vertical-colored.html",
+      "description": "Vertical (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "timeline-vertical-light",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_title": true,
+        "point_1_body": true,
+        "point_2_date": true,
+        "point_2_title": true,
+        "point_2_body": true,
+        "point_3_date": true,
+        "point_3_title": true,
+        "point_3_body": true,
+        "point_4_date": true,
+        "point_4_title": true,
+        "point_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "light",
+      "file": "timeline/vertical-light.html",
+      "description": "Vertical (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "timeline-vertical-reversed",
+      "slots": {
+        "title": true,
+        "point_1_date": true,
+        "point_1_title": true,
+        "point_1_body": true,
+        "point_2_date": true,
+        "point_2_title": true,
+        "point_2_body": true,
+        "point_3_date": true,
+        "point_3_title": true,
+        "point_3_body": true,
+        "point_4_date": true,
+        "point_4_title": true,
+        "point_4_body": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "timeline",
+      "layout": "vertical",
+      "treatment": "reversed",
+      "file": "timeline/vertical-reversed.html",
+      "description": "Vertical (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "quote-editorial-colored",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "context": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "colored",
+      "file": "quote/editorial-colored.html",
+      "description": "Editorial (colored) \u2014 Editorial Spread composition",
+      "tags": [
+        "impact",
+        "editorial-spread",
+        "colored"
+      ]
+    },
+    {
+      "id": "quote-editorial-light",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "context": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "light",
+      "file": "quote/editorial-light.html",
+      "description": "Editorial (light) \u2014 Editorial Spread composition",
+      "tags": [
+        "impact",
+        "editorial-spread",
+        "light"
+      ]
+    },
+    {
+      "id": "quote-editorial-reversed",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "context": true
+      },
+      "composition": "Editorial Spread",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "editorial",
+      "treatment": "reversed",
+      "file": "quote/editorial-reversed.html",
+      "description": "Editorial (reversed) \u2014 Editorial Spread composition",
+      "tags": [
+        "impact",
+        "editorial-spread",
+        "reversed"
+      ]
+    },
+    {
+      "id": "quote-large-centered-colored",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "colored",
+      "file": "quote/large-centered-colored.html",
+      "description": "Large Centered (colored) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "colored"
+      ]
+    },
+    {
+      "id": "quote-large-centered-light",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "light",
+      "file": "quote/large-centered-light.html",
+      "description": "Large Centered (light) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "light"
+      ]
+    },
+    {
+      "id": "quote-large-centered-reversed",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "large-centered",
+      "treatment": "reversed",
+      "file": "quote/large-centered-reversed.html",
+      "description": "Large Centered (reversed) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "reversed"
+      ]
+    },
+    {
+      "id": "quote-minimal-colored",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "colored",
+      "file": "quote/minimal-colored.html",
+      "description": "Minimal (colored) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "colored"
+      ]
+    },
+    {
+      "id": "quote-minimal-light",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "light",
+      "file": "quote/minimal-light.html",
+      "description": "Minimal (light) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "light"
+      ]
+    },
+    {
+      "id": "quote-minimal-reversed",
+      "slots": {
+        "quote_text": true,
+        "attribution": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "minimal",
+      "treatment": "reversed",
+      "file": "quote/minimal-reversed.html",
+      "description": "Minimal (reversed) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "reversed"
+      ]
+    },
+    {
+      "id": "quote-sidebar-portrait-colored",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "colored",
+      "file": "quote/sidebar-portrait-colored.html",
+      "description": "Sidebar Portrait (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "quote-sidebar-portrait-light",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "light",
+      "file": "quote/sidebar-portrait-light.html",
+      "description": "Sidebar Portrait (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "quote-sidebar-portrait-reversed",
+      "slots": {
+        "quote_text": true,
+        "attribution": true,
+        "image": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "quote",
+      "layout": "sidebar-portrait",
+      "treatment": "reversed",
+      "file": "quote/sidebar-portrait-reversed.html",
+      "description": "Sidebar Portrait (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "quote-stacked-colored",
+      "slots": {
+        "quote_1_text": true,
+        "quote_1_attribution": true,
+        "quote_2_text": true,
+        "quote_2_attribution": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "colored",
+      "file": "quote/stacked-colored.html",
+      "description": "Stacked (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "quote-stacked-light",
+      "slots": {
+        "quote_1_text": true,
+        "quote_1_attribution": true,
+        "quote_2_text": true,
+        "quote_2_attribution": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "light",
+      "file": "quote/stacked-light.html",
+      "description": "Stacked (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "quote-stacked-reversed",
+      "slots": {
+        "quote_1_text": true,
+        "quote_1_attribution": true,
+        "quote_2_text": true,
+        "quote_2_attribution": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "quote",
+      "layout": "stacked",
+      "treatment": "reversed",
+      "file": "quote/stacked-reversed.html",
+      "description": "Stacked (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "team-featured-colored",
+      "slots": {
+        "title": true,
+        "featured_name": true,
+        "featured_role": true,
+        "featured_bio": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "colored",
+      "file": "team/featured-colored.html",
+      "description": "Featured (colored) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "colored"
+      ]
+    },
+    {
+      "id": "team-featured-light",
+      "slots": {
+        "title": true,
+        "featured_name": true,
+        "featured_role": true,
+        "featured_bio": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "light",
+      "file": "team/featured-light.html",
+      "description": "Featured (light) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "light"
+      ]
+    },
+    {
+      "id": "team-featured-reversed",
+      "slots": {
+        "title": true,
+        "featured_name": true,
+        "featured_role": true,
+        "featured_bio": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true
+      },
+      "composition": "Asymmetric Split",
+      "intensity": "impact",
+      "category": "team",
+      "layout": "featured",
+      "treatment": "reversed",
+      "file": "team/featured-reversed.html",
+      "description": "Featured (reversed) \u2014 Asymmetric Split composition",
+      "tags": [
+        "impact",
+        "asymmetric-split",
+        "reversed"
+      ]
+    },
+    {
+      "id": "team-grid-4-colored",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "colored",
+      "file": "team/grid-4-colored.html",
+      "description": "Grid 4 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "team-grid-4-light",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "light",
+      "file": "team/grid-4-light.html",
+      "description": "Grid 4 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "team-grid-4-reversed",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-4",
+      "treatment": "reversed",
+      "file": "team/grid-4-reversed.html",
+      "description": "Grid 4 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "team-grid-6-colored",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true,
+        "member_5_name": true,
+        "member_5_role": true,
+        "member_6_name": true,
+        "member_6_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "colored",
+      "file": "team/grid-6-colored.html",
+      "description": "Grid 6 (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "team-grid-6-light",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true,
+        "member_5_name": true,
+        "member_5_role": true,
+        "member_6_name": true,
+        "member_6_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "light",
+      "file": "team/grid-6-light.html",
+      "description": "Grid 6 (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "team-grid-6-reversed",
+      "slots": {
+        "title": true,
+        "member_1_name": true,
+        "member_1_role": true,
+        "member_2_name": true,
+        "member_2_role": true,
+        "member_3_name": true,
+        "member_3_role": true,
+        "member_4_name": true,
+        "member_4_role": true,
+        "member_5_name": true,
+        "member_5_role": true,
+        "member_6_name": true,
+        "member_6_role": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "grid-6",
+      "treatment": "reversed",
+      "file": "team/grid-6-reversed.html",
+      "description": "Grid 6 (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "team-org-chart-colored",
+      "slots": {
+        "title": true,
+        "leader_name": true,
+        "leader_role": true,
+        "report_1_name": true,
+        "report_1_role": true,
+        "report_2_name": true,
+        "report_2_role": true,
+        "report_3_name": true,
+        "report_3_role": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "colored",
+      "file": "team/org-chart-colored.html",
+      "description": "Org Chart (colored) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "team-org-chart-light",
+      "slots": {
+        "title": true,
+        "leader_name": true,
+        "leader_role": true,
+        "report_1_name": true,
+        "report_1_role": true,
+        "report_2_name": true,
+        "report_2_role": true,
+        "report_3_name": true,
+        "report_3_role": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "light",
+      "file": "team/org-chart-light.html",
+      "description": "Org Chart (light) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "team-org-chart-reversed",
+      "slots": {
+        "title": true,
+        "leader_name": true,
+        "leader_role": true,
+        "report_1_name": true,
+        "report_1_role": true,
+        "report_2_name": true,
+        "report_2_role": true,
+        "report_3_name": true,
+        "report_3_role": true
+      },
+      "composition": "Timeline Flow",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "org-chart",
+      "treatment": "reversed",
+      "file": "team/org-chart-reversed.html",
+      "description": "Org Chart (reversed) \u2014 Timeline Flow composition",
+      "tags": [
+        "workhorse",
+        "timeline-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "team-profiles-colored",
+      "slots": {
+        "title": true,
+        "profile_1_name": true,
+        "profile_1_role": true,
+        "profile_1_bio": true,
+        "profile_2_name": true,
+        "profile_2_role": true,
+        "profile_2_bio": true,
+        "profile_3_name": true,
+        "profile_3_role": true,
+        "profile_3_bio": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "colored",
+      "file": "team/profiles-colored.html",
+      "description": "Profiles (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "team-profiles-light",
+      "slots": {
+        "title": true,
+        "profile_1_name": true,
+        "profile_1_role": true,
+        "profile_1_bio": true,
+        "profile_2_name": true,
+        "profile_2_role": true,
+        "profile_2_bio": true,
+        "profile_3_name": true,
+        "profile_3_role": true,
+        "profile_3_bio": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "light",
+      "file": "team/profiles-light.html",
+      "description": "Profiles (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "team-profiles-reversed",
+      "slots": {
+        "title": true,
+        "profile_1_name": true,
+        "profile_1_role": true,
+        "profile_1_bio": true,
+        "profile_2_name": true,
+        "profile_2_role": true,
+        "profile_2_bio": true,
+        "profile_3_name": true,
+        "profile_3_role": true,
+        "profile_3_bio": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "team",
+      "layout": "profiles",
+      "treatment": "reversed",
+      "file": "team/profiles-reversed.html",
+      "description": "Profiles (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-agenda-colored",
+      "slots": {
+        "title": true,
+        "agenda_1": true,
+        "agenda_2": true,
+        "agenda_3": true,
+        "agenda_4": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "colored",
+      "file": "structural/agenda-colored.html",
+      "description": "Agenda (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-agenda-light",
+      "slots": {
+        "title": true,
+        "agenda_1": true,
+        "agenda_2": true,
+        "agenda_3": true,
+        "agenda_4": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "light",
+      "file": "structural/agenda-light.html",
+      "description": "Agenda (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-agenda-reversed",
+      "slots": {
+        "title": true,
+        "agenda_1": true,
+        "agenda_2": true,
+        "agenda_3": true,
+        "agenda_4": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "agenda",
+      "treatment": "reversed",
+      "file": "structural/agenda-reversed.html",
+      "description": "Agenda (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-chapter-marker-colored",
+      "slots": {
+        "chapter_number": true,
+        "chapter_title": true,
+        "chapter_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "colored",
+      "file": "structural/chapter-marker-colored.html",
+      "description": "Chapter Marker (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-chapter-marker-light",
+      "slots": {
+        "chapter_number": true,
+        "chapter_title": true,
+        "chapter_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "light",
+      "file": "structural/chapter-marker-light.html",
+      "description": "Chapter Marker (light) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-chapter-marker-reversed",
+      "slots": {
+        "chapter_number": true,
+        "chapter_title": true,
+        "chapter_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "chapter-marker",
+      "treatment": "reversed",
+      "file": "structural/chapter-marker-reversed.html",
+      "description": "Chapter Marker (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-recap-colored",
+      "slots": {
+        "title": true,
+        "recap_1": true,
+        "recap_2": true,
+        "recap_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "colored",
+      "file": "structural/recap-colored.html",
+      "description": "Recap (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-recap-light",
+      "slots": {
+        "title": true,
+        "recap_1": true,
+        "recap_2": true,
+        "recap_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "light",
+      "file": "structural/recap-light.html",
+      "description": "Recap (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-recap-reversed",
+      "slots": {
+        "title": true,
+        "recap_1": true,
+        "recap_2": true,
+        "recap_3": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "recap",
+      "treatment": "reversed",
+      "file": "structural/recap-reversed.html",
+      "description": "Recap (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-section-divider-colored",
+      "slots": {
+        "section_number": true,
+        "section_title": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "colored",
+      "file": "structural/section-divider-colored.html",
+      "description": "Section Divider (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-section-divider-light",
+      "slots": {
+        "section_number": true,
+        "section_title": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "light",
+      "file": "structural/section-divider-light.html",
+      "description": "Section Divider (light) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-section-divider-reversed",
+      "slots": {
+        "section_number": true,
+        "section_title": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "section-divider",
+      "treatment": "reversed",
+      "file": "structural/section-divider-reversed.html",
+      "description": "Section Divider (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-toc-colored",
+      "slots": {
+        "title": true,
+        "toc_1": true,
+        "toc_2": true,
+        "toc_3": true,
+        "toc_4": true,
+        "toc_5": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "colored",
+      "file": "structural/toc-colored.html",
+      "description": "Toc (colored) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-toc-light",
+      "slots": {
+        "title": true,
+        "toc_1": true,
+        "toc_2": true,
+        "toc_3": true,
+        "toc_4": true,
+        "toc_5": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "light",
+      "file": "structural/toc-light.html",
+      "description": "Toc (light) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-toc-reversed",
+      "slots": {
+        "title": true,
+        "toc_1": true,
+        "toc_2": true,
+        "toc_3": true,
+        "toc_4": true,
+        "toc_5": true
+      },
+      "composition": "Magazine Flow",
+      "intensity": "workhorse",
+      "category": "structural",
+      "layout": "toc",
+      "treatment": "reversed",
+      "file": "structural/toc-reversed.html",
+      "description": "Toc (reversed) \u2014 Magazine Flow composition",
+      "tags": [
+        "workhorse",
+        "magazine-flow",
+        "reversed"
+      ]
+    },
+    {
+      "id": "structural-transition-colored",
+      "slots": {
+        "transition_text": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "colored",
+      "file": "structural/transition-colored.html",
+      "description": "Transition (colored) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "colored"
+      ]
+    },
+    {
+      "id": "structural-transition-light",
+      "slots": {
+        "transition_text": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "light",
+      "file": "structural/transition-light.html",
+      "description": "Transition (light) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "light"
+      ]
+    },
+    {
+      "id": "structural-transition-reversed",
+      "slots": {
+        "transition_text": true
+      },
+      "composition": "Minimal Statement",
+      "intensity": "impact",
+      "category": "structural",
+      "layout": "transition",
+      "treatment": "reversed",
+      "file": "structural/transition-reversed.html",
+      "description": "Transition (reversed) \u2014 Minimal Statement composition",
+      "tags": [
+        "impact",
+        "minimal-statement",
+        "reversed"
+      ]
+    },
+    {
+      "id": "closing-contact-colored",
+      "slots": {
+        "title": true,
+        "name": true,
+        "email": true,
+        "phone": true,
+        "website": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "colored",
+      "file": "closing/contact-colored.html",
+      "description": "Contact (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "closing-contact-light",
+      "slots": {
+        "title": true,
+        "name": true,
+        "email": true,
+        "phone": true,
+        "website": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "light",
+      "file": "closing/contact-light.html",
+      "description": "Contact (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "closing-contact-reversed",
+      "slots": {
+        "title": true,
+        "name": true,
+        "email": true,
+        "phone": true,
+        "website": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "contact",
+      "treatment": "reversed",
+      "file": "closing/contact-reversed.html",
+      "description": "Contact (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "closing-cta-colored",
+      "slots": {
+        "cta_text": true,
+        "cta_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "colored",
+      "file": "closing/cta-colored.html",
+      "description": "Cta (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "closing-cta-light",
+      "slots": {
+        "cta_text": true,
+        "cta_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "light",
+      "file": "closing/cta-light.html",
+      "description": "Cta (light) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "closing-cta-reversed",
+      "slots": {
+        "cta_text": true,
+        "cta_subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "cta",
+      "treatment": "reversed",
+      "file": "closing/cta-reversed.html",
+      "description": "Cta (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "closing-qr-code-colored",
+      "slots": {
+        "title": true,
+        "qr_image": true,
+        "url": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "colored",
+      "file": "closing/qr-code-colored.html",
+      "description": "Qr Code (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "closing-qr-code-light",
+      "slots": {
+        "title": true,
+        "qr_image": true,
+        "url": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "light",
+      "file": "closing/qr-code-light.html",
+      "description": "Qr Code (light) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "closing-qr-code-reversed",
+      "slots": {
+        "title": true,
+        "qr_image": true,
+        "url": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "impact",
+      "category": "closing",
+      "layout": "qr-code",
+      "treatment": "reversed",
+      "file": "closing/qr-code-reversed.html",
+      "description": "Qr Code (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "impact",
+        "centered-hero",
+        "reversed"
+      ]
+    },
+    {
+      "id": "closing-social-colored",
+      "slots": {
+        "title": true,
+        "platform_1": true,
+        "handle_1": true,
+        "platform_2": true,
+        "handle_2": true,
+        "platform_3": true,
+        "handle_3": true,
+        "platform_4": true,
+        "handle_4": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "colored",
+      "file": "closing/social-colored.html",
+      "description": "Social (colored) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "colored"
+      ]
+    },
+    {
+      "id": "closing-social-light",
+      "slots": {
+        "title": true,
+        "platform_1": true,
+        "handle_1": true,
+        "platform_2": true,
+        "handle_2": true,
+        "platform_3": true,
+        "handle_3": true,
+        "platform_4": true,
+        "handle_4": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "light",
+      "file": "closing/social-light.html",
+      "description": "Social (light) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "light"
+      ]
+    },
+    {
+      "id": "closing-social-reversed",
+      "slots": {
+        "title": true,
+        "platform_1": true,
+        "handle_1": true,
+        "platform_2": true,
+        "handle_2": true,
+        "platform_3": true,
+        "handle_3": true,
+        "platform_4": true,
+        "handle_4": true
+      },
+      "composition": "Card Grid",
+      "intensity": "workhorse",
+      "category": "closing",
+      "layout": "social",
+      "treatment": "reversed",
+      "file": "closing/social-reversed.html",
+      "description": "Social (reversed) \u2014 Card Grid composition",
+      "tags": [
+        "workhorse",
+        "card-grid",
+        "reversed"
+      ]
+    },
+    {
+      "id": "closing-thank-you-colored",
+      "slots": {
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "colored",
+      "file": "closing/thank-you-colored.html",
+      "description": "Thank You (colored) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "colored"
+      ]
+    },
+    {
+      "id": "closing-thank-you-light",
+      "slots": {
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "light",
+      "file": "closing/thank-you-light.html",
+      "description": "Thank You (light) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "light"
+      ]
+    },
+    {
+      "id": "closing-thank-you-reversed",
+      "slots": {
+        "subtitle": true
+      },
+      "composition": "Centered Hero",
+      "intensity": "hero",
+      "category": "closing",
+      "layout": "thank-you",
+      "treatment": "reversed",
+      "file": "closing/thank-you-reversed.html",
+      "description": "Thank You (reversed) \u2014 Centered Hero composition",
+      "tags": [
+        "hero",
+        "centered-hero",
+        "reversed"
+      ]
+    }
+  ]
+}

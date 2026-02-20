@@ -1,0 +1,52 @@
+<!-- Template: data-bar-comparison-light -->
+<!-- Slots: title, bar_1_label, bar_1_value, bar_2_label, bar_2_value, bar_3_label, bar_3_value -->
+<!-- Composition: Data Spotlight | Intensity: impact -->
+<div class="slide" style="position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+
+  <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px;">
+
+    <!-- Bar 1: accent color (first / dominant bar) -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 260px; flex-shrink: 0; font-size: var(--size-body); color: var(--color-text); font-weight: 500; text-align: right;">
+        {{bar_1_label}}
+      </div>
+      <div style="flex: 1; height: 52px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: 85%; height: 100%; background: var(--color-accent); border-radius: 8px;"></div>
+      </div>
+      <div style="width: 120px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-accent); letter-spacing: -1px;">
+        {{bar_1_value}}
+      </div>
+    </div>
+
+    <!-- Bar 2: muted color -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 260px; flex-shrink: 0; font-size: var(--size-body); color: var(--color-text); font-weight: 500; text-align: right;">
+        {{bar_2_label}}
+      </div>
+      <div style="flex: 1; height: 52px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: 60%; height: 100%; background: var(--color-muted); border-radius: 8px; opacity: 0.5;"></div>
+      </div>
+      <div style="width: 120px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-text); letter-spacing: -1px;">
+        {{bar_2_value}}
+      </div>
+    </div>
+
+    <!-- Bar 3: muted color -->
+    <div style="display: flex; align-items: center; gap: 24px;">
+      <div style="width: 260px; flex-shrink: 0; font-size: var(--size-body); color: var(--color-text); font-weight: 500; text-align: right;">
+        {{bar_3_label}}
+      </div>
+      <div style="flex: 1; height: 52px; background: var(--color-border); border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="width: 40%; height: 100%; background: var(--color-muted); border-radius: 8px; opacity: 0.4;"></div>
+      </div>
+      <div style="width: 120px; flex-shrink: 0; font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-text); letter-spacing: -1px;">
+        {{bar_3_value}}
+      </div>
+    </div>
+
+  </div>
+</div>

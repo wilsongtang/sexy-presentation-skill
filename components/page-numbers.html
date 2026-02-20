@@ -1,0 +1,133 @@
+<!--
+  page-numbers.html
+  Reusable page number / slide indicator patterns for presentation slides.
+  All color, size, and spacing values use CSS custom properties for theme compatibility.
+  These are designed to be positioned absolutely within a slide container that has
+  position: relative set.
+-->
+
+<!-- ============================================================ -->
+<!-- Component: page-number-bottom-right                           -->
+<!-- Simple slide number anchored to the bottom-right corner      -->
+<!-- ============================================================ -->
+<!-- Component: page-number-bottom-right -->
+<div style="
+  position: absolute;
+  bottom: var(--padding, 24px);
+  right: var(--padding, 24px);
+  color: var(--color-text-muted, var(--color-text));
+  font-size: var(--size-label, 0.8rem);
+  font-weight: 500;
+  opacity: 0.6;
+  line-height: 1;
+  user-select: none;
+">
+  7
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: page-number-bottom-center                          -->
+<!-- Simple slide number centered at the bottom of the slide      -->
+<!-- ============================================================ -->
+<!-- Component: page-number-bottom-center -->
+<div style="
+  position: absolute;
+  bottom: var(--padding, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-text-muted, var(--color-text));
+  font-size: var(--size-label, 0.8rem);
+  font-weight: 500;
+  opacity: 0.6;
+  line-height: 1;
+  user-select: none;
+">
+  7
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: page-number-accent-pill                            -->
+<!-- Slide number displayed inside an accent-colored pill badge   -->
+<!-- Positioned at bottom-right by default                        -->
+<!-- ============================================================ -->
+<!-- Component: page-number-accent-pill -->
+<div style="
+  position: absolute;
+  bottom: var(--padding, 24px);
+  right: var(--padding, 24px);
+  background: var(--color-accent);
+  color: var(--color-on-accent, #ffffff);
+  font-size: var(--size-label, 0.8rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 5px 12px;
+  border-radius: 999px;
+  user-select: none;
+">
+  7
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: page-number-fraction                               -->
+<!-- Current/total fraction format (e.g. 3 / 10) at bottom-right -->
+<!-- ============================================================ -->
+<!-- Component: page-number-fraction -->
+<div style="
+  position: absolute;
+  bottom: var(--padding, 24px);
+  right: var(--padding, 24px);
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  user-select: none;
+">
+  <!-- Current slide -->
+  <span style="
+    color: var(--color-text);
+    font-size: var(--size-label, 0.8rem);
+    font-weight: 700;
+    line-height: 1;
+  ">3</span>
+  <!-- Separator -->
+  <span style="
+    color: var(--color-text-muted, var(--color-text));
+    font-size: var(--size-label, 0.8rem);
+    font-weight: 400;
+    opacity: 0.5;
+    line-height: 1;
+  ">/</span>
+  <!-- Total slides -->
+  <span style="
+    color: var(--color-text-muted, var(--color-text));
+    font-size: var(--size-label, 0.8rem);
+    font-weight: 400;
+    opacity: 0.5;
+    line-height: 1;
+  ">10</span>
+</div>
+
+<!-- ============================================================ -->
+<!-- Component: page-number-progress-bar                           -->
+<!-- Horizontal progress bar spanning the full slide width at     -->
+<!-- the bottom edge, filled proportional to current slide        -->
+<!-- ============================================================ -->
+<!-- Component: page-number-progress-bar -->
+<div style="
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-border, rgba(0,0,0,0.1));
+  overflow: hidden;
+">
+  <!-- Fill width as a percentage: (current / total) * 100         -->
+  <!-- Example below shows slide 3 of 10 = 30%                     -->
+  <div style="
+    height: 100%;
+    width: 30%;
+    background: var(--color-accent);
+    border-radius: 0 2px 2px 0;
+    transition: width 0.3s ease;
+  "></div>
+</div>

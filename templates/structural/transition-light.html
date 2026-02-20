@@ -1,0 +1,19 @@
+<!-- Template: structural-transition-light -->
+<!-- Slots: transition_text -->
+<!-- Composition: Minimal Statement | Intensity: impact -->
+<div class="slide items-center" style="position: relative; overflow: hidden;">
+
+  <!-- Motif: thin rule at left edge (vertical accent line) -->
+  <div class="motif-element motif-rule" style="position: absolute; top: 50%; left: var(--margin); transform: translateY(-50%);"></div>
+
+  <!-- Content: offset from center for editorial feel, max whitespace -->
+  <div style="position: relative; z-index: 1; max-width: 900px; padding-left: calc(var(--margin) * 3); padding-bottom: calc(var(--margin) * 0.5);">
+    <!-- Single sentence at title size -->
+    <p style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 400; line-height: 1.25; color: var(--color-text); letter-spacing: -0.02em;">
+      {{transition_text}}
+    </p>
+    <!-- Thin 40px accent line below text -->
+    <div style="width: 40px; height: 2px; background: var(--color-accent); margin-top: calc(var(--gap) * 1.5);"></div>
+  </div>
+
+</div>

@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Model Routing Configuration",
+  "description": "Defines which AI model each agent uses. Allows cost/quality trade-offs via presets or per-agent overrides.",
+  "type": "object",
+  "required": ["default_model", "tiers"],
+  "properties": {
+    "default_model": {
+      "type": "string",
+      "enum": ["opus", "sonnet", "haiku"],
+      "description": "Fallback model when no tier or override matches"
+    },
+    "tiers": {
+      "type": "object",
+      "properties": {
+        "creative": {
+          "$ref": "#/$defs/tier"
+        },
+        "support": {
+          "$ref": "#/$defs/tier"
+        },
+        "mechanical": {
+          "$ref": "#/$defs/tier"
+        }
+      },
+      "required": ["creative", "support", "mechanical"]
+    },
+    "overrides": {
+      "type": "object",
+      "description": "Per-agent model overrides. Keys are agent names, values are model IDs.",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["opus", "sonnet", "haiku"]
+      }
+    },
+    "presets": {
+      "type": "object",
+      "description": "Named configurations for quick switching",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "description": { "type": "string" },
+          "creative": { "type": "string", "enum": ["opus", "sonnet", "haiku"] },
+          "support": { "type": "string", "enum": ["opus", "sonnet", "haiku"] },
+          "mechanical": { "type": "string", "enum": ["opus", "sonnet", "haiku"] },
+          "overrides": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "tier": {
+      "type": "object",
+      "required": ["model", "agents"],
+      "properties": {
+        "description": { "type": "string" },
+        "model": {
+          "type": "string",
+          "enum": ["opus", "sonnet", "haiku"]
+        },
+        "agents": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

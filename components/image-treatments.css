@@ -1,0 +1,68 @@
+/* Image Treatment Utilities
+   Usage: Wrap an <img> in a <div class="img-treatment img-darken">
+   The overlay <div class="img-treatment-overlay"> sits inside the wrapper.
+   All treatments use real DOM elements for Figma/PPTX export compatibility. */
+
+.img-treatment {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.img-treatment img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-treatment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Darken — semi-transparent dark overlay for text legibility */
+.img-darken .img-treatment-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Gradient Fade — fades image to solid color on bottom edge */
+.img-gradient-fade .img-treatment-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    var(--color-background) 100%
+  );
+}
+
+/* Desaturate — reduced saturation to let brand colors dominate */
+.img-desaturate img {
+  filter: saturate(0.25);
+}
+
+/* Color Wash — brand accent tint at low opacity */
+.img-color-wash .img-treatment-overlay {
+  background: var(--color-accent);
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+}
+
+/* Duotone — maps image to two brand colors */
+.img-duotone img {
+  filter: grayscale(100%) contrast(1.1);
+}
+.img-duotone .img-treatment-overlay {
+  background: var(--color-primary);
+  mix-blend-mode: color;
+  opacity: 0.85;
+}
+
+/* Blur Edge — gaussian blur on edges, sharp center */
+.img-blur-edge .img-treatment-overlay {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: radial-gradient(ellipse 70% 70% at center, transparent 50%, black 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, transparent 50%, black 100%);
+}
