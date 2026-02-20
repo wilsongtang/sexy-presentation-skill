@@ -1,13 +1,22 @@
 <!-- Template: data-big-stat-single-light -->
 <!-- Slots: stat_number, stat_label, stat_context -->
-<div class="slide" style="justify-content: center; align-items: center; text-align: center;">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 24px;">
-    <div style="font-family: var(--font-header); font-size: clamp(60pt, 6vw, 72pt); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+<!-- Composition: Data Spotlight | Intensity: impact -->
+<div class="slide items-center justify-center text-center" style="position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom-center for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <!-- Overline above stat -->
+    <span class="overline" style="color: var(--color-accent); font-size: var(--size-caption); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;">METRIC</span>
+    <!-- Dominant: the stat number at --size-stat -->
+    <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
       {{stat_number}}
     </div>
+    <!-- Label at --size-header -->
     <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text); letter-spacing: 0.02em;">
       {{stat_label}}
     </div>
+    <!-- Context at --size-body, muted -->
     <div style="font-size: var(--size-body); color: var(--color-muted); max-width: 800px; line-height: var(--line-height);">
       {{stat_context}}
     </div>
