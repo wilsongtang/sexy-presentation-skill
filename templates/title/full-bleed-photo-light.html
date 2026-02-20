@@ -1,12 +1,24 @@
 <!-- Template: title-full-bleed-photo-light -->
 <!-- Slots: title, subtitle, image -->
-<div class="slide !p-0 items-center justify-center text-center" style="position: relative;">
-  <img src="{{image}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
-  <div style="position: relative; z-index: 10; max-width: 1200px; padding: var(--margin);">
-    <h1 style="font-size: var(--size-title); font-weight: 700; letter-spacing: -0.02em;">
+<!-- Composition: Full Bleed | Intensity: hero -->
+<div class="slide !p-0" style="position: relative; overflow: hidden;">
+  <!-- Full-bleed image with darkening treatment for text legibility -->
+  <div class="img-treatment img-darken" style="position: absolute; inset: 0;">
+    <img src="{{image}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="img-treatment-overlay"></div>
+  </div>
+
+  <!-- Motif: rule at top-right for balance -->
+  <div class="motif-element motif-rule" style="position: absolute; top: var(--margin); right: var(--margin); z-index: 2;"></div>
+  <!-- Motif: dot at top-left for secondary anchor -->
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); left: var(--margin); z-index: 2;"></div>
+
+  <!-- Text anchored to bottom-left third -->
+  <div style="position: absolute; bottom: calc(var(--margin) * 2); left: calc(var(--margin) * 1.5); z-index: 2; max-width: 900px;">
+    <h1 style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: #fff; margin-bottom: var(--gap);">
       {{title}}
     </h1>
-    <p style="font-size: var(--size-header); color: var(--color-muted); margin-top: var(--gap);">
+    <p style="font-size: var(--size-header); color: rgba(255,255,255,0.75); line-height: 1.4; max-width: 700px;">
       {{subtitle}}
     </p>
   </div>

@@ -1,12 +1,28 @@
 <!-- Template: title-asymmetric-light -->
 <!-- Slots: title, subtitle -->
-<div class="slide !p-0 flex-row" style="position: relative;">
-  <div style="position: absolute; right: 0; top: 0; width: 40%; height: 100%; background: var(--color-secondary); opacity: 0.3;"></div>
-  <div class="flex flex-col justify-end" style="padding: var(--margin); padding-bottom: 120px; width: 65%; position: relative; z-index: 10;">
-    <h1 style="font-size: var(--size-title); font-weight: 700; letter-spacing: -0.02em;">
+<!-- Composition: Asymmetric Split | Intensity: hero -->
+<div class="slide !p-0" style="display: flex; flex-direction: row; position: relative; overflow: hidden;">
+  <!-- Left panel: 60% — title at display size -->
+  <div style="width: 60%; height: 100%; padding: calc(var(--margin) * 1.5); display: flex; flex-direction: column; justify-content: center; position: relative;">
+    <!-- Motif: dot at top-right corner of left panel -->
+    <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
+    <!-- Motif: subtle rule at bottom-left for grounding -->
+    <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: var(--margin);"></div>
+
+    <h1 style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text); max-width: 800px;">
       {{title}}
     </h1>
-    <p style="font-size: var(--size-header); color: var(--color-muted); margin-top: calc(var(--gap) * 0.5);">
+  </div>
+
+  <!-- Vertical divider -->
+  <div style="width: 1px; background: var(--color-accent); opacity: 0.2; flex-shrink: 0;"></div>
+
+  <!-- Right panel: 40% — subtitle with subtle accent background -->
+  <div style="flex: 1; height: 100%; padding: calc(var(--margin) * 1.5); display: flex; flex-direction: column; justify-content: center; position: relative; background: var(--color-accent); background-opacity: 0.04;">
+    <!-- Subtle accent tint via overlay -->
+    <div style="position: absolute; inset: 0; background: var(--color-accent); opacity: 0.04; pointer-events: none;"></div>
+
+    <p style="position: relative; z-index: 1; font-size: var(--size-header); color: var(--color-muted); line-height: 1.4;">
       {{subtitle}}
     </p>
   </div>
