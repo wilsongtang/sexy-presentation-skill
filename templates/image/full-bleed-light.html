@@ -1,8 +1,20 @@
 <!-- Template: image-full-bleed-light -->
 <!-- Slots: image, caption -->
-<div class="slide !p-0" style="position: relative;">
-  <img src="{{image}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--margin) calc(var(--margin) * 1.5); background: linear-gradient(to top, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0) 100%);">
-    <p style="font-size: var(--size-caption); color: var(--color-text); max-width: 900px;">{{caption}}</p>
+<!-- Composition: Full Bleed | Intensity: hero -->
+<div class="slide !p-0" style="position: relative; overflow: hidden;">
+
+  <!-- Full-bleed image with darken treatment for text legibility -->
+  <div class="img-treatment img-darken" style="position: absolute; inset: 0;">
+    <img src="{{image}}" alt="{{caption}}" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="img-treatment-overlay"></div>
   </div>
+
+  <!-- Motif: rule at top-right for editorial balance -->
+  <div class="motif-element motif-rule" style="position: absolute; top: var(--margin); right: var(--margin); z-index: 2;"></div>
+
+  <!-- Caption anchored to bottom-left, displayed at display scale -->
+  <div style="position: absolute; bottom: calc(var(--margin) * 2); left: calc(var(--margin) * 1.5); z-index: 2; max-width: 900px;">
+    <p style="font-size: var(--size-display); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: #fff;">{{caption}}</p>
+  </div>
+
 </div>
