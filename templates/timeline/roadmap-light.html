@@ -1,85 +1,82 @@
 <!-- Template: timeline-roadmap-light -->
-<!-- Slots: title, lane_1_label, lane_2_label, lane_3_label, q1_label, q2_label, q3_label, q4_label, lane_1_q1_activity, lane_1_q2_activity, lane_1_q3_activity, lane_1_q4_activity, lane_2_q1_activity, lane_2_q2_activity, lane_2_q3_activity, lane_2_q4_activity, lane_3_q1_activity, lane_3_q2_activity, lane_3_q3_activity, lane_3_q4_activity -->
-<div class="slide">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+<!-- Slots: title, phase_1_title, phase_1_body, phase_2_title, phase_2_body, phase_3_title, phase_3_body, phase_4_title, phase_4_body -->
+<!-- Composition: Timeline Flow | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden;">
 
-  <div class="flex flex-col" style="flex: 1; gap: 0;">
+  <!-- Motif: dot at bottom-right -->
+  <div class="motif-element" style="position: absolute; bottom: -24px; right: -24px; width: 96px; height: 96px; border-radius: 50%; border: 3px solid var(--color-accent); opacity: 0.15; pointer-events: none;"></div>
 
-    <!-- Column headers row (quarter labels) -->
-    <div class="flex flex-row" style="margin-bottom: 8px;">
-      <!-- Lane label spacer -->
-      <div style="width: 200px; flex-shrink: 0;"></div>
-      <!-- Quarter headers -->
-      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px;">
-        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q1_label}}</div>
-        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q2_label}}</div>
-        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q3_label}}</div>
-        <div style="flex: 1; text-align: center; font-size: var(--size-caption); font-weight: 700; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0; border-bottom: 2px solid var(--color-border);">{{q4_label}}</div>
+  <h2 style="font-size: var(--size-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div class="flex flex-col" style="flex: 1; justify-content: center;">
+
+    <!-- Phase cards + connecting arrows -->
+    <div class="flex flex-row" style="align-items: stretch; gap: 0; position: relative;">
+
+      <!-- Phase 1 — dominant (active, accent top stripe) -->
+      <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; position: relative; z-index: 1;">
+        <!-- Accent top stripe (4px) -->
+        <div style="height: 4px; background: var(--color-accent); flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text); margin-bottom: 8px; line-height: 1.3;">{{phase_1_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0; flex: 1;">{{phase_1_body}}</p>
+        </div>
       </div>
+
+      <!-- Connecting arrow 1→2 -->
+      <div style="display: flex; align-items: center; padding: 0 8px; flex-shrink: 0; z-index: 2;">
+        <!-- Arrow line -->
+        <div style="display: flex; align-items: center; gap: 0;">
+          <div style="width: 20px; height: 3px; background: var(--color-border);"></div>
+          <!-- Arrowhead as small triangle using borders -->
+          <div style="width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid var(--color-border);"></div>
+        </div>
+      </div>
+
+      <!-- Phase 2 — future -->
+      <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; position: relative; z-index: 1;">
+        <!-- Border-color top stripe (not accent) -->
+        <div style="height: 4px; background: var(--color-border); flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 8px; line-height: 1.3;">{{phase_2_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0; flex: 1;">{{phase_2_body}}</p>
+        </div>
+      </div>
+
+      <!-- Connecting arrow 2→3 -->
+      <div style="display: flex; align-items: center; padding: 0 8px; flex-shrink: 0; z-index: 2;">
+        <div style="display: flex; align-items: center; gap: 0;">
+          <div style="width: 20px; height: 3px; background: var(--color-border);"></div>
+          <div style="width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid var(--color-border);"></div>
+        </div>
+      </div>
+
+      <!-- Phase 3 — future -->
+      <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; position: relative; z-index: 1;">
+        <div style="height: 4px; background: var(--color-border); flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 8px; line-height: 1.3;">{{phase_3_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0; flex: 1;">{{phase_3_body}}</p>
+        </div>
+      </div>
+
+      <!-- Connecting arrow 3→4 -->
+      <div style="display: flex; align-items: center; padding: 0 8px; flex-shrink: 0; z-index: 2;">
+        <div style="display: flex; align-items: center; gap: 0;">
+          <div style="width: 20px; height: 3px; background: var(--color-border);"></div>
+          <div style="width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid var(--color-border);"></div>
+        </div>
+      </div>
+
+      <!-- Phase 4 — future -->
+      <div style="flex: 1; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; position: relative; z-index: 1;">
+        <div style="height: 4px; background: var(--color-border); flex-shrink: 0;"></div>
+        <div style="padding: 20px 24px; flex: 1; display: flex; flex-direction: column;">
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 8px; line-height: 1.3;">{{phase_4_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0; flex: 1;">{{phase_4_body}}</p>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Lane 1 row -->
-    <div class="flex flex-row" style="flex: 1; align-items: center; border-bottom: 1px solid var(--color-border);">
-      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
-        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_1_label}}</span>
-      </div>
-      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
-        <div style="flex: 1; background: var(--color-accent); border-radius: 8px; padding: 10px 14px; opacity: 0.85;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_1_q1_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-accent); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_1_q2_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_1_q3_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_1_q4_activity}}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lane 2 row -->
-    <div class="flex flex-row" style="flex: 1; align-items: center; border-bottom: 1px solid var(--color-border);">
-      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
-        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_2_label}}</span>
-      </div>
-      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_2_q1_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-primary); border-radius: 8px; padding: 10px 14px; opacity: 0.8;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_2_q2_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-primary); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_2_q3_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_2_q4_activity}}</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Lane 3 row -->
-    <div class="flex flex-row" style="flex: 1; align-items: center;">
-      <div style="width: 200px; flex-shrink: 0; padding-right: 24px;">
-        <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-text);">{{lane_3_label}}</span>
-      </div>
-      <div style="flex: 1; display: flex; flex-direction: row; gap: 8px; padding: 12px 0;">
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_3_q1_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-border); border-radius: 8px; padding: 10px 14px; opacity: 0.6;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: var(--color-muted);">{{lane_3_q2_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-secondary); border-radius: 8px; padding: 10px 14px; opacity: 0.8;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_3_q3_activity}}</span>
-        </div>
-        <div style="flex: 1; background: var(--color-secondary); border-radius: 8px; padding: 10px 14px; opacity: 0.65;">
-          <span style="font-size: var(--size-caption); font-weight: 500; color: white;">{{lane_3_q4_activity}}</span>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
