@@ -1,99 +1,50 @@
 <!-- Template: data-percentage-ring-reversed -->
-<!-- Slots: title, subtitle, ring_1_pct, ring_1_label, ring_1_description, ring_2_pct, ring_2_label, ring_2_description, ring_3_pct, ring_3_label, ring_3_description -->
-<!-- ring_*_pct is a number 0–100. The SVG stroke-dashoffset is calculated as: circumference * (1 - pct/100). Circumference for r=90 is ~565.5 -->
-<div class="slide" style="background-color: var(--color-primary);">
-  <div style="margin-bottom: var(--gap);">
-    <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600;">{{title}}</h2>
-    <p style="font-size: var(--size-body); color: rgba(255,255,255,0.6); margin-top: 8px;">{{subtitle}}</p>
-  </div>
+<!-- Slots: title, percentage, label, context -->
+<!-- Composition: Data Spotlight | Intensity: impact -->
+<div class="slide items-center justify-center text-center" style="background-color: var(--color-primary); position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
 
-  <div class="flex flex-row" style="flex: 1; align-items: center; justify-content: space-around; gap: var(--gap);">
+  <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text-reversed); margin-bottom: var(--gap);">{{title}}</h2>
 
-    <!-- Ring 1 -->
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 28px; flex: 1;">
-      <div style="position: relative; width: 240px; height: 240px; flex-shrink: 0;">
-        <svg width="240" height="240" viewBox="0 0 240 240" style="transform: rotate(-90deg);">
-          <!-- Track circle -->
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-border)"
-            stroke-width="18"/>
-          <!-- Progress circle: dasharray=565.5, dashoffset = 565.5*(1-pct/100) -->
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-accent)"
-            stroke-width="18"
-            stroke-linecap="round"
-            stroke-dasharray="565.5"
-            stroke-dashoffset="{{ring_1_dashoffset}}"/>
-        </svg>
-        <!-- Centered percentage label -->
-        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-          <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-text-reversed); line-height: 1;">
-            {{ring_1_pct}}%
-          </span>
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+
+    <!-- CSS conic-gradient ring: 300px, NOT SVG -->
+    <div style="
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: conic-gradient(var(--color-accent) calc({{percentage}} * 1%), var(--color-border) 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      <!-- Inner circle to create donut effect -->
+      <div style="
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: var(--color-background, #fff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+        <!-- Percentage number centered inside at --size-stat -->
+        <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+          {{percentage}}%
         </div>
-      </div>
-      <div style="text-align: center; display: flex; flex-direction: column; gap: 8px;">
-        <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">{{ring_1_label}}</div>
-        <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height); max-width: 320px;">{{ring_1_description}}</div>
       </div>
     </div>
 
-    <!-- Ring 2 -->
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 28px; flex: 1;">
-      <div style="position: relative; width: 240px; height: 240px; flex-shrink: 0;">
-        <svg width="240" height="240" viewBox="0 0 240 240" style="transform: rotate(-90deg);">
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-border)"
-            stroke-width="18"/>
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-accent)"
-            stroke-width="18"
-            stroke-linecap="round"
-            stroke-dasharray="565.5"
-            stroke-dashoffset="{{ring_2_dashoffset}}"/>
-        </svg>
-        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-          <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-text-reversed); line-height: 1;">
-            {{ring_2_pct}}%
-          </span>
-        </div>
-      </div>
-      <div style="text-align: center; display: flex; flex-direction: column; gap: 8px;">
-        <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">{{ring_2_label}}</div>
-        <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height); max-width: 320px;">{{ring_2_description}}</div>
-      </div>
+    <!-- Label -->
+    <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text-reversed);">
+      {{label}}
     </div>
 
-    <!-- Ring 3 -->
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 28px; flex: 1;">
-      <div style="position: relative; width: 240px; height: 240px; flex-shrink: 0;">
-        <svg width="240" height="240" viewBox="0 0 240 240" style="transform: rotate(-90deg);">
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-border)"
-            stroke-width="18"/>
-          <circle cx="120" cy="120" r="90"
-            fill="none"
-            stroke="var(--color-accent)"
-            stroke-width="18"
-            stroke-linecap="round"
-            stroke-dasharray="565.5"
-            stroke-dashoffset="{{ring_3_dashoffset}}"/>
-        </svg>
-        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
-          <span style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 800; color: var(--color-text-reversed); line-height: 1;">
-            {{ring_3_pct}}%
-          </span>
-        </div>
-      </div>
-      <div style="text-align: center; display: flex; flex-direction: column; gap: 8px;">
-        <div style="font-family: var(--font-header); font-size: var(--size-body); font-weight: 600; color: var(--color-text-reversed);">{{ring_3_label}}</div>
-        <div style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height); max-width: 320px;">{{ring_3_description}}</div>
-      </div>
+    <!-- Context at --size-body, muted -->
+    <div style="font-size: var(--size-body); color: rgba(255,255,255,0.6); max-width: 700px; line-height: var(--line-height);">
+      {{context}}
     </div>
 
   </div>

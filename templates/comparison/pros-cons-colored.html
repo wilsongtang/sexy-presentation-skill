@@ -1,65 +1,38 @@
 <!-- Template: comparison-pros-cons-colored -->
-<!-- Slots: title, pro_1, pro_2, pro_3, pro_4, con_1, con_2, con_3, con_4 -->
-<div class="slide" style="background-color: var(--color-secondary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header);">{{title}}</h2>
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
+<!-- Slots: title, pros_heading, pros_items, cons_heading, cons_items -->
+<!-- Composition: Comparison Matrix | Intensity: impact -->
+<div class="slide light" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
 
-    <!-- Pros Panel -->
-    <div style="flex: 1; border: 2px solid #16a34a; border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 20px; background: #f0fdf4;">
-      <div class="flex flex-row items-center" style="gap: 12px;">
-        <div style="width: 32px; height: 32px; border-radius: 50%; background: #16a34a; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: #ffffff; font-size: 18px; font-weight: 700; line-height: 1;">+</span>
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+
+    <!-- Cons panel (left, subdued) -->
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: row; align-items: center; gap: 14px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="font-size: 18px; font-weight: 700; color: var(--color-muted); line-height: 1;">−</span>
         </div>
-        <h3 style="font-size: var(--size-body); font-weight: 700; color: #15803d; font-family: var(--font-header);">Pros</h3>
+        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{cons_heading}}</h3>
       </div>
-      <div style="height: 1px; background: #86efac;"></div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
-          <span>{{pro_1}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
-          <span>{{pro_2}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
-          <span>{{pro_3}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10003;</span>
-          <span>{{pro_4}}</span>
-        </li>
-      </ul>
+      <div style="width: 40px; height: 2px; background: var(--color-border); border-radius: 2px;"></div>
+      <div style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7;">{{cons_items}}</div>
     </div>
 
-    <!-- Cons Panel -->
-    <div style="flex: 1; border: 2px solid #dc2626; border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 20px; background: #fff1f2;">
-      <div class="flex flex-row items-center" style="gap: 12px;">
-        <div style="width: 32px; height: 32px; border-radius: 50%; background: #dc2626; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: #ffffff; font-size: 18px; font-weight: 700; line-height: 1;">&#8722;</span>
+    <!-- Vertical divider -->
+    <div style="width: 1px; background: var(--color-border); flex-shrink: 0; align-self: stretch;"></div>
+
+    <!-- Pros panel (right, dominant accent) -->
+    <div style="flex: 1; border: 2px solid var(--color-accent); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+      <div style="display: flex; flex-direction: row; align-items: center; gap: 14px;">
+        <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="font-size: 18px; font-weight: 700; color: #fff; line-height: 1;">+</span>
         </div>
-        <h3 style="font-size: var(--size-body); font-weight: 700; color: #b91c1c; font-family: var(--font-header);">Cons</h3>
+        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-accent); font-family: var(--font-header);">{{pros_heading}}</h3>
       </div>
-      <div style="height: 1px; background: #fca5a5;"></div>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
-          <span>{{con_1}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
-          <span>{{con_2}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
-          <span>{{con_3}}</span>
-        </li>
-        <li class="flex flex-row items-start" style="gap: 12px; font-size: var(--size-caption); color: var(--color-text); line-height: 1.6;">
-          <span style="color: #dc2626; font-weight: 700; flex-shrink: 0; margin-top: 1px;">&#10005;</span>
-          <span>{{con_4}}</span>
-        </li>
-      </ul>
+      <div style="width: 40px; height: 3px; background: var(--color-accent); border-radius: 2px;"></div>
+      <div style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7;">{{pros_items}}</div>
     </div>
 
   </div>

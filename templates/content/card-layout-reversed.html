@@ -1,22 +1,32 @@
 <!-- Template: content-card-layout-reversed -->
 <!-- Slots: title, card_1_title, card_1_body, card_2_title, card_2_body, card_3_title, card_3_body -->
-<div class="slide" style="background-color: var(--color-primary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
+<!-- Composition: Card Grid | Intensity: workhorse -->
+<div class="slide" style="background-color: var(--color-primary); position: relative; overflow: hidden; display: flex; flex-direction: column; padding: var(--margin);">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text-reversed); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+    <!-- Card 1: dominant — accent border + flex:1.15 -->
+    <div style="flex: 1.15; border: 2px solid var(--color-accent); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
       <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.15; flex-shrink: 0;"></div>
-      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_1_title}}</h3>
-      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: 1.6;">{{card_1_body}}</p>
+      <h3 style="font-size: var(--size-body); font-family: var(--font-header); font-weight: 600; color: var(--color-text-reversed);">{{card_1_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">{{card_1_body}}</p>
     </div>
+    <!-- Card 2 -->
     <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
-      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.15; flex-shrink: 0;"></div>
-      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_2_title}}</h3>
-      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: 1.6;">{{card_2_body}}</p>
+      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.08; flex-shrink: 0;"></div>
+      <h3 style="font-size: var(--size-body); font-family: var(--font-header); font-weight: 600; color: var(--color-text-reversed);">{{card_2_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">{{card_2_body}}</p>
     </div>
+    <!-- Card 3 -->
     <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px;">
-      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.15; flex-shrink: 0;"></div>
-      <h3 style="font-size: var(--size-body); font-weight: 600;">{{card_3_title}}</h3>
-      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: 1.6;">{{card_3_body}}</p>
+      <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--color-accent); opacity: 0.08; flex-shrink: 0;"></div>
+      <h3 style="font-size: var(--size-body); font-family: var(--font-header); font-weight: 600; color: var(--color-text-reversed);">{{card_3_title}}</h3>
+      <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); line-height: var(--line-height);">{{card_3_body}}</p>
     </div>
   </div>
 </div>

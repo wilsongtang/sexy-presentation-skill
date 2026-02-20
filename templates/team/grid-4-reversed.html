@@ -1,14 +1,21 @@
 <!-- Template: team-grid-4-reversed -->
 <!-- Slots: title, member_1_name, member_1_role, member_2_name, member_2_role, member_3_name, member_3_role, member_4_name, member_4_role -->
-<div class="slide" style="background-color: var(--color-primary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+<!-- Composition: Card Grid | Intensity: workhorse -->
+<div class="slide" style="background-color: var(--color-primary); position: relative; overflow: hidden;">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
 
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
-    <!-- Member 1 -->
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
-      <div style="width: 160px; height: 160px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
-      </div>
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <!-- 2x2 card grid -->
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: var(--gap); flex: 1;">
+
+    <!-- Member 1: dominant — accent border treatment -->
+    <div style="border: 2px solid var(--color-accent); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+      </svg>
       <div>
         <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_1_name}}</p>
         <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 6px;">{{member_1_role}}</p>
@@ -16,10 +23,11 @@
     </div>
 
     <!-- Member 2 -->
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
-      <div style="width: 160px; height: 160px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
-      </div>
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+      </svg>
       <div>
         <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_2_name}}</p>
         <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 6px;">{{member_2_role}}</p>
@@ -27,10 +35,11 @@
     </div>
 
     <!-- Member 3 -->
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
-      <div style="width: 160px; height: 160px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
-      </div>
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+      </svg>
       <div>
         <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_3_name}}</p>
         <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 6px;">{{member_3_role}}</p>
@@ -38,14 +47,16 @@
     </div>
 
     <!-- Member 4 -->
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
-      <div style="width: 160px; height: 160px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="rgba(255,255,255,0.6)"/></svg>
-      </div>
+    <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="rgba(255,255,255,0.6)" opacity="0.3"/>
+      </svg>
       <div>
         <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text-reversed);">{{member_4_name}}</p>
         <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); font-family: var(--font-body); margin-top: 6px;">{{member_4_role}}</p>
       </div>
     </div>
+
   </div>
 </div>

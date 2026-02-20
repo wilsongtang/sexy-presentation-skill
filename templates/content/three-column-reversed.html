@@ -1,10 +1,25 @@
 <!-- Template: content-three-column-reversed -->
-<!-- Slots: title, column_1, column_2, column_3 -->
-<div class="slide" style="background-color: var(--color-primary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1;">
-    <div style="flex: 1; font-size: var(--size-body); line-height: var(--line-height);">{{column_1}}</div>
-    <div style="flex: 1; font-size: var(--size-body); line-height: var(--line-height);">{{column_2}}</div>
-    <div style="flex: 1; font-size: var(--size-body); line-height: var(--line-height);">{{column_3}}</div>
+<!-- Slots: title, col_1, col_2, col_3 -->
+<!-- Composition: Card Grid | Intensity: workhorse -->
+<div class="slide" style="background-color: var(--color-primary); position: relative; overflow: hidden; display: flex; flex-direction: column; padding: var(--margin);">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text-reversed); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+    <!-- Dominant column: accent border + flex:1.15 -->
+    <div style="flex: 1.15; border: 2px solid var(--color-accent); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text-reversed);">
+      {{col_1}}
+    </div>
+    <!-- Supporting columns -->
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text-reversed);">
+      {{col_2}}
+    </div>
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; font-size: var(--size-body); line-height: var(--line-height); color: var(--color-text-reversed);">
+      {{col_3}}
+    </div>
   </div>
 </div>

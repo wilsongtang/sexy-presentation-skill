@@ -1,26 +1,30 @@
 <!-- Template: comparison-side-by-side-colored -->
 <!-- Slots: title, left_heading, left_bullets, right_heading, right_bullets -->
-<div class="slide" style="background-color: var(--color-secondary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header);">{{title}}</h2>
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1; align-items: stretch;">
+<!-- Composition: Comparison Matrix | Intensity: impact -->
+<div class="slide light" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: var(--margin);"></div>
 
-    <!-- Left Panel -->
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+
+    <!-- Left panel (supporting) -->
     <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
       <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{left_heading}}</h3>
-      <div style="width: 40px; height: 3px; background: var(--color-accent); border-radius: 2px;"></div>
-      <ul style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+      <div style="width: 40px; height: 2px; background: var(--color-border); border-radius: 2px;"></div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7;">
         {{left_bullets}}
       </ul>
     </div>
 
-    <!-- Divider -->
+    <!-- Vertical divider -->
     <div style="width: 1px; background: var(--color-border); flex-shrink: 0; align-self: stretch;"></div>
 
-    <!-- Right Panel -->
-    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
-      <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{right_heading}}</h3>
-      <div style="width: 40px; height: 3px; background: var(--color-secondary); border-radius: 2px;"></div>
-      <ul style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7; list-style: none; display: flex; flex-direction: column; gap: 12px;">
+    <!-- Right panel (dominant: accent treatment) -->
+    <div style="flex: 1; border: 2px solid var(--color-accent); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+      <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-accent); font-family: var(--font-header);">{{right_heading}}</h3>
+      <div style="width: 40px; height: 3px; background: var(--color-accent); border-radius: 2px;"></div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: var(--size-caption); color: var(--color-muted); line-height: 1.7;">
         {{right_bullets}}
       </ul>
     </div>

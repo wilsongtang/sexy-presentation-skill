@@ -1,25 +1,32 @@
 <!-- Template: quote-editorial-colored -->
-<!-- Slots: quote_text, attribution -->
-<div class="slide justify-center" style="background-color: var(--color-secondary); position: relative;">
-  <div style="max-width: 1300px; width: 100%; display: flex; flex-direction: column; gap: calc(var(--gap) * 0.8);">
-    <!-- Top thin rule line -->
-    <div style="height: 1px; width: 100%; background: var(--color-text);"></div>
-    <!-- Thin spacer line below rule -->
-    <div style="height: 3px; width: 100%; background: var(--color-accent);"></div>
+<!-- Slots: quote_text, attribution, context -->
+<!-- Composition: Editorial Spread | Intensity: impact -->
+<div class="slide !p-0" style="background-color: var(--color-secondary); display: flex; flex-direction: row; position: relative; overflow: hidden;">
+  <!-- Quote column: left side -->
+  <div style="flex: 1; padding: calc(var(--margin) * 1.5); display: flex; flex-direction: column; justify-content: center; position: relative; gap: calc(var(--gap) * 1.5);">
+    <!-- Motif: vertical line at the split point -->
+    <div class="motif-element motif-vline" style="position: absolute; top: var(--margin); right: 0; bottom: var(--margin);"></div>
 
-    <div style="padding: calc(var(--gap) * 1.2) 0;">
-      <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 300; font-style: italic; line-height: 1.2; color: var(--color-text); letter-spacing: -0.02em;">
+    <!-- Decorative opening quotation mark in quote column (real div, 320px, accent, 12% opacity) -->
+    <div aria-hidden="true" style="position: absolute; top: calc(var(--margin) * -0.5); left: var(--margin); font-family: var(--font-header); font-size: 320px; line-height: 1; color: var(--color-accent); opacity: 0.12; user-select: none; pointer-events: none; letter-spacing: -0.05em;">&ldquo;</div>
+
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: calc(var(--gap) * 1.2);">
+      <blockquote style="font-family: var(--font-header); font-size: var(--size-title); font-weight: 400; font-style: italic; line-height: 1.25; color: var(--color-text); letter-spacing: -0.02em; margin: 0;">
         {{quote_text}}
       </blockquote>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; margin: 0;">
+        &mdash; {{attribution}}
+      </p>
     </div>
+  </div>
 
-    <!-- Bottom thin rule lines -->
-    <div style="height: 3px; width: 100%; background: var(--color-accent);"></div>
-    <div style="height: 1px; width: 100%; background: var(--color-text);"></div>
+  <!-- Column rule divider -->
+  <div style="width: 1px; background: var(--color-border); flex-shrink: 0; align-self: stretch; margin: var(--margin) 0;"></div>
 
-    <!-- Attribution right-aligned -->
-    <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); font-style: normal; letter-spacing: 0.1em; text-transform: uppercase; text-align: right; padding-top: calc(var(--gap) * 0.4);">
-      {{attribution}}
+  <!-- Context column: right side -->
+  <div style="width: 38%; padding: calc(var(--margin) * 1.5); display: flex; flex-direction: column; justify-content: center; gap: var(--gap); flex-shrink: 0;">
+    <p style="font-size: var(--size-body); color: var(--color-muted); font-family: var(--font-body); line-height: 1.7; margin: 0;">
+      {{context}}
     </p>
   </div>
 </div>

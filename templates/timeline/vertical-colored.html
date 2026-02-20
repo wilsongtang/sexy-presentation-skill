@@ -1,83 +1,79 @@
 <!-- Template: timeline-vertical-colored -->
-<!-- Slots: title, event_1_date, event_1_title, event_1_description, event_2_date, event_2_title, event_2_description, event_3_date, event_3_title, event_3_description, event_4_date, event_4_title, event_4_description, event_5_date, event_5_title, event_5_description -->
-<div class="slide" style="background-color: var(--color-secondary);">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
+<!-- Slots: title, point_1_date, point_1_title, point_1_body, point_2_date, point_2_title, point_2_body, point_3_date, point_3_title, point_3_body, point_4_date, point_4_title, point_4_body -->
+<!-- Composition: Timeline Flow | Intensity: workhorse -->
+<div class="slide" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
+
+  <!-- Motif: dot at top of timeline -->
+  <div class="motif-element" style="position: absolute; left: var(--margin); top: -28px; width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent); opacity: 0.12; pointer-events: none;"></div>
+
+  <h2 style="font-size: var(--size-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
 
   <div class="flex flex-row" style="flex: 1; gap: 0;">
 
     <!-- Vertical timeline spine -->
-    <div style="display: flex; flex-direction: column; align-items: center; width: 48px; flex-shrink: 0; padding-top: 4px;">
-      <!-- Top cap -->
-      <div style="width: 3px; height: 16px; background: var(--color-border);"></div>
-      <!-- Repeating: dot then segment -->
-      <div style="width: 14px; height: 14px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0;"></div>
+    <div style="display: flex; flex-direction: column; align-items: center; width: 40px; flex-shrink: 0;">
+      <!-- Top cap line -->
+      <div style="width: 3px; height: 12px; background: var(--color-border);"></div>
+      <!-- Point 1 — active dot (20px, accent fill) -->
+      <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; z-index: 1;"></div>
+      <!-- Connector 1→2 -->
       <div style="flex: 1; width: 3px; background: var(--color-border);"></div>
-      <div style="width: 14px; height: 14px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0;"></div>
+      <!-- Point 2 — future dot (16px, border-only) -->
+      <div style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; flex-shrink: 0; z-index: 1;"></div>
+      <!-- Connector 2→3 -->
       <div style="flex: 1; width: 3px; background: var(--color-border);"></div>
-      <div style="width: 14px; height: 14px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0;"></div>
+      <!-- Point 3 — future dot (16px, border-only) -->
+      <div style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; flex-shrink: 0; z-index: 1;"></div>
+      <!-- Connector 3→4 -->
       <div style="flex: 1; width: 3px; background: var(--color-border);"></div>
-      <div style="width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--color-border); background: white; flex-shrink: 0;"></div>
-      <div style="flex: 1; width: 3px; background: var(--color-border);"></div>
-      <div style="width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--color-border); background: white; flex-shrink: 0;"></div>
-      <!-- Bottom cap -->
-      <div style="width: 3px; height: 16px; background: var(--color-border);"></div>
+      <!-- Point 4 — future dot (16px, border-only) -->
+      <div style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--color-border); background: transparent; flex-shrink: 0; z-index: 1;"></div>
+      <!-- Bottom cap line -->
+      <div style="width: 3px; height: 12px; background: var(--color-border);"></div>
     </div>
 
-    <!-- Events list -->
-    <div class="flex flex-col" style="flex: 1; justify-content: space-between; padding-left: 16px;">
+    <!-- Content cards alternating left/right of the spine -->
+    <div class="flex flex-col" style="flex: 1; justify-content: space-between; padding-left: 20px;">
 
-      <!-- Event 1 -->
+      <!-- Point 1 — active, full row -->
       <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
-        <div style="width: 140px; flex-shrink: 0; padding-top: 2px;">
-          <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-accent);">{{event_1_date}}</span>
+        <div style="flex: 1; border-left: 3px solid var(--color-accent); padding: 4px 0 4px 16px;">
+          <span style="font-size: var(--size-caption); color: var(--color-accent); font-weight: 600; display: block; margin-bottom: 4px;">{{point_1_date}}</span>
+          <h3 style="font-size: var(--size-body); font-weight: 700; color: var(--color-text); margin-bottom: 4px;">{{point_1_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{point_1_body}}</p>
         </div>
-        <div style="flex: 1;">
-          <h3 style="font-size: var(--size-body); font-weight: 600; margin-bottom: 6px; color: var(--color-text);">{{event_1_title}}</h3>
-          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">{{event_1_description}}</p>
+        <!-- Right spacer for alternating effect -->
+        <div style="flex: 1;"></div>
+      </div>
+
+      <!-- Point 2 — future, right side -->
+      <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
+        <!-- Left spacer -->
+        <div style="flex: 1;"></div>
+        <div style="flex: 1; border-left: 3px solid var(--color-border); padding: 4px 0 4px 16px;">
+          <span style="font-size: var(--size-caption); color: var(--color-muted); font-weight: 500; display: block; margin-bottom: 4px;">{{point_2_date}}</span>
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 4px;">{{point_2_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{point_2_body}}</p>
         </div>
       </div>
 
-      <!-- Event 2 -->
+      <!-- Point 3 — future, left side -->
       <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
-        <div style="width: 140px; flex-shrink: 0; padding-top: 2px;">
-          <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-accent);">{{event_2_date}}</span>
+        <div style="flex: 1; border-left: 3px solid var(--color-border); padding: 4px 0 4px 16px;">
+          <span style="font-size: var(--size-caption); color: var(--color-muted); font-weight: 500; display: block; margin-bottom: 4px;">{{point_3_date}}</span>
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 4px;">{{point_3_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{point_3_body}}</p>
         </div>
-        <div style="flex: 1;">
-          <h3 style="font-size: var(--size-body); font-weight: 600; margin-bottom: 6px; color: var(--color-text);">{{event_2_title}}</h3>
-          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">{{event_2_description}}</p>
-        </div>
+        <div style="flex: 1;"></div>
       </div>
 
-      <!-- Event 3 -->
+      <!-- Point 4 — future, right side -->
       <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
-        <div style="width: 140px; flex-shrink: 0; padding-top: 2px;">
-          <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-accent);">{{event_3_date}}</span>
-        </div>
-        <div style="flex: 1;">
-          <h3 style="font-size: var(--size-body); font-weight: 600; margin-bottom: 6px; color: var(--color-text);">{{event_3_title}}</h3>
-          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5;">{{event_3_description}}</p>
-        </div>
-      </div>
-
-      <!-- Event 4 -->
-      <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
-        <div style="width: 140px; flex-shrink: 0; padding-top: 2px;">
-          <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-muted);">{{event_4_date}}</span>
-        </div>
-        <div style="flex: 1;">
-          <h3 style="font-size: var(--size-body); font-weight: 600; margin-bottom: 6px; color: var(--color-muted);">{{event_4_title}}</h3>
-          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; opacity: 0.7;">{{event_4_description}}</p>
-        </div>
-      </div>
-
-      <!-- Event 5 -->
-      <div class="flex flex-row" style="align-items: flex-start; gap: var(--gap);">
-        <div style="width: 140px; flex-shrink: 0; padding-top: 2px;">
-          <span style="font-size: var(--size-caption); font-weight: 600; color: var(--color-muted);">{{event_5_date}}</span>
-        </div>
-        <div style="flex: 1;">
-          <h3 style="font-size: var(--size-body); font-weight: 600; margin-bottom: 6px; color: var(--color-muted);">{{event_5_title}}</h3>
-          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; opacity: 0.7;">{{event_5_description}}</p>
+        <div style="flex: 1;"></div>
+        <div style="flex: 1; border-left: 3px solid var(--color-border); padding: 4px 0 4px 16px;">
+          <span style="font-size: var(--size-caption); color: var(--color-muted); font-weight: 500; display: block; margin-bottom: 4px;">{{point_4_date}}</span>
+          <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); margin-bottom: 4px;">{{point_4_title}}</h3>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.5; margin: 0;">{{point_4_body}}</p>
         </div>
       </div>
 

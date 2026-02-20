@@ -1,13 +1,28 @@
 <!-- Template: content-text-image-left-colored -->
 <!-- Slots: title, body, image -->
-<div class="slide" style="background-color: var(--color-secondary); !p-0 flex-row">
-  <div style="width: 45%; height: 100%; overflow: hidden;">
-    <img src="{{image}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-  </div>
-  <div style="width: 55%; padding: var(--margin); display: flex; flex-direction: column; justify-content: center;">
-    <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
-    <div style="font-size: var(--size-body); line-height: var(--line-height); max-width: 900px;">
-      {{body}}
+<!-- Composition: Asymmetric Split | Intensity: workhorse -->
+<div class="slide" style="background-color: var(--color-secondary); position: relative; overflow: hidden; display: flex; flex-direction: row; padding: 0;">
+  <!-- Image panel (45%) — bleeds to left edge -->
+  <div style="width: 45%; height: 100%; flex-shrink: 0; position: relative;">
+    <div class="img-treatment img-desaturate" style="width: 100%; height: 100%;">
+      <img src="{{image}}" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="img-treatment-overlay"></div>
     </div>
+  </div>
+
+  <!-- Accent divider -->
+  <div style="width: 3px; background: var(--color-accent); flex-shrink: 0; align-self: stretch;"></div>
+
+  <!-- Text panel (55%) -->
+  <div style="flex: 1; padding: calc(var(--margin) * 1.25); display: flex; flex-direction: column; justify-content: center; position: relative;">
+    <!-- Motif: dot in text panel -->
+    <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
+
+    <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+      {{title}}
+    </h2>
+    <p style="font-size: var(--size-body); line-height: var(--line-height); color: var(--color-muted);">
+      {{body}}
+    </p>
   </div>
 </div>

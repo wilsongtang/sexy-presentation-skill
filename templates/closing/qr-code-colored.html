@@ -1,55 +1,24 @@
 <!-- Template: closing-qr-code-colored -->
-<!-- Slots: title, qr_url, qr_caption -->
+<!-- Slots: title, qr_image, url -->
+<!-- Composition: Centered Hero | Intensity: impact -->
 <div class="slide items-center justify-center text-center" style="background-color: var(--color-secondary); position: relative; overflow: hidden;">
-  <!-- Subtle corner decorations -->
-  <div style="position: absolute; top: calc(var(--margin) - 10px); left: calc(var(--margin) - 10px); width: 80px; height: 80px; border-top: 3px solid var(--color-accent); border-left: 3px solid var(--color-accent); border-radius: 4px;"></div>
-  <div style="position: absolute; top: calc(var(--margin) - 10px); right: calc(var(--margin) - 10px); width: 80px; height: 80px; border-top: 3px solid var(--color-accent); border-right: 3px solid var(--color-accent); border-radius: 4px;"></div>
-  <div style="position: absolute; bottom: calc(var(--margin) - 10px); left: calc(var(--margin) - 10px); width: 80px; height: 80px; border-bottom: 3px solid var(--color-accent); border-left: 3px solid var(--color-accent); border-radius: 4px;"></div>
-  <div style="position: absolute; bottom: calc(var(--margin) - 10px); right: calc(var(--margin) - 10px); width: 80px; height: 80px; border-bottom: 3px solid var(--color-accent); border-right: 3px solid var(--color-accent); border-radius: 4px;"></div>
+  <!-- Motif: bottom rule for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+  <!-- Motif: top-right dot for balance -->
+  <div class="motif-element motif-dot" style="position: absolute; top: var(--margin); right: calc(var(--margin) + 40px);"></div>
 
-  <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; gap: var(--gap);">
-    <!-- Title -->
-    <h2 style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text);">{{title}}</h2>
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: calc(var(--gap) * 1.5); padding-bottom: calc(var(--margin) * 0.5);">
+    <!-- Title above QR -->
+    <h2 style="font-size: var(--size-title); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--color-text);">
+      {{title}}
+    </h2>
 
-    <!-- QR code placeholder (bordered square) -->
-    <div style="width: 400px; height: 400px; border: 3px solid var(--color-border); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: white; box-shadow: 0 4px 24px rgba(0,0,0,0.06);">
-      <!-- Mock QR grid pattern -->
-      <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; padding: 24px;">
-        <!-- Simulated QR-like pattern using accent and muted colored squares -->
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-accent);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:var(--color-accent);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-        <div style="width:36px;height:36px;background:transparent;"></div>
-        <div style="width:36px;height:36px;background:var(--color-text);border-radius:4px;"></div>
-      </div>
-      <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); padding: 0 16px 16px;">Scan to visit</p>
-    </div>
+    <!-- QR image — NOT wrapped in .img-treatment -->
+    <img src="{{qr_image}}" alt="QR code" style="max-width: 300px; width: 100%; height: auto; border-radius: 8px;" />
 
-    <!-- URL text -->
-    <p style="font-family: var(--font-body); font-size: var(--size-body); color: var(--color-accent); font-weight: 500; letter-spacing: 0.01em;">{{qr_url}}</p>
-    <p style="font-family: var(--font-body); font-size: var(--size-caption); color: var(--color-muted);">{{qr_caption}}</p>
+    <!-- URL below QR at caption size, muted -->
+    <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); letter-spacing: 0.01em;">
+      {{url}}
+    </p>
   </div>
 </div>
