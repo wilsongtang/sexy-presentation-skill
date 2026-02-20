@@ -1,49 +1,53 @@
 <!-- Template: team-profiles-light -->
-<!-- Slots: title, member_1_name, member_1_role, member_1_bio, member_2_name, member_2_role, member_2_bio, member_3_name, member_3_role, member_3_bio -->
-<div class="slide">
-  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+<!-- Slots: title, profile_1_name, profile_1_role, profile_1_bio, profile_2_name, profile_2_role, profile_2_bio, profile_3_name, profile_3_role, profile_3_bio -->
+<!-- Composition: Card Grid | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden;">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
 
-  <div style="flex: 1; display: flex; flex-direction: column; gap: var(--gap); justify-content: space-evenly;">
-    <!-- Profile 1 -->
-    <div style="display: flex; flex-direction: row; align-items: center; gap: 48px; border: 1px solid var(--color-border); border-radius: 16px; padding: 32px 48px;">
-      <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="var(--color-muted)"/></svg>
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <!-- 3-column profile cards -->
+  <div style="display: flex; flex-direction: row; gap: var(--gap); flex: 1; align-items: stretch;">
+
+    <!-- Profile 1: dominant — accent border treatment -->
+    <div style="flex: 1; border: 2px solid var(--color-accent); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{profile_1_name}}</p>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body);">{{profile_1_role}}</p>
       </div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text);">{{member_1_name}}</p>
-          <p style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 500;">{{member_1_role}}</p>
-        </div>
-        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height); max-width: 1200px;">{{member_1_bio}}</p>
-      </div>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height);">{{profile_1_bio}}</p>
     </div>
 
     <!-- Profile 2 -->
-    <div style="display: flex; flex-direction: row; align-items: center; gap: 48px; border: 1px solid var(--color-border); border-radius: 16px; padding: 32px 48px;">
-      <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="var(--color-muted)"/></svg>
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{profile_2_name}}</p>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body);">{{profile_2_role}}</p>
       </div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text);">{{member_2_name}}</p>
-          <p style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 500;">{{member_2_role}}</p>
-        </div>
-        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height); max-width: 1200px;">{{member_2_bio}}</p>
-      </div>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height);">{{profile_2_bio}}</p>
     </div>
 
     <!-- Profile 3 -->
-    <div style="display: flex; flex-direction: row; align-items: center; gap: 48px; border: 1px solid var(--color-border); border-radius: 16px; padding: 32px 48px;">
-      <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--color-secondary); opacity: 0.25; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--color-border);">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="var(--color-muted)"/></svg>
+    <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+        <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{profile_3_name}}</p>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body);">{{profile_3_role}}</p>
       </div>
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 8px;">
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text);">{{member_3_name}}</p>
-          <p style="font-size: var(--size-caption); color: var(--color-accent); font-family: var(--font-body); font-weight: 500;">{{member_3_role}}</p>
-        </div>
-        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height); max-width: 1200px;">{{member_3_bio}}</p>
-      </div>
+      <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); line-height: var(--line-height);">{{profile_3_bio}}</p>
     </div>
+
   </div>
 </div>

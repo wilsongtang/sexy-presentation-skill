@@ -1,99 +1,93 @@
 <!-- Template: team-org-chart-light -->
-<!-- Slots: title, ceo_name, ceo_role, dir_1_name, dir_1_role, dir_2_name, dir_2_role, dir_3_name, dir_3_role, lead_1_name, lead_1_role, lead_2_name, lead_2_role, lead_3_name, lead_3_role, lead_4_name, lead_4_role, lead_5_name, lead_5_role, lead_6_name, lead_6_role -->
-<div class="slide">
-  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); margin-bottom: var(--gap);">{{title}}</h2>
+<!-- Slots: title, leader_name, leader_role, report_1_name, report_1_role, report_2_name, report_2_role, report_3_name, report_3_role -->
+<!-- Composition: Timeline Flow | Intensity: workhorse -->
+<div class="slide" style="position: relative; overflow: hidden;">
+  <!-- Motif: dot bottom-right -->
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
 
-  <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; position: relative;">
+  <h2 style="font-size: var(--size-header); font-weight: 600; font-family: var(--font-header); color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
 
-    <!-- Level 1: CEO -->
-    <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 0;">
-      <div style="background: var(--color-primary); border-radius: 12px; padding: 16px 32px; text-align: center; min-width: 240px;">
-        <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text-reversed);">{{ceo_name}}</p>
-        <p style="font-size: var(--size-caption); color: var(--color-text-reversed); opacity: 0.75; font-family: var(--font-body); margin-top: 4px;">{{ceo_role}}</p>
+  <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;">
+
+    <!-- Leader card: accent border (dominant), 120px avatar -->
+    <div style="border: 2px solid var(--color-accent); border-radius: 16px; padding: 28px 40px; display: flex; flex-direction: row; align-items: center; gap: 24px; min-width: 380px; max-width: 480px; position: relative; overflow: hidden;">
+      <!-- 6px accent top stripe -->
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--color-accent);"></div>
+      <svg width="120" height="120" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary); flex-shrink: 0; margin-top: 4px;">
+        <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+        <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+      </svg>
+      <div>
+        <p style="font-size: var(--size-body); font-weight: 700; font-family: var(--font-header); color: var(--color-text);">{{leader_name}}</p>
+        <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-top: 6px;">{{leader_role}}</p>
       </div>
     </div>
 
-    <!-- Connector: CEO to Directors -->
-    <div style="width: 2px; height: 36px; background: var(--color-border); margin: 0 auto;"></div>
-    <div style="width: 66%; height: 2px; background: var(--color-border);"></div>
+    <!-- Vertical connector: leader to horizontal bar -->
+    <div style="width: 3px; height: 36px; background: var(--color-border);"></div>
 
-    <!-- Level 2: Directors -->
-    <div style="display: flex; justify-content: space-between; width: 100%; position: relative;">
-      <!-- Top connector stubs -->
-      <div style="position: absolute; top: 0; left: 16.5%; width: 2px; height: 28px; background: var(--color-border);"></div>
-      <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 28px; background: var(--color-border);"></div>
-      <div style="position: absolute; top: 0; right: 16.5%; width: 2px; height: 28px; background: var(--color-border);"></div>
+    <!-- Horizontal connector bar spanning all three reports -->
+    <div style="display: flex; flex-direction: row; align-items: flex-start; width: 100%;">
 
-      <div style="margin-top: 28px; flex: 1; display: flex; justify-content: space-around; gap: var(--gap);">
-        <!-- Director 1 -->
-        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
-          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_1_name}}</p>
-          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_1_role}}</p>
-        </div>
-        <!-- Director 2 -->
-        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
-          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_2_name}}</p>
-          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_2_role}}</p>
-        </div>
-        <!-- Director 3 -->
-        <div style="border: 2px solid var(--color-accent); border-radius: 10px; padding: 14px 24px; text-align: center; flex: 1; max-width: 360px;">
-          <p style="font-size: var(--size-caption); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{dir_3_name}}</p>
-          <p style="font-size: 18px; color: var(--color-muted); font-family: var(--font-body); margin-top: 3px;">{{dir_3_role}}</p>
-        </div>
+      <!-- Left vertical stub for report 1 -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 3px; height: 32px; background: var(--color-border);"></div>
       </div>
+
+      <!-- Center vertical stub for report 2 -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 3px; height: 32px; background: var(--color-border);"></div>
+      </div>
+
+      <!-- Right vertical stub for report 3 -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 3px; height: 32px; background: var(--color-border);"></div>
+      </div>
+
     </div>
 
-    <!-- Connectors: Directors to Team Leads -->
-    <div style="display: flex; justify-content: space-around; width: 100%; gap: var(--gap); padding-top: 0;">
-      <div style="flex: 1; display: flex; justify-content: space-around;">
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-      </div>
-      <div style="flex: 1; display: flex; justify-content: space-around;">
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-      </div>
-      <div style="flex: 1; display: flex; justify-content: space-around;">
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-        <div style="width: 2px; height: 32px; background: var(--color-border);"></div>
-      </div>
-    </div>
+    <!-- Horizontal bar connecting all three verticals -->
+    <div style="width: 66%; height: 3px; background: var(--color-border); margin-top: -3px; align-self: flex-start; margin-left: 16.5%;"></div>
 
-    <!-- Level 3: Team Leads (6, 2 under each director) -->
-    <div style="display: flex; justify-content: space-around; width: 100%; gap: var(--gap);">
-      <!-- Leads under Dir 1 -->
-      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_1_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_1_role}}</p>
-        </div>
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_2_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_2_role}}</p>
-        </div>
-      </div>
-      <!-- Leads under Dir 2 -->
-      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_3_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_3_role}}</p>
-        </div>
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_4_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_4_role}}</p>
+    <!-- Report cards row: 80px avatars, standard border -->
+    <div style="display: flex; flex-direction: row; gap: var(--gap); width: 100%; margin-top: 0;">
+
+      <!-- Report 1 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+          <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+          <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+        </svg>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{report_1_name}}</p>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-top: 4px;">{{report_1_role}}</p>
         </div>
       </div>
-      <!-- Leads under Dir 3 -->
-      <div style="flex: 1; display: flex; gap: 12px; justify-content: space-around;">
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_5_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_5_role}}</p>
-        </div>
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 16px; text-align: center; flex: 1; background: var(--color-secondary); opacity: 0.85;">
-          <p style="font-size: 18px; font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{lead_6_name}}</p>
-          <p style="font-size: 16px; color: var(--color-muted); font-family: var(--font-body); margin-top: 2px;">{{lead_6_role}}</p>
+
+      <!-- Report 2 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+          <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+          <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+        </svg>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{report_2_name}}</p>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-top: 4px;">{{report_2_role}}</p>
         </div>
       </div>
+
+      <!-- Report 3 -->
+      <div style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="border-radius: 50%; background: var(--color-secondary);">
+          <circle cx="40" cy="30" r="14" fill="var(--color-muted)" opacity="0.3"/>
+          <ellipse cx="40" cy="68" rx="22" ry="18" fill="var(--color-muted)" opacity="0.3"/>
+        </svg>
+        <div>
+          <p style="font-size: var(--size-body); font-weight: 600; font-family: var(--font-header); color: var(--color-text);">{{report_3_name}}</p>
+          <p style="font-size: var(--size-caption); color: var(--color-muted); font-family: var(--font-body); margin-top: 4px;">{{report_3_role}}</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
