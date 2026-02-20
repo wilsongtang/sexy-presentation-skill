@@ -1,13 +1,24 @@
 <!-- Template: content-magazine-flow-light -->
 <!-- Slots: title, body, pull_quote -->
-<div class="slide">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap);">{{title}}</h2>
-  <div class="flex flex-row" style="gap: var(--gap); flex: 1;">
-    <div style="flex: 1; font-size: var(--size-body); line-height: var(--line-height);">
+<!-- Composition: Magazine Flow | Intensity: impact -->
+<div class="slide" style="position: relative; overflow: hidden; display: flex; flex-direction: column; padding: var(--margin);">
+  <!-- Motif: vertical line bottom-right -->
+  <div class="motif-element motif-vline" style="position: absolute; bottom: var(--margin); right: calc(var(--margin) + 20px);"></div>
+
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap); letter-spacing: -0.01em;">
+    {{title}}
+  </h2>
+
+  <div style="display: flex; flex-direction: row; gap: calc(var(--gap) * 1.5); flex: 1; align-items: stretch;">
+    <!-- Main column (60%): body text -->
+    <div style="flex: 60; font-size: var(--size-body); line-height: 1.7; color: var(--color-text);">
       {{body}}
     </div>
-    <div style="flex: 1; display: flex; align-items: center; padding-left: var(--gap);">
-      <blockquote style="font-size: var(--size-header); font-style: italic; line-height: 1.4; color: var(--color-primary); border-left: 4px solid var(--color-accent); padding-left: 32px;">
+    <!-- Column divider -->
+    <div style="width: 1px; background: var(--color-border); flex-shrink: 0; align-self: stretch;"></div>
+    <!-- Side column (40%): dominant pull quote -->
+    <div style="flex: 40; display: flex; align-items: center;">
+      <blockquote style="font-family: var(--font-header); font-size: var(--size-header); font-style: italic; color: var(--color-accent); line-height: 1.4; border-left: 4px solid var(--color-accent); padding-left: 28px; margin: 0;">
         {{pull_quote}}
       </blockquote>
     </div>
