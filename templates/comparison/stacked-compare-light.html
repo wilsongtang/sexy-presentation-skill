@@ -1,40 +1,43 @@
 <!-- Template: comparison-stacked-compare-light -->
-<!-- Slots: title, top_label, top_heading, top_body, top_tag, bottom_label, bottom_heading, bottom_body, bottom_tag -->
-<div class="slide">
-  <h2 style="font-size: var(--size-header); font-weight: 600; margin-bottom: var(--gap); font-family: var(--font-header);">{{title}}</h2>
-  <div class="flex flex-col" style="gap: var(--gap); flex: 1;">
+<!-- Slots: title, item_1_label, item_1_value, item_2_label, item_2_value, item_3_label, item_3_value -->
+<!-- Composition: Comparison Matrix | Intensity: workhorse -->
+<div class="slide light" style="position: relative; overflow: hidden;">
+  <div class="motif-element motif-dot" style="position: absolute; bottom: calc(var(--margin) + 8px); right: calc(var(--margin) + 8px);"></div>
 
-    <!-- Top Panel -->
-    <div class="flex flex-row" style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; align-items: stretch;">
-      <!-- Accent sidebar -->
-      <div style="width: 8px; background: var(--color-accent); flex-shrink: 0;"></div>
-      <!-- Label column -->
-      <div style="width: 200px; background: #f9fafb; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border-right: 1px solid var(--color-border); flex-shrink: 0;">
-        <span style="font-size: var(--size-caption); font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-header);">{{top_label}}</span>
-        <div style="width: 24px; height: 2px; background: var(--color-accent); border-radius: 1px;"></div>
-        <span style="font-size: var(--size-caption); color: var(--color-muted); background: #e5e7eb; padding: 4px 10px; border-radius: 20px; font-weight: 500;">{{top_tag}}</span>
+  <h2 style="font-size: var(--size-header); font-family: var(--font-header); font-weight: 600; color: var(--color-text); margin-bottom: var(--gap);">{{title}}</h2>
+
+  <div style="display: flex; flex-direction: column; gap: var(--gap); flex: 1; justify-content: center;">
+
+    <!-- Item 1 (dominant — accent color bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{item_1_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 700; color: var(--color-accent);">{{item_1_value}}</span>
       </div>
-      <!-- Content -->
-      <div style="flex: 1; padding: 32px 40px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
-        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{top_heading}}</h3>
-        <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6; max-width: 1200px;">{{top_body}}</p>
+      <div style="height: 16px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 80%; background: var(--color-accent); border-radius: 8px;"></div>
       </div>
     </div>
 
-    <!-- Bottom Panel -->
-    <div class="flex flex-row" style="flex: 1; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; align-items: stretch;">
-      <!-- Accent sidebar -->
-      <div style="width: 8px; background: var(--color-secondary); flex-shrink: 0;"></div>
-      <!-- Label column -->
-      <div style="width: 200px; background: #f9fafb; padding: 32px 24px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px; border-right: 1px solid var(--color-border); flex-shrink: 0;">
-        <span style="font-size: var(--size-caption); font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-header);">{{bottom_label}}</span>
-        <div style="width: 24px; height: 2px; background: var(--color-secondary); border-radius: 1px;"></div>
-        <span style="font-size: var(--size-caption); color: var(--color-muted); background: #e5e7eb; padding: 4px 10px; border-radius: 20px; font-weight: 500;">{{bottom_tag}}</span>
+    <!-- Item 2 (supporting — muted bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 500; color: var(--color-text); font-family: var(--font-header);">{{item_2_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-muted);">{{item_2_value}}</span>
       </div>
-      <!-- Content -->
-      <div style="flex: 1; padding: 32px 40px; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
-        <h3 style="font-size: var(--size-body); font-weight: 600; color: var(--color-text); font-family: var(--font-header);">{{bottom_heading}}</h3>
-        <p style="font-size: var(--size-caption); color: var(--color-muted); line-height: 1.6; max-width: 1200px;">{{bottom_body}}</p>
+      <div style="height: 12px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 55%; background: var(--color-muted); border-radius: 8px; opacity: 0.4;"></div>
+      </div>
+    </div>
+
+    <!-- Item 3 (supporting — muted bar) -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; flex-direction: row; align-items: baseline; justify-content: space-between;">
+        <span style="font-size: var(--size-body); font-weight: 500; color: var(--color-text); font-family: var(--font-header);">{{item_3_label}}</span>
+        <span style="font-size: var(--size-body); font-weight: 600; color: var(--color-muted);">{{item_3_value}}</span>
+      </div>
+      <div style="height: 12px; background: var(--color-border); border-radius: 8px; overflow: hidden;">
+        <div style="height: 100%; width: 35%; background: var(--color-muted); border-radius: 8px; opacity: 0.4;"></div>
       </div>
     </div>
 
