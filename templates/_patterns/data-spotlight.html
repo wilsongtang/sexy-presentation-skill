@@ -1,0 +1,30 @@
+<!-- PATTERN: Data Spotlight
+     PURPOSE: Single metrics, KPIs, statistics — giving numbers dramatic visual weight
+     COMPOSITION RULES: Scale contrast (stat number is dominant), one dominant element
+     TYPICAL CATEGORIES: data
+
+     KEY FEATURES:
+     - Stat number uses --size-stat (impact) or --size-display (hero) for dramatic sizing
+     - Number is the dominant element with 800 font-weight and accent color
+     - Supporting label and context create hierarchy below
+     - Overline provides metric category context above
+     - Motif elements frame the negative space around the number
+-->
+<div class="slide items-center justify-center text-center" style="position: relative; overflow: hidden;">
+  <!-- Motif: rule at bottom for grounding -->
+  <div class="motif-element motif-rule" style="position: absolute; bottom: calc(var(--margin) * 2); left: 50%; transform: translateX(-50%);"></div>
+
+  <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <span class="overline" style="color: var(--color-accent);">{{overline}}</span>
+    <!-- Dominant: the stat number -->
+    <div style="font-family: var(--font-header); font-size: var(--size-stat); font-weight: 800; line-height: 1; color: var(--color-accent); letter-spacing: -2px;">
+      {{stat_number}}
+    </div>
+    <div style="font-family: var(--font-header); font-size: var(--size-header); font-weight: 600; color: var(--color-text); letter-spacing: 0.02em;">
+      {{stat_label}}
+    </div>
+    <div style="font-size: var(--size-body); color: var(--color-muted); max-width: 800px; line-height: var(--line-height);">
+      {{stat_context}}
+    </div>
+  </div>
+</div>

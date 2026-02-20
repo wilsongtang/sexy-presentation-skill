@@ -1,0 +1,27 @@
+<!-- PATTERN: Full Bleed
+     PURPOSE: Hero images, dramatic visual moments, photo backgrounds with text overlay
+     COMPOSITION RULES: Edge tension (image fills entire slide), layered depth (text over image)
+     TYPICAL CATEGORIES: image, title
+
+     KEY FEATURES:
+     - Image covers entire 1920x1080 with zero padding
+     - MUST use image treatment (.img-darken or .img-gradient-fade) for text legibility
+     - Text positioned at bottom-left third (not centered) for editorial feel
+     - Motif elements at top-right for balance
+     - All text uses --color-text-reversed since it's over a dark image
+-->
+<div class="slide !p-0" style="position: relative; overflow: hidden;">
+  <!-- Full-bleed image with darkening treatment -->
+  <div class="img-treatment img-darken" style="position: absolute; inset: 0;">
+    <img src="{{image}}" alt="{{image_alt}}" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="img-treatment-overlay"></div>
+  </div>
+
+  <!-- Motif: top-right corner for balance -->
+  <div class="motif-element motif-rule" style="position: absolute; top: var(--margin); right: var(--margin); z-index: 2;"></div>
+
+  <!-- Text anchored to bottom-left third -->
+  <div style="position: absolute; bottom: calc(var(--margin) * 2); left: calc(var(--margin) * 1.5); z-index: 2; max-width: 900px;">
+    <p style="font-size: var(--size-caption); color: rgba(255,255,255,0.6); max-width: 700px;">{{caption}}</p>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<!-- PATTERN: Editorial Spread
+     PURPOSE: Magazine-style layouts mixing type sizes, images, and whitespace
+     COMPOSITION RULES: Rule of thirds, scale contrast, one dominant element
+     TYPICAL CATEGORIES: title, content
+
+     KEY FEATURES:
+     - Large hero text occupies one third, image another, whitespace the last
+     - Drop cap or oversized first letter as decorative element
+     - Column rules (thin vertical lines) between sections
+     - Generous whitespace is deliberate, not accidental
+     - Overline + title + subtitle stack with dramatic size differences
+-->
+<div class="slide !p-0" style="display: flex; flex-direction: row; position: relative; overflow: hidden;">
+  <!-- Left panel: 60% image -->
+  <div style="width: 60%; height: 100%;">
+    <div class="img-treatment img-desaturate" style="width: 100%; height: 100%;">
+      <img src="{{image}}" alt="{{image_alt}}" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="img-treatment-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Right panel: text with dramatic typography -->
+  <div style="width: 40%; padding: calc(var(--margin) * 2) var(--margin); display: flex; flex-direction: column; justify-content: center; position: relative;">
+    <div class="motif-element motif-vline" style="position: absolute; top: var(--margin); left: 0;"></div>
+
+    <span class="overline" style="color: var(--color-accent); margin-bottom: 20px;">{{overline}}</span>
+    <h1 style="font-size: var(--size-title); font-family: var(--font-header); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; color: var(--color-text); margin-bottom: calc(var(--gap) * 0.75);">
+      {{title}}
+    </h1>
+    <p style="font-size: var(--size-body); color: var(--color-muted); line-height: 1.6;">
+      {{subtitle}}
+    </p>
+  </div>
+</div>
